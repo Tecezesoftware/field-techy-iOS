@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ScreenVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="OTPScreenVC" storyboardIdentifier="OTPScreenVC" id="Y6W-OH-hqX" customClass="OTPScreenVC" customModule="FieldTechy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aff-iB-jYZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroungImage" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-BT-2ex">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OnboardingImage" translatesAutoresizingMaskIntoConstraints="NO" id="Hjw-kV-GCA">
+                                <rect key="frame" x="87.666666666666686" y="20" width="218" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="FwB-PE-Hq7"/>
+                                    <constraint firstAttribute="width" constant="218" id="Xfe-o9-1cc"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcP-Dg-W2Z">
+                                <rect key="frame" x="0.0" y="267" width="393" height="585"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vne-XU-fBc">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="585"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y6W-OH-hqX" id="py7-LZ-hWo"/>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="cyJ-G0-87L"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" name="SecondaryBGColor"/>
+                                <constraints>
+                                    <constraint firstItem="vne-XU-fBc" firstAttribute="leading" secondItem="HcP-Dg-W2Z" secondAttribute="leading" id="6Nw-cb-LdL"/>
+                                    <constraint firstAttribute="bottom" secondItem="vne-XU-fBc" secondAttribute="bottom" id="N8G-lq-JNG"/>
+                                    <constraint firstAttribute="trailing" secondItem="vne-XU-fBc" secondAttribute="trailing" id="TjQ-GV-mL3"/>
+                                    <constraint firstItem="vne-XU-fBc" firstAttribute="top" secondItem="HcP-Dg-W2Z" secondAttribute="top" id="YJl-d0-rYp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lAJ-d9-MDA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hjw-kV-GCA" firstAttribute="top" secondItem="zhS-BT-2ex" secondAttribute="top" constant="20" id="1Eb-ib-WzF"/>
+                            <constraint firstItem="zhS-BT-2ex" firstAttribute="trailing" secondItem="lAJ-d9-MDA" secondAttribute="trailing" id="4AJ-1F-2Re"/>
+                            <constraint firstItem="HcP-Dg-W2Z" firstAttribute="top" secondItem="Hjw-kV-GCA" secondAttribute="bottom" id="ApN-N8-k8Z"/>
+                            <constraint firstItem="zhS-BT-2ex" firstAttribute="top" secondItem="Aff-iB-jYZ" secondAttribute="top" id="DFi-We-2a1"/>
+                            <constraint firstItem="Hjw-kV-GCA" firstAttribute="centerX" secondItem="Aff-iB-jYZ" secondAttribute="centerX" id="PTR-Db-n3I"/>
+                            <constraint firstAttribute="bottom" secondItem="zhS-BT-2ex" secondAttribute="bottom" id="c93-HI-txZ"/>
+                            <constraint firstItem="zhS-BT-2ex" firstAttribute="leading" secondItem="lAJ-d9-MDA" secondAttribute="leading" id="llO-jT-IQ1"/>
+                            <constraint firstAttribute="bottom" secondItem="HcP-Dg-W2Z" secondAttribute="bottom" id="qol-sH-qr5"/>
+                            <constraint firstItem="HcP-Dg-W2Z" firstAttribute="leading" secondItem="lAJ-d9-MDA" secondAttribute="leading" id="wa1-wd-4gy"/>
+                            <constraint firstItem="HcP-Dg-W2Z" firstAttribute="trailing" secondItem="lAJ-d9-MDA" secondAttribute="trailing" id="xVA-HX-5Zt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="HcP-Dg-W2Z" id="Hn2-vA-RPP"/>
+                        <outlet property="otpTableView" destination="vne-XU-fBc" id="aEd-5q-ErA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackgroungImage" width="390" height="848"/>
+        <image name="OnboardingImage" width="355" height="338"/>
+        <namedColor name="SecondaryBGColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Role SelectionVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="RoleSelectionVC" storyboardIdentifier="RoleSelectionVC" id="Y6W-OH-hqX" customClass="RoleSelectionVC" customModule="FieldTechy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Applogo" translatesAutoresizingMaskIntoConstraints="NO" id="ddg-cI-NWN">
+                                <rect key="frame" x="191.66666666666666" y="207" width="57" height="42"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Account Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHQ-3E-yj0">
+                                <rect key="frame" x="24" y="281" width="392" height="31"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
+                                <color key="textColor" name="PrimaryTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select how you'd like to Sign Up to Field Techy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af2-jQ-Izz">
+                                <rect key="frame" x="24" y="320" width="392" height="19.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <color key="textColor" name="SecondaryTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-xY-Efa">
+                                <rect key="frame" x="24" y="363.66666666666669" width="392" height="209.00000000000006"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-fm-kaz" userLabel="ClientView">
+                                        <rect key="frame" x="0.0" y="0.0" width="392" height="96.666666666666671"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tn8-H8-7yY">
+                                                <rect key="frame" x="16" y="16" width="360" height="64.666666666666671"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ClientIcon" translatesAutoresizingMaskIntoConstraints="NO" id="YHZ-gb-9aa">
+                                                        <rect key="frame" x="0.0" y="10.333333333333314" width="44" height="44"/>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FzE-Gq-s9H">
+                                                        <rect key="frame" x="60" y="0.33333333333331439" width="300" height="64.333333333333329"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOl-9A-G1P">
+                                                                <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="22.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                                <color key="textColor" name="PrimaryTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hire certified engineers, schedule services, and post maintenance jobs." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-0w-fVc">
+                                                                <rect key="frame" x="0.0" y="30.666666666666682" width="283.33333333333331" height="33.666666666666657"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                                <color key="textColor" name="SecondaryTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="tn8-H8-7yY" firstAttribute="leading" secondItem="pRx-fm-kaz" secondAttribute="leading" constant="16" id="Bbw-fB-kSb"/>
+                                            <constraint firstAttribute="bottom" secondItem="tn8-H8-7yY" secondAttribute="bottom" constant="16" id="JG2-eT-OuA"/>
+                                            <constraint firstAttribute="trailing" secondItem="tn8-H8-7yY" secondAttribute="trailing" constant="16" id="fQU-WC-9Pi"/>
+                                            <constraint firstItem="tn8-H8-7yY" firstAttribute="top" secondItem="pRx-fm-kaz" secondAttribute="top" constant="16" id="ukD-fT-UvA"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ve1-rd-Rs5" appends="YES" id="z1B-q0-ROE"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ba1-9h-5Uy" userLabel="EngineerView">
+                                        <rect key="frame" x="0.0" y="112.66666666666663" width="392" height="96.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gAz-Lu-lFv">
+                                                <rect key="frame" x="16" y="16" width="360" height="64.333333333333329"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EngineerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hdM-rp-5h2">
+                                                        <rect key="frame" x="0.0" y="10.333333333333371" width="44" height="44"/>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gKO-Ad-Kw0">
+                                                        <rect key="frame" x="60" y="0.0" width="300" height="64.333333333333329"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am an Engineer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euf-TE-Deb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="136.33333333333334" height="22.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                                <color key="textColor" name="PrimaryTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find local commercial jobs, manage schedules, and grow your business." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TE5-Zm-fxG">
+                                                                <rect key="frame" x="0.0" y="30.666666666666682" width="288.66666666666669" height="33.666666666666657"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                                <color key="textColor" name="SecondaryTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="gAz-Lu-lFv" firstAttribute="top" secondItem="Ba1-9h-5Uy" secondAttribute="top" constant="16" id="BpY-aH-9c8"/>
+                                            <constraint firstItem="gAz-Lu-lFv" firstAttribute="leading" secondItem="Ba1-9h-5Uy" secondAttribute="leading" constant="16" id="QM5-Pr-36x"/>
+                                            <constraint firstAttribute="trailing" secondItem="gAz-Lu-lFv" secondAttribute="trailing" constant="16" id="Ts7-ih-Qj2"/>
+                                            <constraint firstAttribute="bottom" secondItem="gAz-Lu-lFv" secondAttribute="bottom" constant="16" id="Y5E-U7-351"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Dt3-xQ-zKV" appends="YES" id="tpg-Cd-tMS"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbd-oD-VEY" userLabel="Already SignIn Stack View">
+                                <rect key="frame" x="119" y="610.66666666666663" width="202" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd9-AF-dbF">
+                                        <rect key="frame" x="0.0" y="0.0" width="158" height="29"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                        <color key="textColor" name="SecondaryTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABo-C8-ISv">
+                                        <rect key="frame" x="158" y="0.0" width="44" height="29"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Sign In">
+                                            <color key="titleColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="NavigateToSignInScreen:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qEj-bJ-2c3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="SecondaryBGColor"/>
+                        <constraints>
+                            <constraint firstItem="ddg-cI-NWN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1Uz-xV-nRp"/>
+                            <constraint firstItem="Af2-jQ-Izz" firstAttribute="top" secondItem="MHQ-3E-yj0" secondAttribute="bottom" constant="8" id="5Eq-hK-L74"/>
+                            <constraint firstItem="cbd-oD-VEY" firstAttribute="top" secondItem="Ve3-xY-Efa" secondAttribute="bottom" constant="38" id="80J-7T-Qjy"/>
+                            <constraint firstItem="MHQ-3E-yj0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="AFA-WY-sOE"/>
+                            <constraint firstItem="ddg-cI-NWN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="207" id="DzK-nN-HmA"/>
+                            <constraint firstItem="MHQ-3E-yj0" firstAttribute="top" secondItem="ddg-cI-NWN" secondAttribute="bottom" constant="32" id="H8g-sw-bEq"/>
+                            <constraint firstItem="MHQ-3E-yj0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KNO-L5-brK"/>
+                            <constraint firstItem="Af2-jQ-Izz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="NFW-41-luk"/>
+                            <constraint firstItem="Af2-jQ-Izz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Y8o-fW-OAW"/>
+                            <constraint firstItem="cbd-oD-VEY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="b8h-l8-fEK"/>
+                            <constraint firstItem="Ve3-xY-Efa" firstAttribute="top" secondItem="Af2-jQ-Izz" secondAttribute="bottom" constant="24" id="dUQ-Iv-CDE"/>
+                            <constraint firstAttribute="trailing" secondItem="Ve3-xY-Efa" secondAttribute="trailing" constant="24" id="eYa-Xo-q1c"/>
+                            <constraint firstItem="Ve3-xY-Efa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="eaZ-Gr-Ybg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Af2-jQ-Izz" secondAttribute="trailing" constant="24" id="fOP-1d-Vxq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MHQ-3E-yj0" secondAttribute="trailing" constant="24" id="gtP-sq-hsi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clientView" destination="pRx-fm-kaz" id="ZaU-6J-m5r"/>
+                        <outlet property="engineerView" destination="Ba1-9h-5Uy" id="sws-YY-7Y1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ve1-rd-Rs5">
+                    <connections>
+                        <action selector="clientTapped:" destination="Y6W-OH-hqX" id="6Ey-cO-iy4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Dt3-xQ-zKV">
+                    <connections>
+                        <action selector="engineerTapped:" destination="Y6W-OH-hqX" id="FNK-fC-nz8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Applogo" width="57" height="42"/>
+        <image name="ClientIcon" width="44" height="44"/>
+        <image name="EngineerIcon" width="44" height="44"/>
+        <namedColor name="PrimaryTextColor">
+            <color red="0.062745098039215685" green="0.094117647058823528" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryBGColor">
+            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryTextColor">
+            <color red="0.44313725490196076" green="0.44313725490196076" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
