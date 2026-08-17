@@ -110,8 +110,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="optionLable" destination="ekH-HJ-fSa" id="XHR-JH-86a"/>
                 <outlet property="signInButton" destination="pOv-bQ-Jq1" id="uCP-KA-KkZ"/>
                 <outlet property="signInLabel" destination="419-50-pzY" id="BZg-YS-n5B"/>
+                <outlet property="socialLoginStackView" destination="FS5-gN-oWM" id="uDS-vh-Kwb"/>
             </connections>
             <point key="canvasLocation" x="236.64122137404578" y="118.30985915492958"/>
         </tableViewCell>

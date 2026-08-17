@@ -75,10 +75,14 @@ extension SignInVC: UITableViewDataSource, UITableViewDelegate {
                 let vc = Singleton.shared.storyBoard(storyboard: "OTPScreen", identifier: "OTPScreenVC")
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
+            
+            cell.navigateToForgotPassword = {[weak self] in
+                let vc = Singleton.shared.storyBoard(storyboard: "ForgotPassword", identifier: "ForgotPasswordVC")
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
             return cell
         case .submitButton:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompleteButtonCell", for: indexPath) as! CompleteButtonCell
-            cell.isSignInButtonAction = true
             cell.buttonLabel.text = "Sign in"
             return cell
         case .socialLogin:

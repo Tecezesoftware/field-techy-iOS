@@ -145,7 +145,6 @@ extension SignUpVC: UITableViewDelegate, UITableViewDataSource{
             
         case .submitButton:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompleteButtonCell", for: indexPath) as! CompleteButtonCell
-            cell.isSignUpButtonAction = true
             return cell
             
         }

@@ -69,8 +69,11 @@ extension OTPScreenVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         case .submitButton:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompleteButtonCell", for: indexPath) as! CompleteButtonCell
-            cell.isOtpButtonAction = true
             cell.buttonLabel.text = "Send OTP"
+            cell.navigateToRespectiveScreen = {[weak self] in
+                let vc = Singleton.shared.storyBoard(storyboard: "OTPVerification", identifier: "OTPVerificationVC")
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
             return cell
         case .socialLogin:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SocialLoginCell", for: indexPath) as! SocialLoginCell
