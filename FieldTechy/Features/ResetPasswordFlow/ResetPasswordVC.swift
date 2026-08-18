@@ -29,9 +29,11 @@ class ResetPasswordVC: UIViewController {
         confirmPasswordField.layer.masksToBounds = true
         confirmPasswordField.placeholder = "••••••••••••"
     }
+    
     @IBAction func onTapSigninBtnAction(_ sender: Any) {
         
     }
+    
     @IBAction func navigateToSignUp(_ sender: Any) {
         let vc = Singleton.shared.storyBoard(storyboard: "SignUp", identifier: "SignUpVC")
         self.navigationController?.pushViewController(vc, animated: true)

@@ -22,6 +22,7 @@ class TextFieldCell: UITableViewCell {
     var onValueSelected: ((Int, String) -> Void)?
     var isExpaned: ((Bool) -> ())?
     var formItem:FormItem?
+    var engineerFormItem:EngineerFormItem?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -105,6 +106,68 @@ class TextFieldCell: UITableViewCell {
         formTextfield.layer.borderColor = AppTheme.borderColorOfViews.cgColor
         formTextfield.layer.masksToBounds = true
         dropDownButton.isHidden = true
+    }
+    
+    func configureEngineerSignUpUI() {
+        
+        if engineerFormItem?.isRequired == true {
+            let attr = NSMutableAttributedString(string: engineerFormItem?.title ?? "",
+                                                 attributes: [.foregroundColor: AppTheme.primaryTextColor, .font: AppFonts.Regular(size: 12.0)])
+            
+            attr.append(NSAttributedString(
+                string: " *",
+                attributes: [.foregroundColor: UIColor.red, .font: AppFonts.Regular(size: 12.0)]
+            ))
+            fieldTitleLabel.attributedText = attr
+        } else {
+            let attr = NSMutableAttributedString(string: engineerFormItem?.title ?? "",
+                                                 attributes: [.foregroundColor: AppTheme.primaryTextColor, .font: AppFonts.Regular(size: 12.0)])
+            fieldTitleLabel.attributedText = attr
+            
+        }
+        if engineerFormItem?.fieldType == .phone{
+            mobileTextFieldView.isHidden = false
+            plainTextFieldView.isHidden = true
+            
+            countryCodeField.text = "+91"
+            if engineerFormItem?.value.isEmpty == true {
+                phoneNumberCodeField.placeholder = engineerFormItem?.placeholder ?? ""
+            }else{
+                if let value = engineerFormItem?.value, !value.isEmpty {
+                    phoneNumberCodeField.text = value
+                    engineerFormItem?.value = value
+                }
+            }
+            
+            phoneNumberCodeField.layer.cornerRadius = 10
+            phoneNumberCodeField.layer.borderWidth = 1.5
+            phoneNumberCodeField.layer.borderColor = AppTheme.borderColorOfViews.cgColor
+            phoneNumberCodeField.layer.masksToBounds = true
+            
+            countryCodeField.layer.cornerRadius = 10
+            countryCodeField.layer.borderWidth = 1.5
+            countryCodeField.layer.borderColor = AppTheme.borderColorOfViews.cgColor
+            countryCodeField.layer.masksToBounds = true
+        }else{
+            mobileTextFieldView.isHidden = true
+            plainTextFieldView.isHidden = false
+            
+            if engineerFormItem?.value.isEmpty == true || engineerFormItem?.value == nil {
+                formTextfield.placeholder = engineerFormItem?.placeholder ?? ""
+            }else{
+                if let value = engineerFormItem?.value, !value.isEmpty {
+                    formTextfield.text = value
+                    engineerFormItem?.value = value
+                }
+            }
+            
+            dropDownButton.isHidden = !(engineerFormItem?.showDropDown ?? false)
+            
+            formTextfield.layer.cornerRadius = 10
+            formTextfield.layer.borderWidth = 1.5
+            formTextfield.layer.borderColor = AppTheme.borderColorOfViews.cgColor
+            formTextfield.layer.masksToBounds = true
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
