@@ -116,6 +116,7 @@ enum EngineerFieldType: Equatable {
     case rateField  // ₹ + textfield
     case sectionHeader
     case submitActions
+    case socialLogin
 }
 
 // MARK: - Form Item
@@ -151,7 +152,8 @@ struct EngineerFormDataSource {
         EngineerFormItem(id: "city", fieldType: .text, title: "City / Location",    placeholder: "Enter City",  isRequired: true),
         EngineerFormItem(id: "postalCodeAndCountry",  fieldType: .splitAs2Fields, title: "Postal Code", titleSplitField: "Country", placeholder: "Enter Postal Code", placeholderSplitField: "Enter Your Country", isRequired: true, isRequiredSplitField: true, showDropDown: true, dropDownOptions: ["India", "USA", "UK", "Australia"]),
         EngineerFormItem(id: "photo",     fieldType: .photo,     title: "Take a picture",    placeholder: "Capture a photo (Max 5MB)"),
-        EngineerFormItem(id: "password",   fieldType: .password,   title: "Password",   placeholder: "••••••••••",  isRequired: true)
+        EngineerFormItem(id: "password",   fieldType: .password,   title: "Password",   placeholder: "••••••••••",  isRequired: true),
+        EngineerFormItem(id: "socialLogin", fieldType: .socialLogin, title: "", placeholder: "")
     ]}
     
     // MARK: Step 2 — Skills & Rates
@@ -171,7 +173,8 @@ struct EngineerFormDataSource {
         EngineerFormItem(id: "resume", fieldType: .photo,    title: "Upload Resume",     placeholder: "Capture a photo (Max 5MB)", isRequired: true),
         EngineerFormItem(id: "coverLetter",   fieldType: .photo,    title: "Upload Cover Letter",  placeholder: "Capture a photo (Max 5MB)", isRequired: true),
         EngineerFormItem(id: "workExpiry",   fieldType: .datePicker, title: "Work Expiry Date",   placeholder: "DD/MM/YYYY",  isRequired: true),
-        EngineerFormItem(id: "workEligibility", fieldType: .photo,    title: "Work Eligibility Document Upload", placeholder: "Capture a photo (Max 5MB)", isRequired: true)
+        EngineerFormItem(id: "workEligibility", fieldType: .photo,    title: "Work Eligibility Document Upload", placeholder: "Capture a photo (Max 5MB)", isRequired: true),
+        EngineerFormItem(id: "socialLogin", fieldType: .socialLogin, title: "", placeholder: "")
     ]}
     
     // MARK: Step 3 — Preferences & Bank
@@ -189,6 +192,7 @@ struct EngineerFormDataSource {
         EngineerFormItem(id: "accountHolder",  fieldType: .text,    title: "Account Holder Name",  placeholder: "Enter Account Holder Name"),
         EngineerFormItem(id: "bankName",    fieldType: .text,    title: "Bank Name",  placeholder: "Enter Bank Name"),
         EngineerFormItem(id: "ifscCode",    fieldType: .text,    title: "IFSC Code",  placeholder: "Enter IFSC Code"),
-        EngineerFormItem(id: "branchName",   fieldType: .text,    title: "Branch Name", placeholder: "Enter Branch Name")
+        EngineerFormItem(id: "branchName",   fieldType: .text,    title: "Branch Name", placeholder: "Enter Branch Name"),
+        EngineerFormItem(id: "socialLogin", fieldType: .socialLogin, title: "", placeholder: "")
     ]}
 }

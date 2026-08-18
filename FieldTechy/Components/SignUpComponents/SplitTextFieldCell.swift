@@ -12,7 +12,6 @@ class SplitTextFieldCell: UITableViewCell {
     @IBOutlet weak var fieldGroupView1: UIView!
     @IBOutlet weak var field1TitleLabel: UILabel!
     @IBOutlet weak var field1TextField: UITextField!
-    @IBOutlet weak var field1DropDownButton: UIButton!
     @IBOutlet weak var fieldGroupView2: UIView!
     @IBOutlet weak var field2TitleLabel: UILabel!
     @IBOutlet weak var field2TextField: UITextField!
@@ -25,6 +24,7 @@ class SplitTextFieldCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configureUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,11 +34,11 @@ class SplitTextFieldCell: UITableViewCell {
     func configureUI() {
         field1TitleLabel.attributedText = requiredFieldTitleStyle(title: engineerFormItem?.title ?? "")
         field1TextField.placeholder = engineerFormItem?.placeholder ?? ""
-        field2DropDownButton.isHidden = !(engineerFormItem?.isRequiredSplitField ?? false)
         
         field2TitleLabel.attributedText = requiredFieldTitleStyle(title: engineerFormItem?.titleSplitField ?? "")
         field2TextField.placeholder = engineerFormItem?.placeholderSplitField ?? ""
-        field2DropDownButton.isHidden = !(engineerFormItem?.isRequiredSplitField ?? false)
+        field2DropDownButton.isHidden = false
+        
     }
     
     func requiredFieldTitleStyle(title:String) -> NSMutableAttributedString{
@@ -50,5 +50,10 @@ class SplitTextFieldCell: UITableViewCell {
             attributes: [.foregroundColor: UIColor.red, .font: AppFonts.Regular(size: 12.0)]
         ))
         return attr
+    }
+    
+    @IBAction func didTapOnDropDown(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        self.isExpaned?(sender.isSelected)
     }
 }

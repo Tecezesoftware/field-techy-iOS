@@ -40,21 +40,10 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0P-tB-lPC">
-                                                <rect key="frame" x="186.66666666666666" y="31.666666666666664" width="16" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="16" id="kTW-1o-XpU"/>
-                                                    <constraint firstAttribute="height" constant="16" id="l9d-Gv-zVV"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="DropDownPointer"/>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="y0P-tB-lPC" firstAttribute="centerY" secondItem="HwE-ka-h8h" secondAttribute="centerY" id="AiB-tw-TSb"/>
                                             <constraint firstAttribute="bottom" secondItem="HwE-ka-h8h" secondAttribute="bottom" id="XN1-AN-6e7"/>
-                                            <constraint firstAttribute="trailing" secondItem="y0P-tB-lPC" secondAttribute="trailing" constant="18" id="dKO-CS-PMQ"/>
                                             <constraint firstItem="HwE-ka-h8h" firstAttribute="leading" secondItem="F7A-Ui-8KN" secondAttribute="leading" id="qDn-aS-vUW"/>
                                             <constraint firstAttribute="trailing" secondItem="HwE-ka-h8h" secondAttribute="trailing" id="rWT-Tj-8yS"/>
                                         </constraints>
@@ -98,6 +87,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="DropDownPointer"/>
+                                                <connections>
+                                                    <action selector="didTapOnDropDown:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="40b-oy-N2G"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,7 +126,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="field1DropDownButton" destination="y0P-tB-lPC" id="thO-cv-jlL"/>
                 <outlet property="field1TextField" destination="HwE-ka-h8h" id="xbu-BF-yxO"/>
                 <outlet property="field1TitleLabel" destination="xtH-pw-vks" id="XZT-Ca-BUi"/>
                 <outlet property="field2DropDownButton" destination="Nsm-Qc-hti" id="76C-9U-wVD"/>
