@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8A23FC8630357C29004B14F4 /* Fastis in Frameworks */ = {isa = PBXBuildFile; productRef = 8A23FC8530357C29004B14F4 /* Fastis */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8AA36BDD30245F4700CD1DA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A23FC8630357C29004B14F4 /* Fastis in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = FieldTechy;
 			packageProductDependencies = (
+				8A23FC8530357C29004B14F4 /* Fastis */,
 			);
 			productName = FieldTechy;
 			productReference = 8AA36BC630245F4600CD1DA4 /* FieldTechy.app */;
@@ -209,6 +215,7 @@
 			mainGroup = 8AA36BBD30245F4600CD1DA4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				8A23FC8430357C29004B14F4 /* XCRemoteSwiftPackageReference "Fastis" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8AA36BC730245F4600CD1DA4 /* Products */;
@@ -585,6 +592,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A23FC8430357C29004B14F4 /* XCRemoteSwiftPackageReference "Fastis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simla-tech/Fastis.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A23FC8530357C29004B14F4 /* Fastis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A23FC8430357C29004B14F4 /* XCRemoteSwiftPackageReference "Fastis" */;
+			productName = Fastis;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8AA36BBE30245F4600CD1DA4 /* Project object */;
 }

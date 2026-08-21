@@ -112,7 +112,7 @@ enum EngineerFieldType: Equatable {
     case multiSelectChips([String])
     case photo
     case datePicker
-    case toggle
+    case toggleGroup
     case rateField  // ₹ + textfield
     case sectionHeader
     case submitActions
@@ -180,12 +180,7 @@ struct EngineerFormDataSource {
     // MARK: Step 3 — Preferences & Bank
     static func step3Items() -> [EngineerFormItem] {[
         EngineerFormItem(id: "prefTitle",    fieldType: .sectionHeader,    title: "Preferences", placeholder: ""),
-        EngineerFormItem(id: "onsiteJobs",   fieldType: .toggle,   title: "Onsite jobs", placeholder: "", toggleValue: true, subtitle: "Accept jobs at client locations"),
-        EngineerFormItem(id: "remoteJobs",   fieldType: .toggle,   title: "Remote jobs", placeholder: "", toggleValue: true, subtitle: "Accept work-from-home jobs"),
-        EngineerFormItem(id: "travel", fieldType: .toggle,   title: "Willing to travel",   placeholder: "", toggleValue: false, subtitle: "Open to travel when required"),
-        EngineerFormItem(id: "dispatch",    fieldType: .toggle,   title: "Dispatch (urgent)",   placeholder: "", toggleValue: false, subtitle: "Same-day job requests"),
-        EngineerFormItem(id: "fullTime",    fieldType: .toggle,   title: "Full-time contracts",  placeholder: "", toggleValue: false, subtitle: "Multi-week engagements"),
-        EngineerFormItem(id: "pushNotif",    fieldType: .toggle,   title: "Push Notifications",  placeholder: "", toggleValue: true, subtitle: "Get alerted for new jobs"),
+        EngineerFormItem(id: "preferences",  fieldType: .toggleGroup,      title: "Preferences", placeholder: ""),
         EngineerFormItem(id: "jobRadius",    fieldType: .text,    title: "Job Radius (km)",    placeholder: "25", isRequired: true),
         EngineerFormItem(id: "bankTitle",    fieldType: .sectionHeader,    title: "Bank Details", placeholder: ""),
         EngineerFormItem(id: "accountNumber",  fieldType: .text,    title: "Account Number",    placeholder: "Enter Account Number"),

@@ -7,10 +7,15 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SplitTextFieldCell" rowHeight="67" id="KGk-i7-Jjw" customClass="SplitTextFieldCell" customModule="FieldTechy" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SplitTextFieldCell" rowHeight="67" id="KGk-i7-Jjw" customClass="SplitTextFieldCell" customModule="FieldTechy" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="453" height="67"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -18,20 +23,45 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-WV-aee">
-                        <rect key="frame" x="0.0" y="0.0" width="453" height="67"/>
+                        <rect key="frame" x="28" y="0.0" width="397" height="67"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIZ-CI-j57" userLabel="FieldGroupView1">
-                                <rect key="frame" x="0.0" y="0.0" width="220.66666666666666" height="67"/>
+                                <rect key="frame" x="0.0" y="0.0" width="192.66666666666666" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtH-pw-vks">
-                                        <attributedString key="attributedText"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="15.666666666666666"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Postal Code">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.062745098039215685" green="0.094117647058823528" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="11" name="Poppins-Medium"/>
+                                                    <font key="NSOriginalFont" size="11" name="Poppins-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="Poppins-Medium"/>
+                                                    <font key="NSOriginalFont" size="11" name="Poppins-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="*">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.90588235294117647" green="0.0" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="11" name="Poppins-Medium"/>
+                                                    <font key="NSOriginalFont" size="11" name="Poppins-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7A-Ui-8KN" userLabel="FieldsView">
-                                        <rect key="frame" x="0.0" y="5" width="220.66666666666666" height="62"/>
+                                        <rect key="frame" x="0.0" y="5" width="192.66666666666666" height="62"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HwE-ka-h8h">
-                                                <rect key="frame" x="0.0" y="17" width="220.66666666666666" height="45"/>
+                                                <rect key="frame" x="0.0" y="17" width="192.66666666666666" height="45"/>
                                                 <color key="backgroundColor" name="FieldBGColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Stg-1w-Q4k"/>
@@ -60,17 +90,40 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4h-L9-pAq" userLabel="FieldGroupView2">
-                                <rect key="frame" x="232.66666666666663" y="0.0" width="220.33333333333337" height="67"/>
+                                <rect key="frame" x="204.66666666666663" y="0.0" width="192.33333333333337" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZG6-hJ-yEh">
-                                        <attributedString key="attributedText"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="17"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Country">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.062745098039215685" green="0.094117647058823528" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Poppins-Medium"/>
+                                                    <font key="NSOriginalFont" size="12" name="Poppins-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="smallSystem"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="*">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.90588235294117647" green="0.0" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="smallSystem"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIr-ST-YU5" userLabel="FieldsView">
-                                        <rect key="frame" x="0.0" y="5" width="220.33333333333334" height="62"/>
+                                        <rect key="frame" x="0.0" y="5" width="192.33333333333334" height="62"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rOY-y5-BH1">
-                                                <rect key="frame" x="0.0" y="17" width="220.33333333333334" height="45"/>
+                                                <rect key="frame" x="0.0" y="17" width="192.33333333333334" height="45"/>
                                                 <color key="backgroundColor" name="FieldBGColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="foP-Mt-DaM"/>
@@ -80,7 +133,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsm-Qc-hti">
-                                                <rect key="frame" x="186.33333333333334" y="31.666666666666664" width="16" height="16"/>
+                                                <rect key="frame" x="158.33333333333334" y="31.666666666666664" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="6jj-jA-i3P"/>
                                                     <constraint firstAttribute="width" constant="16" id="AGY-xS-CTi"/>
@@ -118,8 +171,8 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Lcp-WV-aee" secondAttribute="bottom" id="D43-E9-Cpr"/>
-                    <constraint firstAttribute="trailing" secondItem="Lcp-WV-aee" secondAttribute="trailing" id="qxQ-0q-nWt"/>
-                    <constraint firstItem="Lcp-WV-aee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yew-gN-zlP"/>
+                    <constraint firstAttribute="trailing" secondItem="Lcp-WV-aee" secondAttribute="trailing" constant="28" id="qxQ-0q-nWt"/>
+                    <constraint firstItem="Lcp-WV-aee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="28" id="yew-gN-zlP"/>
                     <constraint firstItem="Lcp-WV-aee" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zsn-N0-8J7"/>
                 </constraints>
             </tableViewCellContentView>

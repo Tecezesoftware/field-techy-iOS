@@ -73,10 +73,6 @@ class SignUpVC: UIViewController{
             in: self
         )
     }
-    
-    func hideDropDown(){
-        dropDown.dismiss()
-    }
 }
 
 extension SignUpVC: UITableViewDelegate, UITableViewDataSource{

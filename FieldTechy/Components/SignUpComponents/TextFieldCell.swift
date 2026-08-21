@@ -125,11 +125,11 @@ class TextFieldCell: UITableViewCell {
             fieldTitleLabel.attributedText = attr
             
         }
-        if engineerFormItem?.fieldType == .phone{
+        if engineerFormItem?.fieldType == .phone || engineerFormItem?.fieldType == .rateField{
             mobileTextFieldView.isHidden = false
             plainTextFieldView.isHidden = true
             
-            countryCodeField.text = "+91"
+            countryCodeField.text = engineerFormItem?.fieldType == .phone ? "+91" : "₹"
             if engineerFormItem?.value.isEmpty == true {
                 phoneNumberCodeField.placeholder = engineerFormItem?.placeholder ?? ""
             }else{

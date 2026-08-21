@@ -50,7 +50,6 @@ class OTPVerificationVC: UIViewController {
         for i in 0..<otpLength {
             let field = OTPSingleTextField()
             field.tag         = i
-            
             field.otpDelegate = self
             otpFields.append(field)
             otpStackView.addArrangedSubview(field)

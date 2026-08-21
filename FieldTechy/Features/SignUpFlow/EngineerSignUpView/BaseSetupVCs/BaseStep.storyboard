@@ -14,15 +14,15 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Base StepVC-->
+        <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController restorationIdentifier="BaseStepVC" storyboardIdentifier="BaseStepVC" id="Y6W-OH-hqX" customClass="BaseStepVC" customModule="FieldTechy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-CH-J7X">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-CH-J7X">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="707"/>
                                 <color key="backgroundColor" name="SecondaryBGColor"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,9 +53,6 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3V-WG-Arh">
                                                         <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="47"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <connections>
-                                                            <action selector="backButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="unL-Qm-C9b"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="SecondaryButtonBGColor"/>
@@ -79,7 +76,7 @@
                                                 <rect key="frame" x="184.66666666666663" y="0.0" width="168.33333333333337" height="47"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kV1-Mq-pV9">
-                                                        <rect key="frame" x="35" y="12" width="98.333333333333314" height="23"/>
+                                                        <rect key="frame" x="34.999999999999993" y="12" width="98.333333333333314" height="23"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHU-ha-wG8">
                                                                 <rect key="frame" x="0.0" y="1" width="70.333333333333329" height="21"/>
@@ -95,9 +92,6 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-bZ-czz">
                                                         <rect key="frame" x="0.0" y="0.0" width="168.33333333333334" height="47"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <connections>
-                                                            <action selector="continueButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ho3-OD-i0K"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="PrimaryButtonTextColor"/>
@@ -144,14 +138,6 @@
                             <constraint firstItem="w95-DS-XUC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yNe-kp-xiX"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="backButtonView" destination="MfM-2Y-SUc" id="H2h-kx-pzw"/>
-                        <outlet property="bottomButtonsView" destination="w95-DS-XUC" id="2bv-ca-JKO"/>
-                        <outlet property="continueButtonImageView" destination="mPl-s6-ukK" id="5Fl-JK-2th"/>
-                        <outlet property="continueButtonLabel" destination="FHU-ha-wG8" id="y4x-PZ-xoh"/>
-                        <outlet property="continueButtonView" destination="Mdr-cn-zid" id="J9T-7O-fHK"/>
-                        <outlet property="tableView" destination="zbs-CH-J7X" id="eAH-IS-IRk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

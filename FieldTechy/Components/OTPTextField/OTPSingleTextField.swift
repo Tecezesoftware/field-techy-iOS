@@ -57,7 +57,7 @@ class OTPSingleTextField: UITextField {
     func setFocusedState() {
         backgroundColor    = AppTheme.fieldBGColor
         layer.borderWidth  = 1.5
-        layer.borderColor  = AppTheme.neutral800.cgColor
+        layer.borderColor  = AppTheme.neutralDark800.cgColor
     }
 
     func setErrorState() {

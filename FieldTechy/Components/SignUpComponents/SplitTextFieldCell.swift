@@ -33,11 +33,21 @@ class SplitTextFieldCell: UITableViewCell {
     
     func configureUI() {
         field1TitleLabel.attributedText = requiredFieldTitleStyle(title: engineerFormItem?.title ?? "")
+        
         field1TextField.placeholder = engineerFormItem?.placeholder ?? ""
+        field1TextField.layer.cornerRadius = 10
+        field1TextField.layer.borderWidth = 1.5
+        field1TextField.layer.borderColor = AppTheme.borderColorOfViews.cgColor
+        field1TextField.layer.masksToBounds = true
         
         field2TitleLabel.attributedText = requiredFieldTitleStyle(title: engineerFormItem?.titleSplitField ?? "")
+        
         field2TextField.placeholder = engineerFormItem?.placeholderSplitField ?? ""
         field2DropDownButton.isHidden = false
+        field2TextField.layer.cornerRadius = 10
+        field2TextField.layer.borderWidth = 1.5
+        field2TextField.layer.borderColor = AppTheme.borderColorOfViews.cgColor
+        field2TextField.layer.masksToBounds = true
         
     }
     
