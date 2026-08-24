@@ -86,20 +86,20 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pO-v3-qLR">
-                                        <rect key="frame" x="20" y="91" width="353" height="581"/>
+                                        <rect key="frame" x="0.0" y="91" width="393" height="581"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" name="SecondaryBGColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="TEH-ZS-7h6" secondAttribute="trailing" constant="20" id="0zD-nA-SVG"/>
-                                    <constraint firstItem="5pO-v3-qLR" firstAttribute="leading" secondItem="Coy-z1-50c" secondAttribute="leading" constant="20" id="40S-ee-jON"/>
+                                    <constraint firstItem="5pO-v3-qLR" firstAttribute="leading" secondItem="Coy-z1-50c" secondAttribute="leading" id="40S-ee-jON"/>
                                     <constraint firstItem="TEH-ZS-7h6" firstAttribute="top" secondItem="qh1-dl-pgE" secondAttribute="bottom" constant="12" id="5Z9-RI-bjo"/>
                                     <constraint firstItem="TEH-ZS-7h6" firstAttribute="leading" secondItem="Coy-z1-50c" secondAttribute="leading" constant="20" id="Dao-n6-tpW"/>
                                     <constraint firstAttribute="bottom" secondItem="5pO-v3-qLR" secondAttribute="bottom" id="JF1-Bh-hie"/>
                                     <constraint firstItem="5pO-v3-qLR" firstAttribute="top" secondItem="TEH-ZS-7h6" secondAttribute="bottom" constant="34" id="M5y-75-3SZ"/>
                                     <constraint firstItem="qh1-dl-pgE" firstAttribute="top" secondItem="Coy-z1-50c" secondAttribute="top" constant="20" id="Os2-A5-x4C"/>
-                                    <constraint firstAttribute="trailing" secondItem="5pO-v3-qLR" secondAttribute="trailing" constant="20" id="npO-5x-bkH"/>
+                                    <constraint firstAttribute="trailing" secondItem="5pO-v3-qLR" secondAttribute="trailing" id="npO-5x-bkH"/>
                                     <constraint firstItem="qh1-dl-pgE" firstAttribute="leading" secondItem="Coy-z1-50c" secondAttribute="leading" constant="20" id="uNF-pi-DeN"/>
                                     <constraint firstAttribute="trailing" secondItem="qh1-dl-pgE" secondAttribute="trailing" constant="20" id="yYQ-w4-6VY"/>
                                 </constraints>
