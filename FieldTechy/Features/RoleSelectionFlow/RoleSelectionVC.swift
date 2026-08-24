@@ -34,14 +34,14 @@ class RoleSelectionVC: UIViewController {
     }
     
     @IBAction func clientTapped(_ sender: Any) {
+        UserDefaultsManager.shared.setIsClient(true)
         let vc = Singleton.shared.storyBoard(storyboard: "SignUp", identifier: "SignUpView")
         self.navigationController?.pushViewController(vc, animated: true)
-        print("I'm Client")
     }
     
     @IBAction func engineerTapped(_ sender: Any) {
+        UserDefaultsManager.shared.setIsClient(false)
         let vc = Singleton.shared.storyBoard(storyboard: "EngineerSignUpContainer", identifier: "EngineerSignUpContainerVC")
         self.navigationController?.pushViewController(vc, animated: true)
-        print("I'm Engineer")
     }
 }

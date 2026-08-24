@@ -91,7 +91,7 @@ extension SignInVC: UITableViewDataSource, UITableViewDelegate {
             cell.signInButton.setTitle("Sign Up", for: .normal)
             
             cell.navigateToRespectiveView = {[weak self] in
-                let vc = Singleton.shared.storyBoard(storyboard: "SignUp", identifier: "SignUpView")
+                let vc = Singleton.shared.storyBoard(storyboard: "RoleSelection", identifier: "RoleSelectionVC")
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
             return cell

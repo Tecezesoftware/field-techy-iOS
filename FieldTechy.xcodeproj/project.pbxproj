@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A23FC8630357C29004B14F4 /* Fastis in Frameworks */ = {isa = PBXBuildFile; productRef = 8A23FC8530357C29004B14F4 /* Fastis */; };
+		8A532438303C5EDB00E3559A /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 8A532437303C5EDB00E3559A /* MapboxNavigation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A23FC8630357C29004B14F4 /* Fastis in Frameworks */,
+				8A532438303C5EDB00E3559A /* MapboxNavigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,7 @@
 			name = FieldTechy;
 			packageProductDependencies = (
 				8A23FC8530357C29004B14F4 /* Fastis */,
+				8A532437303C5EDB00E3559A /* MapboxNavigation */,
 			);
 			productName = FieldTechy;
 			productReference = 8AA36BC630245F4600CD1DA4 /* FieldTechy.app */;
@@ -216,6 +219,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				8A23FC8430357C29004B14F4 /* XCRemoteSwiftPackageReference "Fastis" */,
+				8A532436303C5EDB00E3559A /* XCRemoteSwiftPackageReference "maplibre-navigation-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8AA36BC730245F4600CD1DA4 /* Products */;
@@ -602,6 +606,14 @@
 				minimumVersion = 3.2.0;
 			};
 		};
+		8A532436303C5EDB00E3559A /* XCRemoteSwiftPackageReference "maplibre-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/maplibre-navigation-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -609,6 +621,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8A23FC8430357C29004B14F4 /* XCRemoteSwiftPackageReference "Fastis" */;
 			productName = Fastis;
+		};
+		8A532437303C5EDB00E3559A /* MapboxNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A532436303C5EDB00E3559A /* XCRemoteSwiftPackageReference "maplibre-navigation-ios" */;
+			productName = MapboxNavigation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

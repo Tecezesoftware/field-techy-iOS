@@ -9,6 +9,7 @@ import UIKit
 
 final class Singleton {
     static let shared = Singleton()
+    static var isClient = false
     
     private init() {}
     
@@ -16,6 +17,7 @@ final class Singleton {
         UIStoryboard(name: name, bundle: nil)
             .instantiateViewController(withIdentifier: identifier)
     }
+    
     func register(in tableView: UITableView, nameOfAllCells cells: [String]) {
         for cell in cells{
             tableView.register(
@@ -24,4 +26,5 @@ final class Singleton {
             )
         }
     }
+    
 }

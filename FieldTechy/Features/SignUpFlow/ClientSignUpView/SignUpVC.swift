@@ -141,6 +141,11 @@ extension SignUpVC: UITableViewDelegate, UITableViewDataSource{
             
         case .submitButton:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompleteButtonCell", for: indexPath) as! CompleteButtonCell
+            cell.navigateToRespectiveScreen = {[weak self] in
+                UserDefaultsManager.shared.setLoginStatus(true)
+                let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
             return cell
             
         }
