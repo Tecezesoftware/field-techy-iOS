@@ -45,7 +45,7 @@ class BaseStepVC: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius =  24
         view.clipsToBounds = true
-        view.backgroundColor = AppTheme.neutralLight300
+        view.backgroundColor = AppTheme.neutralLight500
         return view
     }()
     

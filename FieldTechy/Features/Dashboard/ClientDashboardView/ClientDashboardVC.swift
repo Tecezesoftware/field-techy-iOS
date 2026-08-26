@@ -21,6 +21,15 @@ class ClientDashboardVC: UIViewController {
     @IBOutlet weak var networkEngView: UIView!
     @IBOutlet weak var cybersecurityView: UIView!
     
+    //MARK: - Menu View Properties
+    @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userCompanyLabel: UILabel!
+    @IBOutlet weak var userLoctionLabel: UILabel!
+    @IBOutlet weak var userJoinedDateLabel: UILabel!
+    
     private let bottomNavigationView = BottomNavigationView()
     private var mapView: MLNMapView!
     
@@ -57,7 +66,8 @@ class ClientDashboardVC: UIViewController {
     }
     
     func ConfigureUI() {
-        makeShadowAndRadius(view: mapContainerView, shadowRadius: 20.0)
+        self.menuView.isHidden = true
+        makeShadowAndRadius(view: mapContainerView, shadowRadius: 10.0)
         makeShadowAndRadius(view: onlineView, shadowRadius: 12.0)
         makeShadowAndRadius(view: nearbyEngineerView, shadowRadius: 12.0)
         makeShadowAndRadius(view: eucSupportView, shadowRadius: 10.0)
@@ -80,31 +90,49 @@ class ClientDashboardVC: UIViewController {
         mapView = MLNMapView(frame: .zero)
 
         mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.showsLogoView = false
+        mapView.showsAttributionButton = false
+        mapView.layer.cornerRadius = 20.0
+        mapView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
+        mapView.layer.borderWidth = 1.5
         mapView.delegate = self
 
         mapContainerView.addSubview(mapView)
-
+        mapView.addSubview(nearbyEngineerView)
+        mapView.addSubview(onlineView)
+        
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalTo: mapContainerView.topAnchor),
             mapView.leadingAnchor.constraint(equalTo: mapContainerView.leadingAnchor),
             mapView.trailingAnchor.constraint(equalTo: mapContainerView.trailingAnchor),
-            mapView.bottomAnchor.constraint(equalTo: mapContainerView.bottomAnchor)
+            mapView.bottomAnchor.constraint(equalTo: mapContainerView.bottomAnchor),
         ])
 
         let location = CLLocationCoordinate2D(
             latitude: 13.0827,
             longitude: 80.2707
         )
-
+        mapView.allowsScrolling = true
+        changeMapStyle("https://api.maptiler.com/maps/streets/style.json?key=geDBuqxjyGVxZPMQbj1x#1.0/3.51342/35.50781")
         mapView.setCenter(
             location,
-            zoomLevel: 5,
+            zoomLevel: 14,
             animated: false
         )
     }
     
+    func changeMapStyle(_ styleURLString: String) {
+
+        guard let url = URL(string: styleURLString) else {
+            return
+        }
+
+        mapView.styleURL = url
+    }
+    
     @IBAction func MenuAction(_ sender: Any) {
-        
+        menuView.isHidden.toggle()
+        bottomNavigationView.isHidden = menuView.isHidden == false ? true : false
     }
     
     @IBAction func searchAction(_ sender: Any) {
@@ -117,6 +145,26 @@ class ClientDashboardVC: UIViewController {
     
     @IBAction func postJobAction(_ sender: Any) {
         
+    }
+    
+    @IBAction func navigateToRespectivePage(_ sender: UIButton) {
+        if sender.tag == 0 {
+            self.menuView.isHidden = true
+            bottomNavigationView.isHidden = menuView.isHidden == false ? true : false
+        }
+    }
+    
+    @IBAction func logoutAction(_ sender: UIButton) {
+        PopupManager.shared.showLogout(in: self) {
+            UserDefaultsManager.shared.logout()
+            let vc = Singleton.shared.storyBoard(storyboard: "SignIn", identifier: "SignInVC")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
+    @IBAction func CloseAction(_ sender: Any) {
+        self.menuView.isHidden = true
+        bottomNavigationView.isHidden = menuView.isHidden == false ? true : false
     }
 }
 
