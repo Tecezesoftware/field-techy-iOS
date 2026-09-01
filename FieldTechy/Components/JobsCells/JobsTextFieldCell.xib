@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="JobsTextFieldCell" rowHeight="83" id="KGk-i7-Jjw" customClass="JobsTextFieldCell" customModule="FieldTechy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="367" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne9-Ho-7DF">
+                        <rect key="frame" x="0.0" y="7" width="65.333333333333329" height="14"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Job Title *">
+                                <attributes>
+                                    <color key="NSColor" red="0.098039215686274508" green="0.12549019607843137" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="13" name="Poppins-SemiBold"/>
+                                    <real key="NSKern" value="0.0"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                        <tabStops/>
+                                    </paragraphStyle>
+                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <real key="NSStrokeWidth" value="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13z-Jy-WLt">
+                        <rect key="frame" x="0.0" y="29" width="367" height="47"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47" id="Jig-BT-1Tm"/>
+                        </constraints>
+                        <color key="textColor" name="PrimaryTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="13z-Jy-WLt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0NE-xb-bxc"/>
+                    <constraint firstAttribute="trailing" secondItem="13z-Jy-WLt" secondAttribute="trailing" id="3tL-8N-jsa"/>
+                    <constraint firstItem="Ne9-Ho-7DF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="c4p-Tb-jum"/>
+                    <constraint firstItem="Ne9-Ho-7DF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ksC-92-8eS"/>
+                    <constraint firstAttribute="bottom" secondItem="13z-Jy-WLt" secondAttribute="bottom" constant="7" id="mfQ-zk-Mpw"/>
+                    <constraint firstItem="13z-Jy-WLt" firstAttribute="top" secondItem="Ne9-Ho-7DF" secondAttribute="bottom" constant="8" id="xvN-Ey-MWE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="textFieldHeight" destination="Jig-BT-1Tm" id="lcG-uy-y4F"/>
+                <outlet property="textFieldView" destination="13z-Jy-WLt" id="9de-2y-t8N"/>
+                <outlet property="titleLabel" destination="Ne9-Ho-7DF" id="xwJ-0l-5k9"/>
+            </connections>
+            <point key="canvasLocation" x="-319.84732824427482" y="72.887323943661968"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryTextColor">
+            <color red="0.062745098039215685" green="0.094117647058823528" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

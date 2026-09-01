@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Post JobsVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="PostJobsVC" storyboardIdentifier="PostJobsVC" id="Y6W-OH-hqX" customClass="PostJobsVC" customModule="FieldTechy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zc-Uj-5zd">
+                                <rect key="frame" x="23" y="53" width="347" height="48"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="2Fd-Xy-yK0">
+                                        <rect key="frame" x="0.0" y="0.0" width="347" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4i-QL-117">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                <color key="backgroundColor" name="BrandTintColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="48" id="gbq-zb-NUO"/>
+                                                    <constraint firstAttribute="height" constant="48" id="jkH-DB-nvg"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="BackIcon"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tyK-Y6-Cu6"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post a Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6H-aE-d7R">
+                                                <rect key="frame" x="129" y="0.0" width="89" height="48"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                <color key="textColor" name="PrimaryTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXk-LJ-r5w">
+                                                <rect key="frame" x="299" y="0.0" width="48" height="48"/>
+                                                <color key="backgroundColor" name="BrandTintColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="48" id="JmB-ms-4BU"/>
+                                                    <constraint firstAttribute="height" constant="48" id="eEs-ax-oGt"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="QueryIcon"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="queryAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xvO-NS-ElZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2Fd-Xy-yK0" secondAttribute="bottom" id="1cd-Z9-KYj"/>
+                                    <constraint firstItem="2Fd-Xy-yK0" firstAttribute="top" secondItem="0zc-Uj-5zd" secondAttribute="top" id="7Tp-G7-mTd"/>
+                                    <constraint firstItem="2Fd-Xy-yK0" firstAttribute="leading" secondItem="0zc-Uj-5zd" secondAttribute="leading" id="Yx1-kj-Xsf"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Fd-Xy-yK0" secondAttribute="trailing" id="h8O-AS-1pd"/>
+                                    <constraint firstAttribute="height" constant="48" id="kGz-y3-zGx"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9cB-0G-1x1">
+                                <rect key="frame" x="25" y="115" width="343" height="634"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kaf-jB-pc9">
+                                    <rect key="frame" x="0.0" y="129" width="343" height="50"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="7.25" translatesAutoresizingMaskIntoConstraints="NO" id="5ei-MY-BqL">
+                                            <rect key="frame" x="0.0" y="14" width="335.66666666666669" height="22"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIN-ri-hFs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="14" height="22"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="UncheckIcon"/>
+                                                    <connections>
+                                                        <action selector="onTapTC:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RSO-J2-cPS"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qN-fi-Pdl">
+                                                    <rect key="frame" x="21.333333333333343" y="0.0" width="314.33333333333326" height="22"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="I agree to the Field Techy">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.062745098039215685" green="0.094117647058823528" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="PrimaryTextColor"/>
+                                                                <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Terms">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <integer key="NSUnderline" value="1"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" &amp; ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="PrimaryTextColor"/>
+                                                                <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Conditions">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <integer key="NSUnderline" value="1"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="5ei-MY-BqL" firstAttribute="centerX" secondItem="Kaf-jB-pc9" secondAttribute="centerX" id="BKT-B1-bUm"/>
+                                        <constraint firstItem="5ei-MY-BqL" firstAttribute="top" secondItem="Kaf-jB-pc9" secondAttribute="top" constant="14" id="ETx-8g-M35"/>
+                                        <constraint firstItem="5ei-MY-BqL" firstAttribute="leading" secondItem="Kaf-jB-pc9" secondAttribute="leading" id="XuM-fF-XlQ"/>
+                                        <constraint firstItem="5ei-MY-BqL" firstAttribute="centerY" secondItem="Kaf-jB-pc9" secondAttribute="centerY" id="fwx-4t-Vaq"/>
+                                        <constraint firstAttribute="height" constant="50" id="pMk-7a-7UN"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postJobsHeaderCell" rowHeight="51" id="bZl-UN-4kd" customClass="postJobsHeaderCell" customModule="FieldTechy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="343" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bZl-UN-4kd" translatesAutoresizingMaskIntoConstraints="NO" id="FXE-jD-uxN">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-wD-kVM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="TFT-Br-z7z">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bJ-Jy-Nae">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="51"/>
+                                                                    <color key="backgroundColor" name="BrandTintColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="DH9-LP-J2q"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="Dispatch">
+                                                                        <color key="titleColor" name="PrimaryButtonTextColor"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="onTapJobs:" destination="bZl-UN-4kd" eventType="touchUpInside" id="yJp-Jx-A5W"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osf-0S-f3t">
+                                                                    <rect key="frame" x="117.33333333333334" y="0.0" width="108.33333333333334" height="51"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="pXg-lu-AiP"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="Full Time">
+                                                                        <color key="titleColor" name="PrimaryTextColor"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="onTapJobs:" destination="bZl-UN-4kd" eventType="touchUpInside" id="GcT-J6-V2X"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fui-m7-dwp">
+                                                                    <rect key="frame" x="234.66666666666666" y="0.0" width="108.33333333333334" height="51"/>
+                                                                    <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.1960784314" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="UqQ-vv-eYW"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="Scheduled">
+                                                                        <color key="titleColor" name="PrimaryTextColor"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="onTapJobs:" destination="bZl-UN-4kd" eventType="touchUpInside" id="qdx-kU-D0F"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="JDh-ld-mKk"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="TFT-Br-z7z" firstAttribute="top" secondItem="eoG-wD-kVM" secondAttribute="top" id="G0J-aw-Gh0"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TFT-Br-z7z" secondAttribute="bottom" id="Ju9-G3-NDM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TFT-Br-z7z" secondAttribute="trailing" id="tcF-GU-8Bs"/>
+                                                        <constraint firstItem="TFT-Br-z7z" firstAttribute="leading" secondItem="eoG-wD-kVM" secondAttribute="leading" id="x81-2a-qkU"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="eoG-wD-kVM" secondAttribute="bottom" id="NbI-UX-abH"/>
+                                                <constraint firstItem="eoG-wD-kVM" firstAttribute="top" secondItem="FXE-jD-uxN" secondAttribute="top" id="NiU-V5-fV9"/>
+                                                <constraint firstAttribute="trailing" secondItem="eoG-wD-kVM" secondAttribute="trailing" id="PBg-f0-tgS"/>
+                                                <constraint firstItem="eoG-wD-kVM" firstAttribute="leading" secondItem="FXE-jD-uxN" secondAttribute="leading" id="rXx-Yz-AZ8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="FXE-jD-uxN" firstAttribute="leading" secondItem="bZl-UN-4kd" secondAttribute="leading" id="57U-Yt-ADl"/>
+                                            <constraint firstAttribute="trailing" secondItem="FXE-jD-uxN" secondAttribute="trailing" id="oTl-0Z-FPa"/>
+                                            <constraint firstItem="FXE-jD-uxN" firstAttribute="top" secondItem="bZl-UN-4kd" secondAttribute="top" id="rCZ-R3-ZPP"/>
+                                            <constraint firstAttribute="bottom" secondItem="FXE-jD-uxN" secondAttribute="bottom" id="tCe-zv-wxU"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dispatchBtn" destination="2bJ-Jy-Nae" id="FXq-OH-dI0"/>
+                                            <outlet property="fullTimeBtn" destination="osf-0S-f3t" id="0jm-m3-V5Q"/>
+                                            <outlet property="scheduledBtn" destination="fui-m7-dwp" id="MMD-CL-EiQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="qfe-PO-Vsw"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="hK4-8w-Fes"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOY-Gy-URd">
+                                <rect key="frame" x="0.0" y="749" width="393" height="103"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="TiA-c1-JyP">
+                                        <rect key="frame" x="24.666666666666657" y="15" width="344" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-qb-NF8">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="50"/>
+                                                <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.1960784314" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" name="NeutralDark300"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" name="BorderColorOfViews"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <real key="value" value="1.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="51J-Lr-l9V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kl-3S-GBZ">
+                                                <rect key="frame" x="176.33333333333337" y="0.0" width="167.66666666666663" height="50"/>
+                                                <color key="backgroundColor" name="NeutralLight200"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" name="NeutralLight800"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="postJob:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hT8-Xr-Ynt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7bf-H9-Hp3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="MVB-XU-rNC"/>
+                                    <constraint firstAttribute="trailing" secondItem="TiA-c1-JyP" secondAttribute="trailing" constant="24.5" id="OLk-kU-NX2"/>
+                                    <constraint firstItem="TiA-c1-JyP" firstAttribute="leading" secondItem="LOY-Gy-URd" secondAttribute="leading" constant="24.5" id="eB5-jG-Gej"/>
+                                    <constraint firstItem="TiA-c1-JyP" firstAttribute="top" secondItem="LOY-Gy-URd" secondAttribute="top" constant="15" id="qnn-Lt-ExM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="SecondaryBGColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LOY-Gy-URd" secondAttribute="trailing" id="9iR-tH-nBD"/>
+                            <constraint firstItem="LOY-Gy-URd" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="C2g-Dz-yn5"/>
+                            <constraint firstItem="9cB-0G-1x1" firstAttribute="top" secondItem="0zc-Uj-5zd" secondAttribute="bottom" constant="14" id="CAB-H1-vNb"/>
+                            <constraint firstItem="0zc-Uj-5zd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LVe-Z3-Xav"/>
+                            <constraint firstAttribute="bottom" secondItem="LOY-Gy-URd" secondAttribute="bottom" id="RwH-BG-FYg"/>
+                            <constraint firstItem="0zc-Uj-5zd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="53" id="aT3-pr-C8n"/>
+                            <constraint firstItem="0zc-Uj-5zd" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="23" id="efl-8I-gzE"/>
+                            <constraint firstItem="LOY-Gy-URd" firstAttribute="top" secondItem="9cB-0G-1x1" secondAttribute="bottom" id="hx8-BL-UYE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9cB-0G-1x1" secondAttribute="trailing" constant="25" id="nLG-JL-ZYE"/>
+                            <constraint firstItem="9cB-0G-1x1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="vLE-Iq-81H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="g4i-QL-117" id="O8x-63-I4y"/>
+                        <outlet property="cancelBtn" destination="ClI-qb-NF8" id="QNM-JI-trO"/>
+                        <outlet property="headerView" destination="0zc-Uj-5zd" id="EDT-mC-dbn"/>
+                        <outlet property="queryBtn" destination="yXk-LJ-r5w" id="KIh-sO-bMK"/>
+                        <outlet property="submitBtn" destination="2kl-3S-GBZ" id="2O5-cX-ubZ"/>
+                        <outlet property="tableView" destination="9cB-0G-1x1" id="216-bd-d2M"/>
+                        <outlet property="tableViewFooter" destination="Kaf-jB-pc9" id="54z-KR-fOO"/>
+                        <outlet property="termsAndContBtn" destination="zIN-ri-hFs" id="2JI-Wf-Wt0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.89312977099236" y="83.802816901408448"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackIcon" width="7" height="12"/>
+        <image name="QueryIcon" width="20" height="21"/>
+        <image name="UncheckIcon" width="14" height="14"/>
+        <namedColor name="BorderColorOfViews">
+            <color red="0.89800000190734863" green="0.90600001811981201" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandTintColor">
+            <color red="0.80400002002716064" green="0.94099998474121094" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NeutralDark300">
+            <color red="0.53700000047683716" green="0.53700000047683716" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NeutralLight200">
+            <color red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NeutralLight800">
+            <color red="0.54500001668930054" green="0.54500001668930054" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryButtonTextColor">
+            <color red="0.0" green="0.60000002384185791" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryTextColor">
+            <color red="0.063000001013278961" green="0.093999996781349182" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryBGColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

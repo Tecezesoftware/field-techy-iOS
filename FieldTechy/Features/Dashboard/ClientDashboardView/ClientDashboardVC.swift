@@ -113,21 +113,16 @@ class ClientDashboardVC: UIViewController {
             longitude: 80.2707
         )
         mapView.allowsScrolling = true
-        changeMapStyle("https://api.maptiler.com/maps/streets/style.json?key=geDBuqxjyGVxZPMQbj1x#1.0/3.51342/35.50781")
+        
+        let styleURLString = "https://api.maptiler.com/maps/streets/style.json?key=geDBuqxjyGVxZPMQbj1x#1.0/3.51342/35.50781"
+        guard let url = URL(string: styleURLString) else { return }
+        mapView.styleURL = url
+        
         mapView.setCenter(
             location,
             zoomLevel: 14,
             animated: false
         )
-    }
-    
-    func changeMapStyle(_ styleURLString: String) {
-
-        guard let url = URL(string: styleURLString) else {
-            return
-        }
-
-        mapView.styleURL = url
     }
     
     @IBAction func MenuAction(_ sender: Any) {
@@ -144,7 +139,8 @@ class ClientDashboardVC: UIViewController {
     }
     
     @IBAction func postJobAction(_ sender: Any) {
-        
+        let vc = Singleton.shared.storyBoard(storyboard: "PostJobs", identifier: "PostJobsVC")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func navigateToRespectivePage(_ sender: UIButton) {

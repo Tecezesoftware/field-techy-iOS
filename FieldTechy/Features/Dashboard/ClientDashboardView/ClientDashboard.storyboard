@@ -121,7 +121,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-6Q-oLA">
                                                 <rect key="frame" x="12" y="6" width="76" height="17"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DotIcon" translatesAutoresizingMaskIntoConstraints="NO" id="D3s-lp-SAP">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenDotIcon" translatesAutoresizingMaskIntoConstraints="NO" id="D3s-lp-SAP">
                                                         <rect key="frame" x="0.0" y="4.6666666666666572" width="8" height="8"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -952,12 +952,12 @@
         <image name="CalendarIcon" width="7" height="7"/>
         <image name="ChatIcon" width="24" height="24"/>
         <image name="CloseIcon" width="8" height="8"/>
-        <image name="DotIcon" width="8" height="8"/>
         <image name="DummyProfile" width="1024" height="1024"/>
         <image name="EUC-Icon" width="44" height="44"/>
         <image name="ExitDoorIcon" width="24" height="24"/>
         <image name="FT Outline logo" width="72" height="53"/>
         <image name="FTlogo" width="33" height="24"/>
+        <image name="GreenDotIcon" width="8" height="8"/>
         <image name="JobPostIcon" width="14" height="12"/>
         <image name="LocationIcon" width="6" height="8"/>
         <image name="MapPinIcon" width="16" height="16"/>
@@ -994,7 +994,7 @@
             <color red="0.0" green="0.60000002384185791" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryTextColor">
-            <color red="0.063000001013278961" green="0.093999996781349182" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.062745098039215685" green="0.094117647058823528" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SecondaryBGColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

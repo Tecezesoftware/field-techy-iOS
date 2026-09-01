@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A23FC8630357C29004B14F4 /* Fastis in Frameworks */ = {isa = PBXBuildFile; productRef = 8A23FC8530357C29004B14F4 /* Fastis */; };
 		8A532438303C5EDB00E3559A /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 8A532437303C5EDB00E3559A /* MapboxNavigation */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A23FC8630357C29004B14F4 /* Fastis in Frameworks */,
 				8A532438303C5EDB00E3559A /* MapboxNavigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,7 +130,6 @@
 			);
 			name = FieldTechy;
 			packageProductDependencies = (
-				8A23FC8530357C29004B14F4 /* Fastis */,
 				8A532437303C5EDB00E3559A /* MapboxNavigation */,
 			);
 			productName = FieldTechy;
@@ -218,7 +215,6 @@
 			mainGroup = 8AA36BBD30245F4600CD1DA4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8A23FC8430357C29004B14F4 /* XCRemoteSwiftPackageReference "Fastis" */,
 				8A532436303C5EDB00E3559A /* XCRemoteSwiftPackageReference "maplibre-navigation-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -598,14 +594,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8A23FC8430357C29004B14F4 /* XCRemoteSwiftPackageReference "Fastis" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/simla-tech/Fastis.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.0;
-			};
-		};
 		8A532436303C5EDB00E3559A /* XCRemoteSwiftPackageReference "maplibre-navigation-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maplibre/maplibre-navigation-ios";
@@ -617,11 +605,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8A23FC8530357C29004B14F4 /* Fastis */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8A23FC8430357C29004B14F4 /* XCRemoteSwiftPackageReference "Fastis" */;
-			productName = Fastis;
-		};
 		8A532437303C5EDB00E3559A /* MapboxNavigation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8A532436303C5EDB00E3559A /* XCRemoteSwiftPackageReference "maplibre-navigation-ios" */;

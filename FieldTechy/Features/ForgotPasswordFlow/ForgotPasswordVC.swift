@@ -14,6 +14,7 @@ class ForgotPasswordVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailIdField.delegate = self
         configureUI()
     }
     
