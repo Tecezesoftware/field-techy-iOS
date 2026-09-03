@@ -103,7 +103,8 @@ class PostJobsVC: UIViewController {
     @IBAction func postJob(_ sender: Any) {
         //TODO: - Call Posted job API
         print ("Job Posted..... ")
-        self.navigationController?.popViewController(animated: true)
+        let vc = Singleton.shared.storyBoard(storyboard: "PaymentSelection", identifier: "PaymentSelectionVC")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
