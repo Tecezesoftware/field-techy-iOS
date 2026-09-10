@@ -287,12 +287,21 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-4A-zOo">
+                                        <rect key="frame" x="10" y="14" width="130" height="37"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="ViewProfileAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1at-d7-FRX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="eHE-bF-1Nc" firstAttribute="top" secondItem="w6X-MZ-VcH" secondAttribute="top" constant="25" id="B3U-OV-zWZ"/>
+                                    <constraint firstItem="mGb-4A-zOo" firstAttribute="top" secondItem="w6X-MZ-VcH" secondAttribute="top" constant="14" id="BCx-hR-6Se"/>
                                     <constraint firstItem="mz5-GP-q2t" firstAttribute="leading" secondItem="DE1-Z5-kWC" secondAttribute="trailing" constant="6" id="Ckl-ka-IiD"/>
                                     <constraint firstItem="DE1-Z5-kWC" firstAttribute="centerY" secondItem="w6X-MZ-VcH" secondAttribute="centerY" id="FEW-Uf-NQG"/>
+                                    <constraint firstItem="mGb-4A-zOo" firstAttribute="leading" secondItem="w6X-MZ-VcH" secondAttribute="leading" constant="10" id="IIk-ia-2em"/>
                                     <constraint firstItem="yNZ-E6-KGV" firstAttribute="centerY" secondItem="w6X-MZ-VcH" secondAttribute="centerY" id="IaA-nA-i9X"/>
                                     <constraint firstItem="yNZ-E6-KGV" firstAttribute="top" secondItem="w6X-MZ-VcH" secondAttribute="top" constant="19.5" id="K02-tv-Gpj"/>
                                     <constraint firstItem="vXP-zG-OGs" firstAttribute="leading" secondItem="eHE-bF-1Nc" secondAttribute="trailing" constant="6" id="PF6-B3-CfV"/>
@@ -304,6 +313,8 @@
                                     <constraint firstItem="mz5-GP-q2t" firstAttribute="centerY" secondItem="DE1-Z5-kWC" secondAttribute="centerY" id="kal-Og-gkc"/>
                                     <constraint firstItem="DE1-Z5-kWC" firstAttribute="leading" secondItem="w6X-MZ-VcH" secondAttribute="leading" constant="16" id="lN0-PN-4GY"/>
                                     <constraint firstItem="DE1-Z5-kWC" firstAttribute="top" secondItem="w6X-MZ-VcH" secondAttribute="top" constant="17" id="p2i-ba-HXt"/>
+                                    <constraint firstAttribute="bottom" secondItem="mGb-4A-zOo" secondAttribute="bottom" constant="14" id="rUW-hs-v5q"/>
+                                    <constraint firstItem="eHE-bF-1Nc" firstAttribute="leading" secondItem="mGb-4A-zOo" secondAttribute="trailing" constant="8" symbolic="YES" id="y4s-6I-j0j"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsl-JI-PI9">

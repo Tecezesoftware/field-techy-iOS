@@ -244,4 +244,9 @@ class viewMyJobsVC: UIViewController {
     @IBAction func backAction(_ sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func ViewProfileAction(_ sender: UIButton){
+        let vc = Singleton.shared.storyBoard(storyboard: "EngineerProfile", identifier: "EngineerProfileVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

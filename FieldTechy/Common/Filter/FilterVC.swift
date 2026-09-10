@@ -22,7 +22,7 @@ class FilterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clearAllBtnView.layer.borderWidth = 1.5
+        clearAllBtnView.layer.borderWidth = 1
         clearAllBtnView.layer.borderColor = AppTheme.brandPrimaryTint.cgColor
         clearAllBtnView.layer.cornerRadius = clearAllBtnView.frame.height / 2
         Singleton.shared.register(in: filterTableView, nameOfAllCells: ["JobsTextFieldWithDDCell"])
