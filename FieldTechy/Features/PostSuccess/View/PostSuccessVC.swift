@@ -28,6 +28,7 @@ class PostSuccessVC: UIViewController {
     }
  
     @IBAction func OntapViewMyJob(_ sender: Any){
-        print("on tap view my jobs...")
+        let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

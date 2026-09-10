@@ -40,8 +40,8 @@ enum AppFonts {
 }
 
 enum AppTheme{
-    static let primaryButtonTextColor = UIColor(hex: "#009966")
-    static let primaryButtonBGColor = UIColor(hex: "#FFFFFF")
+    static let primaryButtonBGColor = UIColor(hex: "#009966")
+    static let primaryButtonLabelColor = UIColor(hex: "#FFFFFF")
     static let primaryTextColor = UIColor(hex: "#101828")
     static let secondaryTextColor = UIColor(hex: "#717182")
     static let secondaryBGColor = UIColor(hex: "#FFFFFF")

@@ -65,7 +65,7 @@ class EngineerSignUpContainerVC: UIViewController {
             let bar = UIView()
             bar.layer.cornerRadius = 2
             bar.backgroundColor    = i == 0
-            ? AppTheme.primaryButtonTextColor  // active
+            ? AppTheme.primaryButtonBGColor  // active
             : AppTheme.primaryBrand100   // inactive
             progressBars.append(bar)
             progressStackView.addArrangedSubview(bar)
@@ -76,7 +76,7 @@ class EngineerSignUpContainerVC: UIViewController {
         for (index, bar) in progressBars.enumerated() {
             UIView.animate(withDuration: 0.3) {
                 bar.backgroundColor = index <= step
-                ? AppTheme.primaryButtonTextColor  // active
+                ? AppTheme.primaryButtonBGColor  // active
                 : AppTheme.primaryBrand100   // inactive
             }
         }

@@ -84,7 +84,7 @@ class PaymentSelectionCell: UITableViewCell {
         
         switch mode {
         case .card:
-            cardView.layer.borderColor = AppTheme.primaryButtonTextColor.cgColor
+            cardView.layer.borderColor = AppTheme.primaryButtonBGColor.cgColor
             cardView.layer.borderWidth = 1.5
             
             walletView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
@@ -101,7 +101,7 @@ class PaymentSelectionCell: UITableViewCell {
             cardView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
             cardView.layer.borderWidth = 1.5
             
-            walletView.layer.borderColor = AppTheme.primaryButtonTextColor.cgColor
+            walletView.layer.borderColor = AppTheme.primaryButtonBGColor.cgColor
             walletView.layer.borderWidth = 1.5
             
             paypalView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
@@ -118,7 +118,7 @@ class PaymentSelectionCell: UITableViewCell {
             walletView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
             walletView.layer.borderWidth = 1.5
             
-            paypalView.layer.borderColor = AppTheme.primaryButtonTextColor.cgColor
+            paypalView.layer.borderColor = AppTheme.primaryButtonBGColor.cgColor
             paypalView.layer.borderWidth = 1.5
             
             cardDetailInnerViewHeight.constant = 54

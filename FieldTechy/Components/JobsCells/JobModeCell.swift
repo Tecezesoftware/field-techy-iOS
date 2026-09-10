@@ -36,8 +36,8 @@ class JobModeCell: UITableViewCell {
         for button in buttons{
             guard let isSelected = isSelected[button] else { return }
             button.isSelected = isSelected
-            button.backgroundColor = isSelected ? AppTheme.primaryButtonTextColor : .clear
-            button.setTitleColor(isSelected ? AppTheme.primaryButtonBGColor: AppTheme.primaryTextColor, for: .normal)
+            button.backgroundColor = isSelected ? AppTheme.primaryButtonBGColor : .clear
+            button.setTitleColor(isSelected ? AppTheme.primaryButtonLabelColor: AppTheme.primaryTextColor, for: .normal)
             button.layer.borderWidth = !isSelected ? 1 : 0
             button.layer.borderColor = !isSelected ? AppTheme.borderColorOfViews.cgColor : UIColor.clear.cgColor
         }

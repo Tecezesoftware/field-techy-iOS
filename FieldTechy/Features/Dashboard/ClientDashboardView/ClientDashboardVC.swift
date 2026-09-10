@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import MapLibre
 
-class ClientDashboardVC: UIViewController {
+class ClientDashboardVC: BaseViewController {
     
     @IBOutlet weak var mapContainerView: UIView!
     @IBOutlet weak var onlineView: UIView!
@@ -21,52 +21,19 @@ class ClientDashboardVC: UIViewController {
     @IBOutlet weak var networkEngView: UIView!
     @IBOutlet weak var cybersecurityView: UIView!
     
-    //MARK: - Menu View Properties
-    @IBOutlet weak var menuView: UIView!
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userCompanyLabel: UILabel!
-    @IBOutlet weak var userLoctionLabel: UILabel!
-    @IBOutlet weak var userJoinedDateLabel: UILabel!
-    
-    private let bottomNavigationView = BottomNavigationView()
     private var mapView: MLNMapView!
-    
+    private var sideMenu: SideMenuView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBottomNavigation()
+        fromScreen = .dashboard
+        setupBottomNavigation(selectedItem: .dashboard)
         ConfigureUI()
         setupMap()
     }
     
-    func setupBottomNavigation() {
-        bottomNavigationView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bottomNavigationView)
-        bottomNavigationView.updateViewConstraints(view: view, bottomNavigationView: bottomNavigationView)
-        
-        bottomNavigationView.selectedItem = .dashboard
-        bottomNavigationView.onItemSelected = { item in
-
-            switch item {
-            case .dashboard:
-                print("Dashboard")
-
-            case .jobs:
-                print("Jobs")
-
-            case .wallet:
-                print("Wallet")
-
-            case .dispute:
-                print("Dispute")
-            }
-        }
-    }
     
     func ConfigureUI() {
-        self.menuView.isHidden = true
         makeShadowAndRadius(view: mapContainerView, shadowRadius: 10.0)
         makeShadowAndRadius(view: onlineView, shadowRadius: 12.0)
         makeShadowAndRadius(view: nearbyEngineerView, shadowRadius: 12.0)
@@ -124,11 +91,7 @@ class ClientDashboardVC: UIViewController {
             animated: false
         )
     }
-    
-    @IBAction func MenuAction(_ sender: Any) {
-        menuView.isHidden.toggle()
-        bottomNavigationView.isHidden = menuView.isHidden == false ? true : false
-    }
+
     
     @IBAction func searchAction(_ sender: Any) {
         
@@ -141,26 +104,6 @@ class ClientDashboardVC: UIViewController {
     @IBAction func postJobAction(_ sender: Any) {
         let vc = Singleton.shared.storyBoard(storyboard: "PostJobs", identifier: "PostJobsVC")
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func navigateToRespectivePage(_ sender: UIButton) {
-        if sender.tag == 0 {
-            self.menuView.isHidden = true
-            bottomNavigationView.isHidden = menuView.isHidden == false ? true : false
-        }
-    }
-    
-    @IBAction func logoutAction(_ sender: UIButton) {
-        PopupManager.shared.showLogout(in: self) {
-            UserDefaultsManager.shared.logout()
-            let vc = Singleton.shared.storyBoard(storyboard: "SignIn", identifier: "SignInVC")
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-
-    @IBAction func CloseAction(_ sender: Any) {
-        self.menuView.isHidden = true
-        bottomNavigationView.isHidden = menuView.isHidden == false ? true : false
     }
 }
 

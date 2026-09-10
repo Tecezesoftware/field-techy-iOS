@@ -89,7 +89,7 @@ class PostJobsVC: UIViewController {
             termsAndContBtn.setImage(UIImage(named: "CheckIcon"), for: .normal)
             
             submitBtn.isEnabled = true
-            submitBtn.backgroundColor = AppTheme.primaryButtonTextColor
+            submitBtn.backgroundColor = AppTheme.primaryButtonBGColor
             submitBtn.setTitleColor(AppTheme.secondaryBGColor, for: .normal)
         }else{
             termsAndContBtn.setImage(UIImage(named: "UncheckIcon"), for: .normal)
@@ -244,7 +244,7 @@ class postJobsHeaderCell: UITableViewCell {
             guard let isSelected = isSelected[button] else { return }
             button.isSelected = isSelected
             button.backgroundColor = isSelected ? AppTheme.brandPrimaryTint : .clear
-            button.setTitleColor(isSelected ? AppTheme.primaryButtonTextColor: AppTheme.primaryTextColor, for: .normal)
+            button.setTitleColor(isSelected ? AppTheme.primaryButtonBGColor: AppTheme.primaryTextColor, for: .normal)
             button.layer.borderColor = !isSelected ? AppTheme.borderColorOfViews.cgColor : UIColor.clear.cgColor
             button.layer.borderWidth = !isSelected ? 1 : 0
         }

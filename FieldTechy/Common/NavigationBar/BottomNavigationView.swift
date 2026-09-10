@@ -70,7 +70,7 @@ final class BottomNavigationView: UIView {
 
     private func setupUI() {
 
-        backgroundColor = AppTheme.primaryButtonBGColor
+        backgroundColor = AppTheme.primaryButtonLabelColor
 
         layer.cornerRadius = 20
         clipsToBounds = false
@@ -154,7 +154,10 @@ final class BottomNavigationView: UIView {
            if item == selectedItem {
                 let imageName = "\(item.imageName)-Selected"
                button.setImage(UIImage(named: imageName), for: .normal)
-            }
+           }else{
+               let imageName = "\(item.imageName)-Unselected"
+              button.setImage(UIImage(named: imageName), for: .normal)
+           }
         }
     }
     

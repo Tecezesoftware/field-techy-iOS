@@ -54,7 +54,7 @@ class BaseStepVC: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 24
         view.clipsToBounds = true
-        view.backgroundColor = AppTheme.primaryButtonTextColor
+        view.backgroundColor = AppTheme.primaryButtonBGColor
         return view
     }()
     
@@ -82,7 +82,7 @@ class BaseStepVC: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
-        label.textColor = AppTheme.primaryButtonBGColor
+        label.textColor = AppTheme.primaryButtonLabelColor
         label.font = AppFonts.SemiBold(size: 40)
         label.textAlignment = .left
         return label

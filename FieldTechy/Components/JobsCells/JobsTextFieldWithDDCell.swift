@@ -18,7 +18,10 @@ class JobsTextFieldWithDDCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        fieldsOuterView.layer.cornerRadius = 5
+        fieldsOuterView.layer.borderWidth = 1.5
+        fieldsOuterView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
+        fieldsOuterView.layer.masksToBounds = true
     }
     
     func configureUI(isRequired:Bool, title:String, placeHolder:String){
@@ -37,14 +40,18 @@ class JobsTextFieldWithDDCell: UITableViewCell {
             titleLabel.attributedText = attr
             
         }
-        fieldsOuterView.layer.cornerRadius = 5
-        fieldsOuterView.layer.borderWidth = 1.5
-        fieldsOuterView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
-        fieldsOuterView.layer.masksToBounds = true
         
         if dropDownField.text?.isEmpty == true {
             dropDownField.placeholder = placeHolder
         }
+    }
+    
+    func configureUIForFilter(title:String){
+        dropDownBtn.setImage(UIImage(named: "GreenDropDown"), for: .normal)
+        let attr = NSMutableAttributedString(string: title,
+                                             attributes: [.foregroundColor: AppTheme.primaryTextColor, .font: AppFonts.SemiBold(size: 13.0)])
+        titleLabel.attributedText = attr
+        dropDownField.placeholder = "All"
     }
     
     @IBAction func showDropDown(_ sender: UIButton) {

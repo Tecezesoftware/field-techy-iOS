@@ -51,7 +51,7 @@ class JobTypeCell: UITableViewCell {
     
     private func configureSelectedButton(_ button: UIButton) {
         button.layer.borderWidth = 0
-        button.setTitleColor(AppTheme.primaryButtonTextColor, for: .normal)
+        button.setTitleColor(AppTheme.primaryButtonBGColor, for: .normal)
         button.backgroundColor = AppTheme.brandPrimaryTint
     }
     

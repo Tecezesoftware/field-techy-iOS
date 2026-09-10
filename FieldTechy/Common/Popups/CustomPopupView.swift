@@ -319,8 +319,8 @@ final class CustomPopupView: UIView {
 
         switch config.style {
         case .primary:
-            button.backgroundColor = AppTheme.primaryButtonTextColor
-            button.setTitleColor(AppTheme.primaryButtonBGColor, for: .normal)
+            button.backgroundColor = AppTheme.primaryButtonBGColor
+            button.setTitleColor(AppTheme.primaryButtonLabelColor, for: .normal)
 
         case .secondary:
             button.backgroundColor = AppTheme.neutralLight500

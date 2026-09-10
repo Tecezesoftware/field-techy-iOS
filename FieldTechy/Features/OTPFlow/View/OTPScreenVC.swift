@@ -58,7 +58,7 @@ extension OTPScreenVC: UITableViewDataSource, UITableViewDelegate {
             
             attr.append(NSAttributedString(
                 string: " Password",
-                attributes: [.foregroundColor: AppTheme.primaryButtonTextColor, .font: AppFonts.SemiBold(size: 12.0)]
+                attributes: [.foregroundColor: AppTheme.primaryButtonBGColor, .font: AppFonts.SemiBold(size: 12.0)]
             ))
             cell.sendOTPButton.setAttributedTitle(attr, for: .normal)
             
