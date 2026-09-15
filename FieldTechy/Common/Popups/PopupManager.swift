@@ -25,6 +25,7 @@ final class PopupManager {
     // ✅ Logout Confirmation
     func showLogout(
         in vc: UIViewController,
+        buttonImage: UIImage? = nil,
         onNo: (() -> Void)? = nil,
         onYes: (() -> Void)?
     ) {
@@ -34,8 +35,8 @@ final class PopupManager {
             title: "Log out",
             subtitle: "Are you sure you want to Log out?",
             buttons: [
-                PopupButton(title: "Yes", style: .primary, action: onYes),
-                PopupButton(title: "No",  style: .secondary,   action: onNo)
+                PopupButton(title: "No", style: .primary, image: buttonImage, action: onNo),
+                PopupButton(title: "Yes",  style: .secondary, image: buttonImage,   action: onYes)
             ]
         )
         show(config: config, in: vc)
@@ -44,6 +45,7 @@ final class PopupManager {
     // ❌ Engineer Rejected
     func showEngineerRejected(
         in vc: UIViewController,
+        buttonImage: UIImage? = nil,
         onBackToJobs: (() -> Void)?
     ) {
         let config = PopupConfig(
@@ -52,7 +54,7 @@ final class PopupManager {
             title: "Engineer Rejected",
             subtitle: "The engineer has been rejected",
             buttons: [
-                PopupButton(title: "Back to Jobs", style: .primary, action: onBackToJobs)
+                PopupButton(title: "Back to Jobs", style: .primary, image: buttonImage, action: onBackToJobs)
             ]
         )
         show(config: config, in: vc)
@@ -61,6 +63,7 @@ final class PopupManager {
     // ❌ Rejected
     func showRejected(
         subtitle: String,
+        buttonImage: UIImage? = nil,
         in vc: UIViewController,
         onBackToJobs: (() -> Void)?
     ) {
@@ -70,7 +73,7 @@ final class PopupManager {
             title: "Rejected",
             subtitle: subtitle,
             buttons: [
-                PopupButton(title: "Back to Jobs", style: .primary, action: onBackToJobs)
+                PopupButton(title: "Back to Jobs", style: .primary, image: buttonImage, action: onBackToJobs)
             ]
         )
         show(config: config, in: vc)
@@ -79,6 +82,7 @@ final class PopupManager {
     // ✅ Receipt Downloaded
     func showReceiptDownloaded(
         in vc: UIViewController,
+        buttonImage: UIImage? = nil,
         onDone: (() -> Void)?
     ) {
         let config = PopupConfig(
@@ -87,7 +91,7 @@ final class PopupManager {
             title: "Receipt Downloaded",
             subtitle: nil,
             buttons: [
-                PopupButton(title: "Done", style: .primary, action: onDone)
+                PopupButton(title: "Done", style: .primary, image: buttonImage, action: onDone)
             ]
         )
         show(config: config, in: vc)
@@ -97,6 +101,7 @@ final class PopupManager {
     func showAlert(
         subtitle: String,
         buttonTitle: String = "Ok",
+        buttonImage: UIImage? = nil,
         in vc: UIViewController,
         onOk: (() -> Void)?
     ) {
@@ -106,7 +111,7 @@ final class PopupManager {
             title: "Alert",
             subtitle: subtitle,
             buttons: [
-                PopupButton(title: buttonTitle, style: .primary, action: onOk)
+                PopupButton(title: buttonTitle, style: .primary, image: buttonImage, action: onOk)
             ]
         )
         show(config: config, in: vc)
@@ -116,6 +121,7 @@ final class PopupManager {
     func showRejectRemarks(
         title: String,
         buttonTitle: String,
+        buttonImage: UIImage? = nil,
         placeholder: String = "Enter Remarks",
         in vc: UIViewController,
         onSubmit: ((String) -> Void)?
@@ -125,7 +131,7 @@ final class PopupManager {
             iconType: .none,
             title: title,
             buttons: [
-                PopupButton(title: buttonTitle, style: .destructive, action: nil)
+                PopupButton(title: buttonTitle, style: .destructive, image: buttonImage, action: nil)
             ],
             onRemarksSubmit: onSubmit
         )
@@ -135,6 +141,7 @@ final class PopupManager {
     // ❌ Payment Rejected
     func showPaymentRejected(
         in vc: UIViewController,
+        buttonImage: UIImage? = nil,
         onBackToJobs: (() -> Void)?
     ) {
         let config = PopupConfig(
@@ -143,7 +150,7 @@ final class PopupManager {
             title: "Payment Rejected",
             subtitle: "The engineer Payment has been rejected",
             buttons: [
-                PopupButton(title: "Back to Jobs", style: .primary, action: onBackToJobs)
+                PopupButton(title: "Back to Jobs", style: .primary, image: buttonImage, action: onBackToJobs)
             ]
         )
         show(config: config, in: vc)

@@ -11,6 +11,8 @@ import MapKit
 
 class LocationView: UIView {
 
+    @IBOutlet weak var view: UIView!
+    
     @IBOutlet weak var jobModeView: UIView!
     @IBOutlet weak var jobModeLabel: UILabel!
     
@@ -32,6 +34,11 @@ class LocationView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        view.layer.cornerRadius = 10
+        view.layer.borderWidth = 1
+        view.layer.borderColor = AppTheme.borderColorOfViews.cgColor
+        
         directionBtnOuterView.layer.cornerRadius = 10
         directionBtnOuterView.layer.borderWidth = 1
         directionBtnOuterView.layer.borderColor = AppTheme.primaryButtonBGColor.cgColor

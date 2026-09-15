@@ -60,25 +60,35 @@ class viewMyJobsVC: UIViewController {
     private let taskInfoView = TaskInfomationView.loadFromXIB()
     private let locationView = LocationView.loadFromXIB()
     private let signOffView = SignOffSheetView.loadFromXIB()
+    private let timesheetView = TimeSheetView.loadFromXIB()
     private let ratingView = RatingView.loadFromXIB()
     private let paymentReceiptView = PaymentReceiptView.loadFromXIB()
     private let engineerTimelineView = EngineerTimelineView.loadFromXIB()
+    private let otherRecieptView = OtherRecieptView.loadFromXIB()
     
     private var currentContentView: UIView?
     var jobType: jobTypes?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
+    }
+    
+    func configureUI(){
+        
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.alwaysBounceHorizontal = false
         scrollView.alwaysBounceVertical = true
         
         taskInfoTabButton.isSelected = true
         showTabContent(taskInfoView)
-        configureUI()
-    }
-    
-    func configureUI(){
+        
+//        taskInfoView?.rejectButtonOnTap =  {
+//            PopupManager.shared.showRejectRemarks(title: "Reject Engineer", buttonTitle: " Reject engineer", buttonImage: UIImage(named: "CrossIcon"), in: self) { test in
+//                print("Dismissed")
+//            }
+//        }
+        
         if jobType == .dispatch {
             
             jobTypeLabel.text = "Dispatch"
@@ -92,6 +102,7 @@ class viewMyJobsVC: UIViewController {
             
             signOffSheetTabButton.setTitle("Sign Off Sheet", for: .normal)
             
+            taskInfoView?.jobPaymentStackView.isHidden = true
             taskInfoView?.SMEHeaderLabel.text = "SME Details"
             taskInfoView?.toolRequiredView.isHidden = false
             taskInfoView?.toolsOuterView.isHidden = false
@@ -109,6 +120,7 @@ class viewMyJobsVC: UIViewController {
             
             signOffSheetTabButton.setTitle("Timesheet", for: .normal)
             
+            taskInfoView?.jobPaymentStackView.isHidden = false
             taskInfoView?.SMEHeaderLabel.text = "Reporting Manager Details"
             taskInfoView?.toolRequiredView.isHidden = true
             taskInfoView?.toolsOuterView.isHidden = true
@@ -126,6 +138,7 @@ class viewMyJobsVC: UIViewController {
             
             signOffSheetTabButton.setTitle("Timesheet", for: .normal)
             
+            taskInfoView?.jobPaymentStackView.isHidden = false
             taskInfoView?.SMEHeaderLabel.text = "Reporting Manager Details"
             taskInfoView?.toolRequiredView.isHidden = true
             taskInfoView?.toolsOuterView.isHidden = true
@@ -214,6 +227,11 @@ class viewMyJobsVC: UIViewController {
     @IBAction func taskInfoTabAction(_ sender: UIButton){
         selectTab(sender)
         showTabContent(taskInfoView)
+        taskInfoView?.rejectButtonOnTap = {
+            PopupManager.shared.showRejectRemarks(title: "Reject Engineer", buttonTitle: " Reject engineer", buttonImage: UIImage(named: "CrossIcon"), in: self) { test in
+                print("Dismissed")
+            }
+        }
     }
     
     @IBAction func locationTabAction(_ sender: UIButton){
@@ -223,7 +241,11 @@ class viewMyJobsVC: UIViewController {
     
     @IBAction func signoffTabAction(_ sender: UIButton){
         selectTab(sender)
-        showTabContent(signOffView)
+        if jobType == .dispatch {
+            showTabContent(signOffView)
+        }else{
+            showTabContent(timesheetView)
+        }
     }
     
     @IBAction func ratingTabAction(_ sender: UIButton){
@@ -233,7 +255,15 @@ class viewMyJobsVC: UIViewController {
     
     @IBAction func paymentReciptTabAction(_ sender: UIButton){
         selectTab(sender)
-        showTabContent(paymentReceiptView)
+        if jobType == .dispatch {
+            showTabContent(paymentReceiptView)
+//            paymentReceiptView?.viewreciept = {[weak self] in
+//                let vc = Singleton.shared.storyBoard(storyboard: "InVoiceReceipt", identifier: "InVoiceReceiptVC")
+//                self?.navigationController?.pushViewController(vc, animated: true)
+//            }
+        }else{
+            showTabContent(otherRecieptView)
+        }
     }
     
     @IBAction func engineerTimelineTabAction(_ sender: UIButton){

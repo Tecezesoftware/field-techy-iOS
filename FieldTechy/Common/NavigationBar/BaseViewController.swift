@@ -56,7 +56,12 @@ class BaseViewController: UIViewController {
             }
             
         case .wallet:
-            print("Wallet")
+            if fromScreen == .wallet{
+                    menu.removeFromSuperview()
+            }else{
+                let vc = Singleton.shared.storyBoard(storyboard: "Wallet", identifier: "WalletVC")
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
             
         case .dispute:
             print("Dispute")
@@ -72,6 +77,7 @@ class BaseViewController: UIViewController {
             showLogoutConfirmation()
         }
     }
+    
     private func showLogoutConfirmation() {
         PopupManager.shared.showLogout(in: self) {
             UserDefaultsManager.shared.logout()
@@ -79,6 +85,7 @@ class BaseViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: false)
         }
     }
+    
     func setupBottomNavigation(selectedItem: BottomNavItem) {
         bottomNavigationView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bottomNavigationView)
@@ -101,7 +108,10 @@ class BaseViewController: UIViewController {
                 }
 
             case .wallet:
-                print("Wallet")
+                if selectedItem != .wallet{
+                    let vc = Singleton.shared.storyBoard(storyboard: "Wallet", identifier: "WalletVC")
+                    self.navigationController?.pushViewController(vc, animated: false)
+                }
 
             case .dispute:
                 print("Dispute")

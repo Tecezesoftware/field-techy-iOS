@@ -7,128 +7,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4C537765-B2CC-4666-9DBE-910A0B283385"
+            uuid = "AC50B0D1-C569-4D81-B01A-1CC22FF5E3B1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FieldTechy/Components/JobsCells/JobModeCell.swift"
+            filePath = "FieldTechy/Common/Popups/CustomPopupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "onTapModeBtn(_:)"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "configure(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F2AC3F2D-F6A5-4CFA-8EB3-C24FB4D373F1"
+            uuid = "CF2A7CF5-BB39-44B7-B462-8F3ED00529CF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FieldTechy/Components/JobsCells/JobModeCell.swift"
+            filePath = "FieldTechy/Common/Popups/CustomPopupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "configure(_:isSelected:)"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
+            landmarkName = "buildButton(config:tag:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0A08DD20-460D-4D9F-8E5C-7AAF0C035986"
+            uuid = "DDC09911-9CF2-4F4E-813C-EF12F4E52C08"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FieldTechy/Features/PostJobs/View/PostJobsVC.swift"
+            filePath = "FieldTechy/Common/Popups/CustomPopupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "setupLayout()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "11564ED4-0E5A-48E3-AE63-F09131824208"
+            uuid = "F1C0E0CA-F867-4F62-9BC2-79F59D4F35F2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FieldTechy/Components/JobsCells/JobModeCell.swift"
+            filePath = "FieldTechy/Features/ViewMyJobs/viewMyJobsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "onTapModeBtn(_:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "configureUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2196D6F5-1EC4-44CD-907A-F21A7B2F3B7E"
+            uuid = "0C8FD21E-D59E-41C4-BE23-F596E042D4BD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FieldTechy/Components/JobsCells/PaymentSelectionCell.swift"
+            filePath = "FieldTechy/Features/ViewMyJobs/viewMyJobsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "updatePaymentMode(_:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "configureUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "81DA49C2-9607-4DEF-8681-307E838541D1"
+            uuid = "5F0F2A07-E25B-4A68-8478-C96843C78665"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FieldTechy/Features/PaymentScreen/View/PaymentSelectionVC.swift"
+            filePath = "FieldTechy/Components/JobDetailViews/TaskInfomationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "onTapPay(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9F9258D3-B763-4BA0-9AB5-913181133B96"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FieldTechy/Common/Menu/SideMenuView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "loadFromXIB()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B99E6B42-1F41-44CC-8170-2BA83BBD60C3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FieldTechy/Common/Filter/FilterVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "onTapClose(_:)"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "rejectEngineer(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -34,7 +34,6 @@ class SignOffSheetView: UIView {
 }
 
 extension SignOffSheetView {
-
     
     static func loadFromXIB() -> SignOffSheetView? {
         let nib = UINib(

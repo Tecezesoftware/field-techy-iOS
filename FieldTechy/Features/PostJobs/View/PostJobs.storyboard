@@ -39,7 +39,7 @@
                                                 <state key="normal" image="BackIcon"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
+                                                        <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -63,7 +63,7 @@
                                                 <state key="normal" image="QueryIcon"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
+                                                        <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -363,7 +363,7 @@
             <color red="0.53700000047683716" green="0.53700000047683716" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NeutralLight200">
-            <color red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81599998474121094" green="0.81599998474121094" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NeutralLight800">
             <color red="0.54500001668930054" green="0.54500001668930054" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -34,7 +34,7 @@ final class CustomPopupView: UIView {
     private let closeButton: UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named: "CloseIcon"), for: .normal)
-        btn.backgroundColor   = AppTheme.neutralLight500
+        btn.backgroundColor   = AppTheme.closeBtnBG
         btn.layer.cornerRadius = 12
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
@@ -271,7 +271,7 @@ final class CustomPopupView: UIView {
             iconImageView.tintColor = .white
 
         case .logout:
-            iconBackgroundView.backgroundColor = AppTheme.neutralLight500
+            iconBackgroundView.backgroundColor = AppTheme.neutralLight100
             iconImageView.image  = UIImage(named: "ExitDoorIcon")
 
         case .custom(let image, let bgColor):
@@ -314,7 +314,7 @@ final class CustomPopupView: UIView {
         let button = UIButton()
         button.setTitle(config.title, for: .normal)
         button.titleLabel?.font = AppFonts.Medium(size: 16)
-        button.layer.cornerRadius = button.layer.frame.height / 2
+        button.layer.cornerRadius = 24
         button.tag = tag
 
         switch config.style {
@@ -327,7 +327,9 @@ final class CustomPopupView: UIView {
             button.setTitleColor(AppTheme.primaryTextColor, for: .normal)
 
         case .destructive:
-            button.backgroundColor = UIColor(hex: "EF4444")
+            button.backgroundColor = UIColor(hex: "#D95741")
+            button.titleLabel?.font = AppFonts.SemiBold(size: 16)
+            button.setImage(config.image, for: .normal)
             button.setTitleColor(.white, for: .normal)
 
         case .outline:

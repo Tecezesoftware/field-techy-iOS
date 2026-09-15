@@ -22,6 +22,7 @@ enum PopupIconType {
 struct PopupButton {
     let title: String
     let style: ButtonStyle
+    let image: UIImage?
     let action: (() -> Void)?
 
     enum ButtonStyle {

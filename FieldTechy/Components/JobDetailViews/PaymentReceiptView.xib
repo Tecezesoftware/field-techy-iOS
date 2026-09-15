@@ -230,6 +230,7 @@
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstItem="43d-kU-6E6" firstAttribute="top" secondItem="wuc-5R-bS3" secondAttribute="top" constant="9.5" id="8lb-OR-fxV"/>
                                                 <constraint firstItem="b6S-cb-RPa" firstAttribute="leading" secondItem="wuc-5R-bS3" secondAttribute="leading" constant="12" id="A9s-EY-4Gr"/>
@@ -246,6 +247,9 @@
                                                     <integer key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="AeA-bc-bXF" appends="YES" id="CiC-GU-VDW"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                 </stackView>
@@ -289,6 +293,11 @@
             </connections>
             <point key="canvasLocation" x="2961.8320610687024" y="36.971830985915496"/>
         </view>
+        <tapGestureRecognizer id="AeA-bc-bXF">
+            <connections>
+                <action selector="onTapReciept:" destination="aoD-ux-rHG" id="94m-zk-9tZ"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="DownloadIcon" width="10" height="11"/>
@@ -303,7 +312,7 @@
             <color red="0.063000001013278961" green="0.093999996781349182" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextMuted">
-            <color red="0.41999998688697815" green="0.44699999690055847" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.41960784313725491" green="0.44705882352941173" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

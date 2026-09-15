@@ -95,7 +95,7 @@ class PostJobsVC: UIViewController {
             termsAndContBtn.setImage(UIImage(named: "UncheckIcon"), for: .normal)
             
             submitBtn.isEnabled = false
-            submitBtn.backgroundColor = AppTheme.neutralLight100
+            submitBtn.backgroundColor = AppTheme.neutralLight200
             submitBtn.setTitleColor(AppTheme.neutralLight800, for: .normal)
         }
     }

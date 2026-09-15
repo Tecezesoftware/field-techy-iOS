@@ -13,6 +13,8 @@ class TaskInfomationView: UIView {
     @IBOutlet weak var workStartDateLabel: UILabel!
     @IBOutlet weak var workEndDateLabel: UILabel!
     
+    @IBOutlet weak var jobPaymentStackView: UIStackView!
+    @IBOutlet weak var jobPaymentLabel: UILabel!
     @IBOutlet weak var jobSkillView: UIView!
     @IBOutlet weak var jobSkillStackView: UIStackView!
     @IBOutlet weak var skillview: UIView!
@@ -49,6 +51,8 @@ class TaskInfomationView: UIView {
     @IBOutlet weak var filenameLabel: UILabel!
     @IBOutlet weak var fileSizeLabel: UILabel!
     
+    var rejectButtonOnTap: (()->())?
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         attachmentView.layer.borderColor = AppTheme.brandPrimaryTint.cgColor
@@ -68,7 +72,7 @@ class TaskInfomationView: UIView {
     }
     
     @IBAction func rejectEngineer(_ sender: Any) {
-        
+       rejectButtonOnTap?()
     }
 }
 

@@ -21,10 +21,15 @@ class PaymentReceiptView: UIView {
     @IBOutlet weak var fileNameLabel: UILabel!
     @IBOutlet weak var fileSizeLabel: UILabel!
     
+    var viewreciept:(() -> ())?
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         fileContainerView.layer.borderWidth = 1
         fileContainerView.layer.borderColor = AppTheme.primaryButtonBGColor.cgColor
+    }
+    @IBAction func onTapReciept(_ sender: Any) {
+        self.viewreciept?()
     }
 }
 
