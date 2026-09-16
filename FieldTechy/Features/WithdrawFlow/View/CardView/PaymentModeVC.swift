@@ -32,6 +32,7 @@ class PaymentModeVC: UIViewController {
     @IBOutlet weak var continueBtn: UIButton!
     
     var fromScreen: String?
+    var addedAmt: String?
     var paymentViews: [UIView] {
         [addCardView, contentView, cardView, paypalView]
     }
@@ -42,7 +43,7 @@ class PaymentModeVC: UIViewController {
     }
     
     func configure() {
-        
+        addCardAmtLabel.text = addedAmt
         if fromScreen == "Withdraw"{
             headerTitleLabel.text = "Withdraw Money"
             addCardTitleLabel.text = "Withdrawing"

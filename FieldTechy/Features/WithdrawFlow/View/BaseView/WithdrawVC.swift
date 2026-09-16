@@ -17,6 +17,7 @@ class WithdrawVC: UIViewController{
     @IBOutlet weak var minmaxLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var benifitsView: UIView!
+    @IBOutlet weak var continueButton: UIButton!
     
     var fromScreen: String?
     
@@ -31,6 +32,9 @@ class WithdrawVC: UIViewController{
         )
         
         view.addGestureRecognizer(tapGesture)
+        
+        continueButton.isEnabled = false
+        continueButton.alpha = 0.5
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -60,6 +64,12 @@ class WithdrawVC: UIViewController{
     @objc private func dismissKeyboard() {
         if amountTextField.text?.count == 0 {
             amountLabel.text = "$0"
+            amountLabel.textColor = AppTheme.neutralLight100
+            continueButton.isEnabled = false
+            continueButton.alpha = 0.5
+        }else{
+            continueButton.isEnabled = true
+            continueButton.alpha = 1
         }
         view.endEditing(true)
     }
@@ -70,12 +80,14 @@ class WithdrawVC: UIViewController{
     
     @IBAction func addAmtByBtn(_ sender: UIButton) {
         amountTextField.text = "$\(sender.tag)"
+        amountLabel.textColor = AppTheme.primaryTextColor
         amountLabel.text = "$\(sender.tag)"
     }
     
     @IBAction func continueAction(_ sender: Any) {
         let vc = Singleton.shared.storyBoard(storyboard: "PaymentMode", identifier: "PaymentModeVC") as! PaymentModeVC
         vc.fromScreen = fromScreen
+        vc.addedAmt = amountTextField.text
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -85,6 +97,8 @@ class WithdrawVC: UIViewController{
               let amount = Int(text) else {
             return
         }
+        amountTextField.text = "$\(amount)"
+        amountLabel.textColor = AppTheme.primaryTextColor
         amountLabel.text = "$\(amount)"
     }
 }

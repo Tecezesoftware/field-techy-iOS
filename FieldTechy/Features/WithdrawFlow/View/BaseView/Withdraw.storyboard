@@ -362,6 +362,7 @@
                         <outlet property="balanceLabel" destination="1mD-su-1PW" id="dRq-vP-S6T"/>
                         <outlet property="balanceStackView" destination="whu-VD-rSF" id="X64-KM-4nm"/>
                         <outlet property="benifitsView" destination="dT9-Eh-WkX" id="O1P-aI-etZ"/>
+                        <outlet property="continueButton" destination="4g1-Ke-zA6" id="16W-YA-gPt"/>
                         <outlet property="headerTitleLabel" destination="YFj-gA-aOR" id="lKc-99-8zp"/>
                         <outlet property="minmaxLabel" destination="j7I-rp-0dc" id="eWz-N9-cXf"/>
                         <outlet property="subtitleLabel" destination="hkv-Kf-c5m" id="MYl-AT-cqb"/>
