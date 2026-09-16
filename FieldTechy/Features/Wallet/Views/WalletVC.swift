@@ -75,11 +75,13 @@ class WalletVC: BaseViewController {
     }
     
     @IBAction func navigateToPaymentScreen(_ sender: Any) {
-        
+        let vc = Singleton.shared.storyBoard(storyboard: "paymentMethod", identifier: "paymentMethodVC")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func navigateToHistoryScreen(_ sender: Any) {
-        
+        let vc = Singleton.shared.storyBoard(storyboard: "TranscationHistory", identifier: "TranscationHistoryVC")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
