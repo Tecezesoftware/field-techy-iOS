@@ -128,47 +128,6 @@
                                 <color key="textColor" name="TextMuted"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSV-m9-8xd">
-                                <rect key="frame" x="257" y="57" width="126" height="76"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="w55-wA-jVx">
-                                        <rect key="frame" x="12" y="12" width="102" height="52"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbb-Px-bSx">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="Bsa-lf-bim"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="  View" image="ViewIcon">
-                                                    <color key="titleColor" name="SecondaryTextColor"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAm-uq-Rdi">
-                                                <rect key="frame" x="0.0" y="32" width="102" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="0Q0-Qm-wjp"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="  Delete" image="BinGrayIcon">
-                                                    <color key="titleColor" name="SecondaryTextColor"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" name="NeutralLight50"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="w55-wA-jVx" secondAttribute="trailing" constant="12" id="8To-mq-OV8"/>
-                                    <constraint firstAttribute="bottom" secondItem="w55-wA-jVx" secondAttribute="bottom" constant="12" id="9YZ-K9-lHc"/>
-                                    <constraint firstAttribute="width" constant="126" id="cub-hn-6Kl"/>
-                                    <constraint firstItem="w55-wA-jVx" firstAttribute="top" secondItem="LSV-m9-8xd" secondAttribute="top" constant="12" id="eBl-Gt-Akn"/>
-                                    <constraint firstAttribute="height" constant="76" id="l6p-lw-2d9"/>
-                                    <constraint firstItem="w55-wA-jVx" firstAttribute="leading" secondItem="LSV-m9-8xd" secondAttribute="leading" constant="12" id="yuA-kQ-cpp"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -180,19 +139,66 @@
                             <constraint firstAttribute="trailing" secondItem="UFa-kJ-sb2" secondAttribute="trailing" constant="16" id="NV7-73-kYy"/>
                             <constraint firstItem="FGO-9C-dBw" firstAttribute="top" secondItem="5bf-AC-CMb" secondAttribute="top" constant="16" id="SGU-h7-wyR"/>
                             <constraint firstItem="lkD-rn-pUm" firstAttribute="top" secondItem="UFa-kJ-sb2" secondAttribute="bottom" constant="10" id="VIA-f4-o8i"/>
-                            <constraint firstItem="LSV-m9-8xd" firstAttribute="top" secondItem="Gfv-AR-PM9" secondAttribute="bottom" constant="3" id="WCx-a4-Cow"/>
                             <constraint firstItem="UFa-kJ-sb2" firstAttribute="leading" secondItem="5bf-AC-CMb" secondAttribute="leading" constant="16" id="X7I-D1-Wr5"/>
                             <constraint firstAttribute="trailing" secondItem="Gfv-AR-PM9" secondAttribute="trailing" constant="16" id="igI-WH-ifc"/>
                             <constraint firstItem="i3b-UX-Oht" firstAttribute="leading" secondItem="FGO-9C-dBw" secondAttribute="trailing" constant="12" id="w8J-RV-dnZ"/>
                             <constraint firstItem="lkD-rn-pUm" firstAttribute="leading" secondItem="5bf-AC-CMb" secondAttribute="leading" constant="16" id="wCc-Ud-b8k"/>
-                            <constraint firstItem="LSV-m9-8xd" firstAttribute="trailing" secondItem="Gfv-AR-PM9" secondAttribute="trailing" constant="3" id="wTz-Sk-4T9"/>
+                        </constraints>
+                    </view>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSV-m9-8xd">
+                        <rect key="frame" x="260" y="52" width="126" height="76"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="w55-wA-jVx">
+                                <rect key="frame" x="12" y="12" width="102" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbb-Px-bSx">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Bsa-lf-bim"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="  View" image="ViewIcon">
+                                            <color key="titleColor" name="SecondaryTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewAddPayment:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cur-PH-RCn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAm-uq-Rdi">
+                                        <rect key="frame" x="0.0" y="32" width="102" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="0Q0-Qm-wjp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="  Delete" image="BinGrayIcon">
+                                            <color key="titleColor" name="SecondaryTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deletePayment:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vc6-C8-Hax"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="NeutralLight50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="76" id="7Bh-zw-oDq"/>
+                            <constraint firstAttribute="width" constant="126" id="JuY-Ff-M8r"/>
+                            <constraint firstItem="w55-wA-jVx" firstAttribute="top" secondItem="LSV-m9-8xd" secondAttribute="top" constant="12" id="Rfa-dS-AOV"/>
+                            <constraint firstAttribute="trailing" secondItem="w55-wA-jVx" secondAttribute="trailing" constant="12" id="j9Z-Eb-VFk"/>
+                            <constraint firstAttribute="bottom" secondItem="w55-wA-jVx" secondAttribute="bottom" constant="12" id="sMs-oZ-41e"/>
+                            <constraint firstItem="w55-wA-jVx" firstAttribute="leading" secondItem="LSV-m9-8xd" secondAttribute="leading" constant="12" id="zdn-ei-Fe5"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LSV-m9-8xd" secondAttribute="trailing" constant="10" id="DTd-TM-p9v"/>
                     <constraint firstAttribute="trailing" secondItem="5bf-AC-CMb" secondAttribute="trailing" id="FVz-N1-D2N"/>
                     <constraint firstAttribute="bottom" secondItem="5bf-AC-CMb" secondAttribute="bottom" constant="12" id="PBp-as-Ib0"/>
                     <constraint firstItem="5bf-AC-CMb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PwM-1C-64U"/>
+                    <constraint firstAttribute="bottom" secondItem="LSV-m9-8xd" secondAttribute="bottom" constant="10" id="Tui-1h-I8X"/>
                     <constraint firstItem="5bf-AC-CMb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="c4v-kD-9eX"/>
                 </constraints>
             </tableViewCellContentView>

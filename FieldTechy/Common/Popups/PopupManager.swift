@@ -42,6 +42,26 @@ final class PopupManager {
         show(config: config, in: vc)
     }
 
+    // ❌ Delete Confirmation
+    func showDeleteConfirm(
+        in vc: UIViewController,
+        buttonImage: UIImage? = nil,
+        onNo: (() -> Void)? = nil,
+        onYes: (() -> Void)?
+    ) {
+        let config = PopupConfig(
+            type: .confirmation,
+            iconType: .delete,
+            title: "Are you sure you want to delete?",
+            subtitle: "",
+            buttons: [
+                PopupButton(title: "No", style: .primary, image: buttonImage, action: onNo),
+                PopupButton(title: "Yes",  style: .secondary, image: buttonImage,   action: onYes)
+            ]
+        )
+        show(config: config, in: vc)
+    }
+    
     // ❌ Engineer Rejected
     func showEngineerRejected(
         in vc: UIViewController,

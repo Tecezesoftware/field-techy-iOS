@@ -273,6 +273,9 @@ final class CustomPopupView: UIView {
         case .logout:
             iconBackgroundView.backgroundColor = AppTheme.neutralLight100
             iconImageView.image  = UIImage(named: "ExitDoorIcon")
+            
+        case .delete:
+            iconImageView.image  = UIImage(named: "BinRedIcon")
 
         case .custom(let image, let bgColor):
             iconBackgroundView.backgroundColor = bgColor

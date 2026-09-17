@@ -13,10 +13,22 @@ class paymentMethodVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerCell()
     }
     
     func registerCell(){
         Singleton.shared.register(in: tableView, nameOfAllCells: ["WalletCardViewCell"])
+    }
+    
+    @IBAction func addPayment(_ sender: UIButton){
+        let vc = Singleton.shared.storyBoard(storyboard: "AddPaymentMethod", identifier: "AddPaymentMethodVC") as! AddPaymentMethodVC
+        vc.isAddPayment = true
+        self.navigationController?.present(vc, animated: true)
+    }
+    
+    
+    @IBAction func back(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -27,6 +39,19 @@ extension paymentMethodVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WalletCardViewCell", for: indexPath) as! WalletCardViewCell
+        
+        cell.viewPayment = {[weak self] in
+            let vc = Singleton.shared.storyBoard(storyboard: "AddPaymentMethod", identifier: "AddPaymentMethodVC") as! AddPaymentMethodVC
+            vc.isAddPayment = false
+            self?.navigationController?.present(vc, animated: true)
+        }
+        
+        cell.deletePayment = {[weak self] in
+            guard let self = self else { return }
+            PopupManager.shared.showDeleteConfirm(in: self) {
+                print("Deleted...")
+            }
+        }
         return cell
     }
     

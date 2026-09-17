@@ -14,6 +14,7 @@ enum PopupIconType {
     case error
     case warning
     case logout
+    case delete
     case custom(UIImage, UIColor)
     case none
 }

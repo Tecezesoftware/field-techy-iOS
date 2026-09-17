@@ -13,6 +13,11 @@ class TranscationHistoryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerCell()
+    }
+    
+    func registerCell(){
+        Singleton.shared.register(in: transHistoryTableView, nameOfAllCells: ["TransHistoryCell"])
     }
     
     @IBAction func back(_ sender: Any) {

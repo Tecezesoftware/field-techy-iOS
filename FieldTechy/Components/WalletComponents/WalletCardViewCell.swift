@@ -17,12 +17,16 @@ class WalletCardViewCell: UITableViewCell {
     @IBOutlet weak var menuOptionView: UIView!
     @IBOutlet weak var expireDateLabel: UILabel!
     
+    var viewPayment: (() -> ())?
+    var deletePayment: (() -> ())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        view.layer.cornerRadius = 10
         view.layer.borderWidth = 1
         view.layer.borderColor = AppTheme.borderColorOfViews.cgColor
         
@@ -41,5 +45,17 @@ class WalletCardViewCell: UITableViewCell {
     @IBAction func showMenu(_ sender: UIButton) {
         sender.isSelected.toggle()
         menuOptionView.isHidden = !sender.isSelected
+    }
+    
+    @IBAction func viewAddPayment(_ sender: UIButton){
+        viewPayment?()
+        menuButton.isSelected = false
+        menuOptionView.isHidden = true
+    }
+    
+    @IBAction func deletePayment(_ sender: UIButton){
+        deletePayment?()
+        menuButton.isSelected = false
+        menuOptionView.isHidden = true
     }
 }
