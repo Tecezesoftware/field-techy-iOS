@@ -80,8 +80,10 @@ class PostJobsVC: UIViewController {
     }
     
     @IBAction func queryAction(_ sender: Any) {
-        
+        let vc = Singleton.shared.storyBoard(storyboard: "RaiseDispute", identifier: "RaiseDisputeVC")
+        self.navigationController?.pushViewController(vc, animated: false)
     }
+    
     @IBAction func onTapTC(_ sender: UIButton) {
         sender.isSelected.toggle()
         if sender.isSelected {

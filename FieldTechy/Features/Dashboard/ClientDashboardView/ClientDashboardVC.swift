@@ -98,7 +98,8 @@ class ClientDashboardVC: BaseViewController {
     }
     
     @IBAction func notificationAction(_ sender: Any) {
-        
+        let vc = Singleton.shared.storyBoard(storyboard: "Notification", identifier: "NotificationVC")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func postJobAction(_ sender: Any) {

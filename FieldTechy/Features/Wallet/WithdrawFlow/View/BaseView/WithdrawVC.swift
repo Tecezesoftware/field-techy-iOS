@@ -78,6 +78,11 @@ class WithdrawVC: UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func queryAction(_ sender: Any) {
+            let vc = Singleton.shared.storyBoard(storyboard: "RaiseDispute", identifier: "RaiseDisputeVC")
+            self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     @IBAction func addAmtByBtn(_ sender: UIButton) {
         amountTextField.text = "$\(sender.tag)"
         amountLabel.textColor = AppTheme.primaryTextColor

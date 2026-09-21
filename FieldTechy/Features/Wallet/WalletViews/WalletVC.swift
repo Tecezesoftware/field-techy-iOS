@@ -83,6 +83,11 @@ class WalletVC: BaseViewController {
         let vc = Singleton.shared.storyBoard(storyboard: "TranscationHistory", identifier: "TranscationHistoryVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func notificationAction(_ sender: Any) {
+        let vc = Singleton.shared.storyBoard(storyboard: "Notification", identifier: "NotificationVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension WalletVC: UITableViewDataSource, UITableViewDelegate {

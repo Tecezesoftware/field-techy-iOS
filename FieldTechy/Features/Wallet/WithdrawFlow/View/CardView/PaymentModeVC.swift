@@ -115,6 +115,11 @@ class PaymentModeVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func queryAction(_ sender: Any) {
+            let vc = Singleton.shared.storyBoard(storyboard: "RaiseDispute", identifier: "RaiseDisputeVC")
+            self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     @IBAction func continueAction(_ sender: UIButton){
         let vc = Singleton.shared.storyBoard(storyboard: "WalletSuccess", identifier: "WalletSuccessVC") as! WalletSuccessVC
         vc.fromScreen = fromScreen
