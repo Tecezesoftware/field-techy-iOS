@@ -6,10 +6,10 @@
 //
 
 
-enum jobTypes{
-    case dispatch
-    case fulltime
-    case scheduled
+enum jobTypes: String{
+    case dispatch = "Dispatch"
+    case fulltime = "Full Time"
+    case scheduled = "Scheduled"
 }
 
 enum jobsFieldType{
@@ -22,6 +22,7 @@ enum jobsFieldType{
     case checklist
     case phoneNumber
     case upload
+    case JD
     case cost
 }
 
@@ -53,7 +54,7 @@ struct jobsFormDataSource{
         jobsFormItem(id: 15, title: "Reporting Manager Phone Number", placeholder: "Enter Reporting Manager Phone Number", type: .phoneNumber, isRequired: true),
         jobsFormItem(id: 16, title: "Tool Required ",placeholder: "Enter or Select" , type: .multiChoice, isRequired: true),
         jobsFormItem(id: 17, title: "Tool Cost", placeholder: "Enter Tool Cost", type: .text, isRequired: true),
-        jobsFormItem(id: 18, title: "Job Description", placeholder: "Enter Job Description", type: .text, isRequired: true),
+        jobsFormItem(id: 18, title: "Job Description", placeholder: "Enter Job Description", type: .JD, isRequired: true),
         jobsFormItem(id: 19, type: .upload, isRequired: true),
         jobsFormItem(id: 20, title: "Job Cost", type: .cost, isRequired: true),
         

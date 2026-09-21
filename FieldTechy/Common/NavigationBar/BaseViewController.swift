@@ -64,7 +64,12 @@ class BaseViewController: UIViewController {
             }
             
         case .dispute:
-            print("Dispute")
+            if fromScreen == .dispute{
+                    menu.removeFromSuperview()
+            }else{
+                let vc = Singleton.shared.storyBoard(storyboard: "Dispute", identifier: "DisputeVC")
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
             
         case .settings:
             print("Settings")
@@ -114,7 +119,10 @@ class BaseViewController: UIViewController {
                 }
 
             case .dispute:
-                print("Dispute")
+                if selectedItem != .dispute{
+                    let vc = Singleton.shared.storyBoard(storyboard: "Dispute", identifier: "DisputeVC")
+                    self.navigationController?.pushViewController(vc, animated: false)
+                }
             }
         }
     }

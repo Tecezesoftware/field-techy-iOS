@@ -128,6 +128,13 @@ extension PostJobsVC: UITableViewDelegate, UITableViewDataSource {
             case .text, .phoneNumber:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "JobsTextFieldCell", for: indexPath) as! JobsTextFieldCell
                 cell.configureUI(isRequired: item.isRequired, title: item.title ?? "", placeHolder: item.placeholder ?? "")
+                cell.textFieldHeight.constant = 47
+                return cell
+                
+            case .JD:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "JobsTextFieldCell", for: indexPath) as! JobsTextFieldCell
+                cell.configureUI(isRequired: item.isRequired, title: item.title ?? "", placeHolder: item.placeholder ?? "")
+                cell.textFieldHeight.constant = 144
                 return cell
                 
             case .dropDown, .multiChoice:
@@ -190,6 +197,7 @@ extension PostJobsVC: UITableViewDelegate, UITableViewDataSource {
                 }else{
                     return 90
                 }
+            case .JD: return 187
             case .buttonStack: return 83
             case .toggle: return 36
             case .engData:

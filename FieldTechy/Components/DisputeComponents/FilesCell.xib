@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="FilesCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="FilesCell" rowHeight="94" id="KGk-i7-Jjw" customClass="FilesCell" customModule="FieldTechy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJC-01-IP0">
+                        <rect key="frame" x="0.0" y="7" width="137" height="18"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Uploaded Evidence ">
+                                <attributes>
+                                    <color key="NSColor" name="PrimaryTextColor"/>
+                                    <font key="NSFont" size="13" name="Poppins-SemiBold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content="*">
+                                <attributes>
+                                    <color key="NSColor" red="0.83529411764705885" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="13" name="Poppins-SemiBold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="coW-xS-hrP">
+                        <rect key="frame" x="0.0" y="39" width="396" height="48"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5T-SZ-thl">
+                                <rect key="frame" x="0.0" y="0.0" width="396" height="48"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PdfIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fnM-4G-igp">
+                                        <rect key="frame" x="12" y="10.666666666666664" width="25" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="0i2-GL-8B4"/>
+                                            <constraint firstAttribute="width" constant="25" id="uDH-gT-TtJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mJP-SY-qYn">
+                                        <rect key="frame" x="44" y="9.6666666666666643" width="146" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Deployment_Scope.pdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4s-DC-8pP">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="11.333333333333334"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                <color key="textColor" name="PrimaryTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.5 MB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfn-fd-osg">
+                                                <rect key="frame" x="0.0" y="13.333333333333336" width="35" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                                <color key="textColor" name="TextMuted"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mJP-SY-qYn" secondAttribute="bottom" constant="9.5" id="4MO-dl-Jge"/>
+                                    <constraint firstItem="mJP-SY-qYn" firstAttribute="leading" secondItem="fnM-4G-igp" secondAttribute="trailing" constant="7" id="BTg-ph-ruV"/>
+                                    <constraint firstItem="mJP-SY-qYn" firstAttribute="top" secondItem="B5T-SZ-thl" secondAttribute="top" constant="9.5" id="Hfd-xU-sUU"/>
+                                    <constraint firstItem="fnM-4G-igp" firstAttribute="leading" secondItem="B5T-SZ-thl" secondAttribute="leading" constant="12" id="NP7-rn-Dk2"/>
+                                    <constraint firstItem="fnM-4G-igp" firstAttribute="top" secondItem="B5T-SZ-thl" secondAttribute="top" constant="10.5" id="TFy-Io-6iR"/>
+                                    <constraint firstAttribute="height" constant="48" id="fIJ-r3-Mv9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="B5T-SZ-thl" firstAttribute="leading" secondItem="coW-xS-hrP" secondAttribute="leading" id="dT9-fu-uAT"/>
+                            <constraint firstAttribute="trailing" secondItem="B5T-SZ-thl" secondAttribute="trailing" id="nVT-8o-Wan"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="coW-xS-hrP" firstAttribute="top" secondItem="XJC-01-IP0" secondAttribute="bottom" constant="14" id="8jK-mP-pae"/>
+                    <constraint firstItem="XJC-01-IP0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="Q2B-vv-fKN"/>
+                    <constraint firstAttribute="bottom" secondItem="coW-xS-hrP" secondAttribute="bottom" constant="7" id="RVd-69-iwX"/>
+                    <constraint firstAttribute="trailing" secondItem="coW-xS-hrP" secondAttribute="trailing" id="Vc8-Rd-XGY"/>
+                    <constraint firstItem="coW-xS-hrP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Xrw-rW-ga9"/>
+                    <constraint firstItem="XJC-01-IP0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zpI-em-JPn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="-206.10687022900763" y="173.94366197183101"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="PdfIcon" width="26" height="27"/>
+        <namedColor name="PrimaryTextColor">
+            <color red="0.063000001013278961" green="0.093999996781349182" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextMuted">
+            <color red="0.41999998688697815" green="0.44699999690055847" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
