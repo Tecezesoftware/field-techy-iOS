@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -124,6 +124,13 @@
                                         </stackView>
                                     </subviews>
                                 </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFO-G5-wmY">
+                                    <rect key="frame" x="20" y="15" width="175.66666666666666" height="104"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="navigateToProfile:" destination="dO0-zX-P3H" eventType="touchUpInside" id="YMJ-cC-TgI"/>
+                                    </connections>
+                                </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FT Outline logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-90-NeE">
                                     <rect key="frame" x="215.66666666666666" y="77" width="71.999999999999972" height="53"/>
                                     <constraints>
@@ -140,7 +147,11 @@
                                 <constraint firstItem="BOR-nC-DSn" firstAttribute="top" secondItem="H2u-FO-BCp" secondAttribute="top" constant="45" id="I40-LR-BEa"/>
                                 <constraint firstAttribute="trailing" secondItem="BOR-nC-DSn" secondAttribute="trailing" constant="15" id="If4-Rs-r9S"/>
                                 <constraint firstAttribute="height" constant="134" id="KSn-3m-3Kf"/>
+                                <constraint firstItem="Vtm-90-NeE" firstAttribute="leading" secondItem="uFO-G5-wmY" secondAttribute="trailing" constant="20" id="SNc-kf-7mk"/>
                                 <constraint firstItem="BO6-ms-jBP" firstAttribute="leading" secondItem="H2u-FO-BCp" secondAttribute="leading" constant="34" id="aBM-CW-FEa"/>
+                                <constraint firstItem="uFO-G5-wmY" firstAttribute="leading" secondItem="H2u-FO-BCp" secondAttribute="leading" constant="20" id="bnd-ms-xlH"/>
+                                <constraint firstItem="uFO-G5-wmY" firstAttribute="top" secondItem="H2u-FO-BCp" secondAttribute="top" constant="15" id="fEL-Oq-72o"/>
+                                <constraint firstAttribute="bottom" secondItem="uFO-G5-wmY" secondAttribute="bottom" constant="15" id="fPj-Tk-cOk"/>
                                 <constraint firstItem="k68-He-25Z" firstAttribute="leading" secondItem="BO6-ms-jBP" secondAttribute="trailing" constant="8" id="iKV-mK-Cmf"/>
                                 <constraint firstItem="BO6-ms-jBP" firstAttribute="top" secondItem="H2u-FO-BCp" secondAttribute="top" constant="45" id="rIv-Fw-dr5"/>
                                 <constraint firstAttribute="bottom" secondItem="k68-He-25Z" secondAttribute="bottom" constant="16" id="wgf-J7-Pt8"/>
@@ -516,7 +527,7 @@
         <image name="ChatIcon" width="24" height="24"/>
         <image name="CloseIcon" width="8" height="8"/>
         <image name="DummyProfile" width="1024" height="1024"/>
-        <image name="ExitDoorIcon" width="24" height="24"/>
+        <image name="ExitDoorIcon" width="33" height="33"/>
         <image name="FT Outline logo" width="72" height="53"/>
         <image name="LocationIcon" width="6" height="8"/>
         <image name="Menu-DashBoardIcon" width="17" height="17"/>

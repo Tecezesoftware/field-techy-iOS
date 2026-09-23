@@ -38,6 +38,9 @@ class BaseViewController: UIViewController {
             return
         }
         switch item {
+        case .profile:
+            let vc = Singleton.shared.storyBoard(storyboard: "ViewProfile", identifier: "ViewProfileVC")
+            self.navigationController?.pushViewController(vc, animated: true)
             
         case .dashboard:
             if fromScreen == .dashboard{

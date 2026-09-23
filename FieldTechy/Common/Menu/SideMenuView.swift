@@ -8,6 +8,7 @@
 import UIKit
 
 enum SideMenuItem {
+    case profile
     case dashboard
     case myJobs
     case wallet
@@ -31,6 +32,10 @@ class SideMenuView: UIView {
 
     @IBAction func closeAction(_ sender: UIButton) {
         onClose?()
+    }
+    
+    @IBAction func navigateToProfile(_ sender: UIButton){
+        onMenuSelection?(.profile)
     }
 
     @IBAction func dashboardAction(_ sender: UIButton) {
