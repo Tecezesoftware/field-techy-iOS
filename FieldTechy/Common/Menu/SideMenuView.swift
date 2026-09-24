@@ -25,6 +25,7 @@ class SideMenuView: UIView {
     @IBOutlet weak var userCompanyLabel: UILabel!
     @IBOutlet weak var userLoctionLabel: UILabel!
     @IBOutlet weak var userJoinedDateLabel: UILabel!
+    @IBOutlet weak var chatBotView: GradientView!
     
     
     var onMenuSelection: ((SideMenuItem) -> Void)?

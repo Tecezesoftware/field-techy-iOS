@@ -49,7 +49,7 @@ enum AppTheme{
     static let fieldBGColor = UIColor(hex: "#F9FAFB")
     static let secondaryButtonBGColor = UIColor(hex: "#F2F2F2")
     static let closeBtnBG = UIColor(hex: "#EAEFF3")
-    static let brandPrimaryTint = UIColor(hex: "#CDF0E4")
+    static let brandPrimaryTint = UIColor(hex: "#E8F8F2")
     static let primaryBrand100 = UIColor(hex: "#CDF0E4")
     static let neutralDark800 = UIColor(hex: "#26272C")
     static let neutralLight500 = UIColor(hex:"D0D0D0")
@@ -57,6 +57,7 @@ enum AppTheme{
     static let neutralLight200 = UIColor(hex: "#DDDDDD")
     static let neutralLight800 = UIColor(hex: "#8B8B8B")
     static let error100 = UIColor(hex: "#EC8686")
+    static let error200 = UIColor(hex: "#FECACA")
     static let error800 = UIColor(hex: "#DA2316")
 }
 

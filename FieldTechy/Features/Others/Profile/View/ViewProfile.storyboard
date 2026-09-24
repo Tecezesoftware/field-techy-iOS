@@ -664,8 +664,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="876-Gs-ctw">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="876-Gs-ctw">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666686" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="Kj2-m8-RPb"/>
                                                                                         </constraints>
@@ -683,8 +684,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDF-Ao-41W">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDF-Ao-41W">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666686" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="YdS-tl-l6T"/>
                                                                                         </constraints>
@@ -706,8 +708,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmO-tL-iRp">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmO-tL-iRp">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666629" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="ito-bg-6kA"/>
                                                                                         </constraints>
@@ -725,8 +728,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8wu-qa-OB1">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bank Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8wu-qa-OB1">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666629" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="Azy-TJ-oQG"/>
                                                                                         </constraints>
@@ -780,8 +784,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUL-4p-iy5">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUL-4p-iy5">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666742" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="Txl-YL-ECD"/>
                                                                                         </constraints>
@@ -799,8 +804,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fmt-XB-8gI">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fmt-XB-8gI">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666629" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="4ad-EQ-QRg"/>
                                                                                         </constraints>
@@ -822,8 +828,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vI0-LZ-ty9">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vI0-LZ-ty9">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666629" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="Dar-SR-Lxd"/>
                                                                                         </constraints>
@@ -841,8 +848,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOR-Ou-ebX">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Postal Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOR-Ou-ebX">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666742" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="j2e-lm-0SK"/>
                                                                                         </constraints>
@@ -860,8 +868,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-0M-zsZ">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-0M-zsZ">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666742" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="f5n-QN-xsE"/>
                                                                                         </constraints>
@@ -917,8 +926,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-IU-U9W">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-IU-U9W">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666742" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="z9G-rZ-dO2"/>
                                                                                         </constraints>
@@ -936,8 +946,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nlq-2o-0A3">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nlq-2o-0A3">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666742" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="uN3-FD-ZLA"/>
                                                                                         </constraints>
@@ -959,8 +970,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttq-GE-kJo">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttq-GE-kJo">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666515" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="5wX-dD-usn"/>
                                                                                         </constraints>
@@ -978,8 +990,9 @@
                                                                                         <color key="textColor" name="TextMuted"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-wX-2DD">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-wX-2DD">
                                                                                         <rect key="frame" x="0.0" y="21.666666666666742" width="311" height="48"/>
+                                                                                        <color key="backgroundColor" name="NeutralLight50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="48" id="6TH-IU-Chj"/>
                                                                                         </constraints>
@@ -1418,7 +1431,7 @@
             <color red="0.89800000190734863" green="0.90600001811981201" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandTintColor">
-            <color red="0.80400002002716064" green="0.94099998474121094" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.90980392156862744" green="0.97254901960784312" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Info100">
             <color red="0.85900002717971802" green="0.92900002002716064" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

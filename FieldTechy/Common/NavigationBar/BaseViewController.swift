@@ -29,6 +29,7 @@ class BaseViewController: UIViewController {
             menu?.removeFromSuperview()
             self?.handleMenuSelection(item)
         }
+        menu.chatBotView.cornerRadius = 15
         view.addSubview(menu)
     }
     
@@ -75,7 +76,8 @@ class BaseViewController: UIViewController {
             }
             
         case .settings:
-            print("Settings")
+            let vc = Singleton.shared.storyBoard(storyboard: "Setting", identifier: "SettingVC")
+            self.navigationController?.pushViewController(vc, animated: false)
             
         case .aiChat:
             print("AI Chat")
