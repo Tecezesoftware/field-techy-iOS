@@ -11,6 +11,8 @@ class SocialLoginCell: UITableViewCell {
 
     @IBOutlet weak var signInLabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var optionLable: UILabel!
+    @IBOutlet weak var socialLoginStackView: UIStackView!
     var navigateToRespectiveView: (() -> ())?
     
     override func awakeFromNib() {
@@ -20,8 +22,6 @@ class SocialLoginCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func navigateToRespectiveScreen(_ sender: Any) {

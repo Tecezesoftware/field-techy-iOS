@@ -67,7 +67,7 @@
                                             <constraint firstAttribute="width" constant="81" id="aq1-Uq-dil"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="Google - Original"/>
+                                        <state key="normal" image="Google"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
@@ -110,14 +110,16 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="optionLable" destination="ekH-HJ-fSa" id="XHR-JH-86a"/>
                 <outlet property="signInButton" destination="pOv-bQ-Jq1" id="uCP-KA-KkZ"/>
                 <outlet property="signInLabel" destination="419-50-pzY" id="BZg-YS-n5B"/>
+                <outlet property="socialLoginStackView" destination="FS5-gN-oWM" id="uDS-vh-Kwb"/>
             </connections>
             <point key="canvasLocation" x="236.64122137404578" y="118.30985915492958"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Google - Original" width="20" height="20"/>
+        <image name="Google" width="20" height="20"/>
         <image name="LinkedIn" width="21" height="22"/>
         <namedColor name="PrimaryButtonTextColor">
             <color red="0.0" green="0.60000002384185791" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,11 +8,19 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--VerificationVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController restorationIdentifier="OTPVerificationVC" storyboardIdentifier="OTPVerificationVC" id="Y6W-OH-hqX" customClass="OTPVerificationVC" customModule="FieldTechy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,18 +38,309 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uW-8Y-7kw">
                                 <rect key="frame" x="0.0" y="277" width="393" height="575"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="01i-ea-IwO">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="575"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Applogo" translatesAutoresizingMaskIntoConstraints="NO" id="qnf-Xa-ret">
+                                        <rect key="frame" x="168" y="30" width="57" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="InN-a5-IMg"/>
+                                            <constraint firstAttribute="height" constant="41" id="VKC-xx-FOC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQw-Vp-4Pg">
+                                        <rect key="frame" x="162.33333333333334" y="83" width="68.333333333333343" height="28"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                        <color key="textColor" name="PrimaryTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="9Xt-Np-PqR">
+                                        <rect key="frame" x="28.666666666666657" y="118" width="336" height="358"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="p7q-Nv-cUY">
+                                                <rect key="frame" x="11" y="0.0" width="314" height="171"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-Td-ADb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="274.33333333333331" height="33.666666666666664"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33.666666666666664" id="du6-2z-w4O"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Enter the 6 digit verification code sent to your ">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="PrimaryTextColor"/>
+                                                                    <font key="NSFont" size="12" name="Poppins-Regular"/>
+                                                                    <font key="NSOriginalFont" size="12" name="Poppins-Regular"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="johndoe@gmail.com">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="PrimaryTextColor"/>
+                                                                    <font key="NSFont" size="12" name="Poppins-SemiBold"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lk3-7D-zrW">
+                                                        <rect key="frame" x="0.0" y="45.666666666666686" width="314" height="85"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ1-04-rqu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="176.33333333333334" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="YCv-tY-r8c"/>
+                                                                </constraints>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Enter OTP sent to your email">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.062745098039215685" green="0.094117647058823528" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Poppins-Regular"/>
+                                                                            <real key="NSKern" value="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                                <tabStops/>
+                                                                            </paragraphStyle>
+                                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <font key="NSFont" size="12" name="Poppins-Regular"/>
+                                                                            <real key="NSKern" value="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                                <tabStops/>
+                                                                            </paragraphStyle>
+                                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="*">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.83529411764705885" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Poppins-Regular"/>
+                                                                            <real key="NSKern" value="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                                <tabStops/>
+                                                                            </paragraphStyle>
+                                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iEo-jB-HJp">
+                                                                <rect key="frame" x="0.0" y="25" width="314" height="60"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="vrT-Yx-Tct"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="iEo-jB-HJp" firstAttribute="leading" secondItem="Lk3-7D-zrW" secondAttribute="leading" id="Mdw-AS-Bnr"/>
+                                                            <constraint firstAttribute="trailing" secondItem="iEo-jB-HJp" secondAttribute="trailing" id="cRe-Xe-lBr"/>
+                                                            <constraint firstAttribute="bottom" secondItem="iEo-jB-HJp" secondAttribute="bottom" id="sSM-6V-xHh"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="201" translatesAutoresizingMaskIntoConstraints="NO" id="KcD-28-t3t">
+                                                        <rect key="frame" x="0.0" y="142.66666666666663" width="296.66666666666669" height="28.333333333333343"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:10 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qo3-xs-byC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="29.666666666666668" height="15.666666666666666"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                                                <color key="textColor" name="SecondaryTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oj8-rP-Ym0">
+                                                                <rect key="frame" x="230.66666666666663" y="0.0" width="66" height="28.333333333333332"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Resend">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <font key="NSFont" size="11" name="Poppins-SemiBold"/>
+                                                                                <real key="NSKern" value="0.0"/>
+                                                                                <font key="NSOriginalFont" size="11" name="Poppins-SemiBold"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                                    <tabStops/>
+                                                                                </paragraphStyle>
+                                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                        <fragment content=" ">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="12" name="Poppins-SemiBold"/>
+                                                                                <real key="NSKern" value="0.0"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                                    <tabStops/>
+                                                                                </paragraphStyle>
+                                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                        <fragment content="OTP">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <font key="NSFont" size="11" name="Poppins-Regular"/>
+                                                                                <real key="NSKern" value="0.0"/>
+                                                                                <font key="NSOriginalFont" size="11" name="Poppins-Regular"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                                    <tabStops/>
+                                                                                </paragraphStyle>
+                                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="resendOtpAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a79-ns-2tl"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Lk3-7D-zrW" secondAttribute="bottom" constant="40.333333333333314" id="9tC-2f-DuY"/>
+                                                    <constraint firstItem="M5e-Td-ADb" firstAttribute="leading" secondItem="p7q-Nv-cUY" secondAttribute="leading" id="JTU-4h-gxo"/>
+                                                    <constraint firstItem="M5e-Td-ADb" firstAttribute="top" secondItem="p7q-Nv-cUY" secondAttribute="top" id="cdO-gY-rpg"/>
+                                                    <constraint firstItem="Lk3-7D-zrW" firstAttribute="trailing" secondItem="p7q-Nv-cUY" secondAttribute="trailingMargin" id="g8w-YA-VlA"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="p1H-Ei-g4a">
+                                                <rect key="frame" x="0.0" y="184" width="336" height="174"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhA-Sv-6ec">
+                                                        <rect key="frame" x="1.3333333333333428" y="0.0" width="333" height="47"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nne-PW-KfI">
+                                                                <rect key="frame" x="127" y="12" width="79.333333333333314" height="23"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfU-0W-zTE">
+                                                                        <rect key="frame" x="0.0" y="1" width="51.333333333333336" height="21"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                                                        <color key="textColor" name="SecondaryBGColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="WhiteRightPointer" translatesAutoresizingMaskIntoConstraints="NO" id="j4u-JN-XPd">
+                                                                        <rect key="frame" x="59.333333333333343" y="1.3333333333333712" width="20" height="20"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="PrimaryButtonTextColor"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="47" id="5iV-2n-u29"/>
+                                                            <constraint firstItem="Nne-PW-KfI" firstAttribute="centerX" secondItem="UhA-Sv-6ec" secondAttribute="centerX" id="Ljw-Lv-PrS"/>
+                                                            <constraint firstAttribute="width" constant="333" id="QkN-vM-5G6"/>
+                                                            <constraint firstItem="Nne-PW-KfI" firstAttribute="top" secondItem="UhA-Sv-6ec" secondAttribute="top" constant="12" id="dha-e2-HVH"/>
+                                                            <constraint firstItem="Nne-PW-KfI" firstAttribute="centerY" secondItem="UhA-Sv-6ec" secondAttribute="centerY" id="igP-Xf-iSG"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Nne-PW-KfI" secondAttribute="bottom" constant="12" id="ny1-0p-fRk"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <real key="value" value="23.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="g6e-T6-Jzo" appends="YES" id="7ZZ-n8-EIL"/>
+                                                        </connections>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ijg-4T-fI0">
+                                                        <rect key="frame" x="73.666666666666671" y="60" width="188.66666666666663" height="114"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neO-kY-04H">
+                                                                <rect key="frame" x="0.0" y="0.0" width="188.66666666666666" height="29"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-KN-Gdr">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="29"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                                        <color key="textColor" name="SecondaryTextColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APL-2m-45o">
+                                                                        <rect key="frame" x="142.66666666666669" y="0.0" width="46" height="29"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Sign up">
+                                                                            <color key="titleColor" name="PrimaryButtonTextColor"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="navigateToSignup:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sjg-nL-nKy"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or Sign in with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLX-km-pOt">
+                                                                <rect key="frame" x="51.666666666666671" y="39" width="85.000000000000014" height="17"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                                <color key="textColor" name="PrimaryButtonTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NNY-ap-LWd">
+                                                                <rect key="frame" x="5.3333333333333428" y="66" width="178" height="48"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tb-2G-9Dl">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="48"/>
+                                                                        <color key="backgroundColor" name="SecondaryButtonBGColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="81" id="Lmt-Rp-WxX"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="Ugw-XE-OV0"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="Google - Original"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SL-id-UZH">
+                                                                        <rect key="frame" x="97" y="0.0" width="81" height="48"/>
+                                                                        <color key="backgroundColor" name="SecondaryButtonBGColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="81" id="Erm-os-v6q"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="KAV-5q-ZmB"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="LinkedIn"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ijg-4T-fI0" firstAttribute="centerX" secondItem="p1H-Ei-g4a" secondAttribute="centerX" id="xPT-Fr-gOO"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="p1H-Ei-g4a" firstAttribute="top" secondItem="p7q-Nv-cUY" secondAttribute="bottom" constant="13" id="4kl-lZ-XW1"/>
+                                            <constraint firstItem="p1H-Ei-g4a" firstAttribute="leading" secondItem="9Xt-Np-PqR" secondAttribute="leadingMargin" id="69N-Em-RQy"/>
+                                            <constraint firstItem="p7q-Nv-cUY" firstAttribute="leading" secondItem="9Xt-Np-PqR" secondAttribute="leading" constant="11" id="8GL-9c-ikS"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="SecondaryBGColor"/>
                                 <constraints>
-                                    <constraint firstItem="01i-ea-IwO" firstAttribute="leading" secondItem="1uW-8Y-7kw" secondAttribute="leading" id="RZw-jn-UXf"/>
-                                    <constraint firstItem="01i-ea-IwO" firstAttribute="top" secondItem="1uW-8Y-7kw" secondAttribute="top" id="jke-FG-W1s"/>
-                                    <constraint firstAttribute="trailing" secondItem="01i-ea-IwO" secondAttribute="trailing" id="xhV-5n-ZO5"/>
-                                    <constraint firstAttribute="bottom" secondItem="01i-ea-IwO" secondAttribute="bottom" id="zxe-MR-6Vf"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Xt-Np-PqR" secondAttribute="bottom" constant="99" id="6lL-tY-bZl"/>
+                                    <constraint firstItem="qnf-Xa-ret" firstAttribute="top" secondItem="1uW-8Y-7kw" secondAttribute="top" constant="30" id="9sj-6i-Xd6"/>
+                                    <constraint firstItem="9Xt-Np-PqR" firstAttribute="centerX" secondItem="1uW-8Y-7kw" secondAttribute="centerX" id="Dip-Kj-SY1"/>
+                                    <constraint firstItem="jQw-Vp-4Pg" firstAttribute="top" secondItem="qnf-Xa-ret" secondAttribute="bottom" constant="11.9" id="NTA-10-ctE"/>
+                                    <constraint firstItem="jQw-Vp-4Pg" firstAttribute="centerX" secondItem="1uW-8Y-7kw" secondAttribute="centerX" id="NTO-y7-Xm1"/>
+                                    <constraint firstItem="9Xt-Np-PqR" firstAttribute="leading" secondItem="1uW-8Y-7kw" secondAttribute="leading" constant="28.5" id="OZ2-eh-VUs"/>
+                                    <constraint firstItem="qnf-Xa-ret" firstAttribute="centerX" secondItem="1uW-8Y-7kw" secondAttribute="centerX" id="oYh-g6-SKN"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Xt-Np-PqR" secondAttribute="trailing" constant="28.5" id="rGV-7n-x6U"/>
+                                    <constraint firstItem="9Xt-Np-PqR" firstAttribute="top" secondItem="jQw-Vp-4Pg" secondAttribute="bottom" constant="7" id="sUU-xg-h2C"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -60,17 +359,45 @@
                             <constraint firstItem="g9N-bE-bvu" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="30" id="q12-gJ-qtT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="otpStackView" destination="iEo-jB-HJp" id="ESQ-iA-GVM"/>
+                        <outlet property="resendOTPButton" destination="Oj8-rP-Ym0" id="8Ux-22-1NZ"/>
+                        <outlet property="signInButtonView" destination="UhA-Sv-6ec" id="aIW-Ex-t1C"/>
+                        <outlet property="timerLabel" destination="Qo3-xs-byC" id="34E-FY-pdb"/>
+                        <outlet property="titleLable" destination="M5e-Td-ADb" id="Z0V-f7-sZt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="g6e-T6-Jzo">
+                    <connections>
+                        <action selector="navigateToSignIn:" destination="Y6W-OH-hqX" id="C44-zq-Bip"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="139" y="131"/>
+            <point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Applogo" width="57" height="42"/>
         <image name="BackgroungImage" width="390" height="848"/>
+        <image name="Google - Original" width="20" height="20"/>
+        <image name="LinkedIn" width="21" height="22"/>
         <image name="OnboardingImage" width="355" height="338"/>
+        <image name="WhiteRightPointer" width="20" height="20"/>
+        <namedColor name="PrimaryButtonTextColor">
+            <color red="0.0" green="0.60000002384185791" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryTextColor">
+            <color red="0.063000001013278961" green="0.093999996781349182" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="SecondaryBGColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryButtonBGColor">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryTextColor">
+            <color red="0.44299998879432678" green="0.44299998879432678" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

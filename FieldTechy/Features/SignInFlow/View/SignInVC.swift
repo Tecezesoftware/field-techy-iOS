@@ -64,7 +64,7 @@ extension SignInVC: UITableViewDataSource, UITableViewDelegate {
             
             attr.append(NSAttributedString(
                 string: " OTP",
-                attributes: [.foregroundColor: AppTheme.primaryButtonTextColor, .font: AppFonts.SemiBold(size: 12.0)]
+                attributes: [.foregroundColor: AppTheme.primaryButtonBGColor, .font: AppFonts.SemiBold(size: 12.0)]
             ))
             cell.sendOTPButton.setAttributedTitle(attr, for: .normal)
             
@@ -75,11 +75,19 @@ extension SignInVC: UITableViewDataSource, UITableViewDelegate {
                 let vc = Singleton.shared.storyBoard(storyboard: "OTPScreen", identifier: "OTPScreenVC")
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
+            
+            cell.navigateToForgotPassword = {[weak self] in
+                let vc = Singleton.shared.storyBoard(storyboard: "ForgotPassword", identifier: "ForgotPasswordVC")
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
             return cell
         case .submitButton:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompleteButtonCell", for: indexPath) as! CompleteButtonCell
-            cell.isSignInButtonAction = true
             cell.buttonLabel.text = "Sign in"
+            cell.navigateToRespectiveScreen = {[weak self] in
+                let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
             return cell
         case .socialLogin:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SocialLoginCell", for: indexPath) as! SocialLoginCell
@@ -87,7 +95,7 @@ extension SignInVC: UITableViewDataSource, UITableViewDelegate {
             cell.signInButton.setTitle("Sign Up", for: .normal)
             
             cell.navigateToRespectiveView = {[weak self] in
-                let vc = Singleton.shared.storyBoard(storyboard: "SignUp", identifier: "SignUpView")
+                let vc = Singleton.shared.storyBoard(storyboard: "RoleSelection", identifier: "RoleSelectionVC")
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
             return cell

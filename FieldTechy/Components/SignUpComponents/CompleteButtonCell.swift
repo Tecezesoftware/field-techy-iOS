@@ -10,12 +10,7 @@ import UIKit
 class CompleteButtonCell: UITableViewCell {
     
     @IBOutlet weak var buttonLabel: UILabel!
-    
-    var isSignInButtonAction: Bool = false
-    var isSignUpButtonAction: Bool = false
-    var isOtpButtonAction: Bool = false
-    var isSendEmailButtonAction: Bool = false
-        
+    var navigateToRespectiveScreen: (() -> ())?
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -25,12 +20,6 @@ class CompleteButtonCell: UITableViewCell {
     }
     
     @IBAction func submitbuttonAction(_ sender: Any) {
-        if isSignInButtonAction{
-            
-        }else if isOtpButtonAction{
-            
-        }else if isSendEmailButtonAction{
-            
-        }
+        self.navigateToRespectiveScreen?()
     }
 }

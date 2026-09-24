@@ -40,14 +40,25 @@ enum AppFonts {
 }
 
 enum AppTheme{
-    static let primaryButtonTextColor = UIColor(hex: "#009966")
-    static let primaryButtonBGColor = UIColor(hex: "#FFFFFF")
+    static let primaryButtonBGColor = UIColor(hex: "#009966")
+    static let primaryButtonLabelColor = UIColor(hex: "#FFFFFF")
     static let primaryTextColor = UIColor(hex: "#101828")
     static let secondaryTextColor = UIColor(hex: "#717182")
     static let secondaryBGColor = UIColor(hex: "#FFFFFF")
     static let borderColorOfViews = UIColor(hex: "#E5E7EB")
     static let fieldBGColor = UIColor(hex: "#F9FAFB")
     static let secondaryButtonBGColor = UIColor(hex: "#F2F2F2")
+    static let closeBtnBG = UIColor(hex: "#EAEFF3")
+    static let brandPrimaryTint = UIColor(hex: "#E8F8F2")
+    static let primaryBrand100 = UIColor(hex: "#CDF0E4")
+    static let neutralDark800 = UIColor(hex: "#26272C")
+    static let neutralLight500 = UIColor(hex:"D0D0D0")
+    static let neutralLight100 = UIColor(hex: "DCDCDC")
+    static let neutralLight200 = UIColor(hex: "#DDDDDD")
+    static let neutralLight800 = UIColor(hex: "#8B8B8B")
+    static let error100 = UIColor(hex: "#EC8686")
+    static let error200 = UIColor(hex: "#FECACA")
+    static let error800 = UIColor(hex: "#DA2316")
 }
 
 // MARK: - UIColor + Hex

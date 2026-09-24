@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Wallet SuccessVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WalletSuccessVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WalletSuccessVC" customModule="FieldTechy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9P-K6-pCS">
+                                <rect key="frame" x="26.666666666666657" y="303" width="340" height="246"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpM-FT-tP8">
+                                        <rect key="frame" x="142" y="25" width="56" height="56"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TickCircleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Mxg-39-mt8">
+                                                <rect key="frame" x="14.666666666666684" y="14.666666666666687" width="26.333333333333329" height="26.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26.600000000000001" id="UCs-MD-Lsh"/>
+                                                    <constraint firstAttribute="width" constant="26.600000000000001" id="gqB-hI-XAm"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BrandTintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="TKI-a4-G5h"/>
+                                            <constraint firstItem="Mxg-39-mt8" firstAttribute="centerX" secondItem="mpM-FT-tP8" secondAttribute="centerX" id="V5K-Sp-haQ"/>
+                                            <constraint firstAttribute="width" constant="56" id="WaM-7O-lbh"/>
+                                            <constraint firstItem="Mxg-39-mt8" firstAttribute="centerY" secondItem="mpM-FT-tP8" secondAttribute="centerY" id="fco-7T-Jx4"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="n3R-ER-g9A">
+                                        <rect key="frame" x="24" y="92" width="292" height="62.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Withdrawal Successful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-uc-d4X">
+                                                <rect key="frame" x="60.000000000000014" y="0.0" width="171.66666666666669" height="21"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                                <color key="textColor" name="PrimaryTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your withdrawal has been processed successfully" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyU-S6-GjW">
+                                                <rect key="frame" x="24" y="25.999999999999996" width="244" height="36.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                                <color key="textColor" name="NeutralDark500"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-BX-Qyg">
+                                        <rect key="frame" x="54" y="171.66666666666669" width="232" height="44"/>
+                                        <color key="backgroundColor" name="PrimaryButtonTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vs3-oy-5oC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" name="BackgroundColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onTapOk:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aBh-Pa-D7g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="n3R-ER-g9A" firstAttribute="top" secondItem="mpM-FT-tP8" secondAttribute="bottom" constant="11" id="2tx-FS-cFC"/>
+                                    <constraint firstAttribute="trailing" secondItem="TIH-BX-Qyg" secondAttribute="trailing" constant="54" id="4aS-nR-9Xw"/>
+                                    <constraint firstItem="mpM-FT-tP8" firstAttribute="centerX" secondItem="T9P-K6-pCS" secondAttribute="centerX" id="GOR-Xg-nX6"/>
+                                    <constraint firstItem="n3R-ER-g9A" firstAttribute="centerX" secondItem="T9P-K6-pCS" secondAttribute="centerX" id="L4q-yO-raR"/>
+                                    <constraint firstItem="TIH-BX-Qyg" firstAttribute="top" secondItem="n3R-ER-g9A" secondAttribute="bottom" constant="17" id="RaC-vI-zeJ"/>
+                                    <constraint firstItem="n3R-ER-g9A" firstAttribute="leading" secondItem="T9P-K6-pCS" secondAttribute="leading" constant="24" id="cCM-T8-EfL"/>
+                                    <constraint firstItem="TIH-BX-Qyg" firstAttribute="leading" secondItem="T9P-K6-pCS" secondAttribute="leading" constant="54" id="ibx-O7-EA4"/>
+                                    <constraint firstItem="mpM-FT-tP8" firstAttribute="top" secondItem="T9P-K6-pCS" secondAttribute="top" constant="25" id="k0z-3L-vyd"/>
+                                    <constraint firstAttribute="height" constant="246" id="wqy-oh-HX9"/>
+                                    <constraint firstAttribute="width" constant="340" id="zX5-t2-R9J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T9P-K6-pCS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="T38-67-98f"/>
+                            <constraint firstItem="T9P-K6-pCS" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="r0G-60-vrF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="T9P-K6-pCS" id="AeV-93-zYC"/>
+                        <outlet property="subtitleLabel" destination="KyU-S6-GjW" id="cG7-a8-Kac"/>
+                        <outlet property="titleLabel" destination="9Hu-uc-d4X" id="T1u-Ux-i8p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TickCircleIcon" width="32" height="32"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandTintColor">
+            <color red="0.80400002002716064" green="0.94099998474121094" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NeutralDark500">
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryButtonTextColor">
+            <color red="0.0" green="0.60000002384185791" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryTextColor">
+            <color red="0.063000001013278961" green="0.093999996781349182" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

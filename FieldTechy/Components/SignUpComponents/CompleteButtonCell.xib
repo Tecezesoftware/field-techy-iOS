@@ -29,7 +29,7 @@
                                 <rect key="frame" x="58.999999999999986" y="12" width="219.66666666666663" height="23"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Registeration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8r-vs-dm0">
-                                        <rect key="frame" x="0.0" y="1" width="191.66666666666663" height="21"/>
+                                        <rect key="frame" x="0.0" y="1" width="191.66666666666666" height="21"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                         <color key="textColor" name="SecondaryBGColor"/>
                                         <nil key="highlightedColor"/>
@@ -39,11 +39,22 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIm-rG-rgi">
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="47"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="submitbuttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DvP-Nj-qia"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="PrimaryButtonTextColor"/>
                         <constraints>
+                            <constraint firstItem="aIm-rG-rgi" firstAttribute="top" secondItem="c0g-1K-Tjb" secondAttribute="top" id="2d8-Ag-Rjc"/>
                             <constraint firstAttribute="height" constant="47" id="3Yy-aT-8AC"/>
+                            <constraint firstItem="aIm-rG-rgi" firstAttribute="leading" secondItem="c0g-1K-Tjb" secondAttribute="leading" id="LHc-gM-Y6o"/>
+                            <constraint firstAttribute="trailing" secondItem="aIm-rG-rgi" secondAttribute="trailing" id="Xbi-sZ-ncL"/>
                             <constraint firstAttribute="bottom" secondItem="W0D-3b-KvD" secondAttribute="bottom" constant="12" id="gSB-O9-Kru"/>
+                            <constraint firstAttribute="bottom" secondItem="aIm-rG-rgi" secondAttribute="bottom" id="kYD-XR-Vbb"/>
                             <constraint firstItem="W0D-3b-KvD" firstAttribute="centerX" secondItem="c0g-1K-Tjb" secondAttribute="centerX" id="mbd-8Z-Hgt"/>
                             <constraint firstItem="W0D-3b-KvD" firstAttribute="top" secondItem="c0g-1K-Tjb" secondAttribute="top" constant="12" id="o9n-5O-sx5"/>
                         </constraints>
