@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
   
     @IBAction func menuAction(_ sender: UIButton) {
         showSideMenu()
+        bottomNavigationView.isHidden = true
     }
     
     private func showSideMenu() {
@@ -24,12 +25,24 @@ class BaseViewController: UIViewController {
         menu.frame = view.bounds
         menu.onClose = { [weak menu] in
             menu?.removeFromSuperview()
+            self.bottomNavigationView.isHidden = false
         }
         menu.onMenuSelection = { [weak self, weak menu] item in
             menu?.removeFromSuperview()
             self?.handleMenuSelection(item)
         }
         menu.chatBotView.cornerRadius = 15
+        
+        if UserDefaultsManager.shared.getIsClient{
+            menu.bottomAnchorLayout.constant = 102
+            menu.recommendedJobsView.isHidden = true
+            menu.wiseListView.isHidden = true
+        }else{
+            menu.bottomAnchorLayout.constant = 36
+            menu.recommendedJobsView.isHidden = false
+            menu.wiseListView.isHidden = false
+        }
+        
         view.addSubview(menu)
     }
     
@@ -47,15 +60,21 @@ class BaseViewController: UIViewController {
             if fromScreen == .dashboard{
                     menu.removeFromSuperview()
             }else{
-                let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
-                self.navigationController?.pushViewController(vc, animated: false)
+                if UserDefaultsManager.shared.getIsClient{
+                    let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
+                    self.navigationController?.pushViewController(vc, animated: false)
+                }else{
+                    let vc = Singleton.shared.storyBoard(storyboard: "EngineerDashboard", identifier: "EngineerDashboardVC")
+                    self.navigationController?.pushViewController(vc, animated: false)
+                }
             }
             
         case .myJobs:
             if fromScreen == .jobs{
                     menu.removeFromSuperview()
             }else{
-                let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC")
+                let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC") as! MyJobsVC
+                vc.previousScreen = "MyJobs"
                 self.navigationController?.pushViewController(vc, animated: false)
             }
             
@@ -85,6 +104,23 @@ class BaseViewController: UIViewController {
             
         case .logout:
             showLogoutConfirmation()
+            
+        case .recommenedJobs:
+            if fromScreen == .jobs{
+                    menu.removeFromSuperview()
+            }else{
+                let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC") as! MyJobsVC
+                vc.previousScreen = "Recommended Jobs"
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
+        case .wiselist:
+            if fromScreen == .jobs{
+                    menu.removeFromSuperview()
+            }else{
+                let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC") as! MyJobsVC
+                vc.previousScreen = "Wiselist Jobs"
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
         }
     }
     
@@ -107,13 +143,19 @@ class BaseViewController: UIViewController {
             switch item {
             case .dashboard:
                 if selectedItem != .dashboard{
-                    let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
-                    self.navigationController?.pushViewController(vc, animated: false)
+                    if UserDefaultsManager.shared.getIsClient{
+                        let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
+                        self.navigationController?.pushViewController(vc, animated: false)
+                    }else{
+                        let vc = Singleton.shared.storyBoard(storyboard: "EngineerDashboard", identifier: "EngineerDashboardVC")
+                        self.navigationController?.pushViewController(vc, animated: false)
+                    }
                 }
 
             case .jobs:
                 if selectedItem != .jobs{
-                    let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC")
+                    let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC") as! MyJobsVC
+                    vc.previousScreen = "MyJobs"
                     self.navigationController?.pushViewController(vc, animated: false)
                 }
 

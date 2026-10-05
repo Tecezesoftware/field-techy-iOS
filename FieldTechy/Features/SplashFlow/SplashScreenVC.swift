@@ -46,8 +46,13 @@ class SplashScreenVC: UIViewController{
     private func navigateToNextScreen() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {[weak self] in
             if UserDefaultsManager.shared.isLoggedIn {
-                let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
-                self?.navigationController?.pushViewController(vc, animated: true)
+                if UserDefaultsManager.shared.getIsClient{
+                    let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
+                    self?.navigationController?.pushViewController(vc, animated: false)
+                }else{
+                    let vc = Singleton.shared.storyBoard(storyboard: "EngineerDashboard", identifier: "EngineerDashboardVC")
+                    self?.navigationController?.pushViewController(vc, animated: false)
+                }
             }else{
                 let vc = Singleton.shared.storyBoard(storyboard: "OnboardingView", identifier: "OnboardingVC")
                 self?.navigationController?.pushViewController(vc, animated: true)

@@ -145,5 +145,8 @@ class EngineerSignUpContainerVC: UIViewController {
         print("Name: \(sharedModel.firstName) \(sharedModel.lastName)")
         print("Skills: \(sharedModel.selectedSkills)")
         print("Onsite: \(sharedModel.onsiteJobs)")
+        UserDefaultsManager.shared.setLoginStatus(true)
+        let vc = Singleton.shared.storyBoard(storyboard: "EngineerDashboard", identifier: "EngineerDashboardVC")
+        self.navigationController?.pushViewController(vc, animated: false)
     }
 }

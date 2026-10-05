@@ -85,8 +85,13 @@ extension SignInVC: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompleteButtonCell", for: indexPath) as! CompleteButtonCell
             cell.buttonLabel.text = "Sign in"
             cell.navigateToRespectiveScreen = {[weak self] in
-                let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
-                self?.navigationController?.pushViewController(vc, animated: true)
+                if UserDefaultsManager.shared.getIsClient{
+                    let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
+                    self?.navigationController?.pushViewController(vc, animated: false)
+                }else{
+                    let vc = Singleton.shared.storyBoard(storyboard: "EngineerDashboard", identifier: "EngineerDashboardVC")
+                    self?.navigationController?.pushViewController(vc, animated: false)
+                }
             }
             return cell
         case .socialLogin:

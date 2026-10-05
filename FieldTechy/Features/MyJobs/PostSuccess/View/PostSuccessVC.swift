@@ -28,7 +28,8 @@ class PostSuccessVC: UIViewController {
     }
  
     @IBAction func OntapViewMyJob(_ sender: Any){
-        let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC")
+        let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC") as! MyJobsVC
+        vc.previousScreen = "MyJobs"
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

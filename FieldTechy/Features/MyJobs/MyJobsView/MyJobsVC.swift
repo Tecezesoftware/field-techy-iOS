@@ -9,11 +9,31 @@ import UIKit
 
 class MyJobsVC: BaseViewController {
     
+    @IBOutlet weak var headerTitleLabel: UILabel!
+    @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var postMyJobsButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    var previousScreen: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBottomNavigation(selectedItem: .jobs)
+        configureUI()
+    }
+    
+    func configureUI(){
+        if UserDefaultsManager.shared.getIsClient{
+            headerTitleLabel.text = "My Jobs"
+            filterButton.isHidden = false
+            postMyJobsButton.isHidden = false
+        }else{
+            headerTitleLabel.text = previousScreen
+            postMyJobsButton.isHidden = true
+             if previousScreen == "Wiselist Jobs"{
+                filterButton.isHidden = true
+            }
+        }
     }
     
     @IBAction func onTapPostJob(_ sender: Any) {
@@ -38,6 +58,11 @@ extension MyJobsVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postedJobCell", for: indexPath) as! postedJobCell
+        if previousScreen == "Recommended Jobs"{
+            cell.saveButton.isHidden = false
+        }else{
+            cell.saveButton.isHidden = true
+        }
         return cell
     }
     
@@ -46,15 +71,19 @@ extension MyJobsVC: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = Singleton.shared.storyBoard(storyboard: "viewMyJobs", identifier: "viewMyJobsVC") as! viewMyJobsVC
-        if indexPath.row == 1{
-            vc.jobType = .fulltime
-        }else if indexPath.row == 2{
-            vc.jobType = .scheduled
+        if UserDefaultsManager.shared.getIsClient{
+            let vc = Singleton.shared.storyBoard(storyboard: "viewMyJobs", identifier: "viewMyJobsVC") as! viewMyJobsVC
+            if indexPath.row == 1{
+                vc.jobType = .fulltime
+            }else if indexPath.row == 2{
+                vc.jobType = .scheduled
+            }else{
+                vc.jobType = .dispatch
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
         }else{
-            vc.jobType = .dispatch
+            
         }
-        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -67,6 +96,7 @@ class postedJobCell: UITableViewCell{
     @IBOutlet weak var jobstatusBGView: UIView!
     @IBOutlet weak var jobstatusLabel: UILabel!
     @IBOutlet weak var jobtypeLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func layoutSubviews() {
         super.layoutSubviews()

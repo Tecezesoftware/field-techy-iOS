@@ -163,10 +163,10 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TTR-BN-Eha">
-                            <rect key="frame" x="19.666666666666657" y="151" width="261" height="300"/>
+                            <rect key="frame" x="19.666666666666657" y="151" width="261" height="354"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-KB-kNx">
-                                    <rect key="frame" x="0.0" y="0.0" width="261" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="261" height="46.333333333333336"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu-DashBoardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mCo-am-Xje">
                                             <rect key="frame" x="15.999999999999996" y="16.666666666666657" width="20.000000000000004" height="20"/>
@@ -182,7 +182,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOy-lW-iFX">
-                                            <rect key="frame" x="0.0" y="0.0" width="261" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="261" height="46.333333333333336"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <connections>
                                                 <action selector="dashboardAction:" destination="dO0-zX-P3H" eventType="touchUpInside" id="EhA-7L-4Ju"/>
@@ -202,24 +202,61 @@
                                         <constraint firstItem="BOy-lW-iFX" firstAttribute="top" secondItem="e7d-KB-kNx" secondAttribute="top" id="w2y-uk-lZK"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gic-cL-ljC">
+                                    <rect key="frame" x="0.0" y="51.333333333333343" width="261" height="46.333333333333343"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RecomIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ps6-zA-ynw">
+                                            <rect key="frame" x="15.999999999999996" y="14.333333333333314" width="24.000000000000004" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="DkB-Hb-wmF"/>
+                                                <constraint firstAttribute="height" constant="24" id="MYX-zu-STt"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpY-ha-W9J">
+                                            <rect key="frame" x="52" y="16" width="197" height="21"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                            <color key="textColor" name="TextMuted"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRZ-YN-XBu">
+                                            <rect key="frame" x="0.0" y="0.0" width="261" height="46.333333333333336"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="recommendedJobsAction:" destination="dO0-zX-P3H" eventType="touchUpInside" id="EPw-RY-i8y"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="BpY-ha-W9J" firstAttribute="leading" secondItem="ps6-zA-ynw" secondAttribute="trailing" constant="12" id="08k-a5-kbs"/>
+                                        <constraint firstAttribute="trailing" secondItem="qRZ-YN-XBu" secondAttribute="trailing" id="8O3-aK-xEf"/>
+                                        <constraint firstItem="ps6-zA-ynw" firstAttribute="centerY" secondItem="BpY-ha-W9J" secondAttribute="centerY" id="9dG-TI-HE8"/>
+                                        <constraint firstItem="qRZ-YN-XBu" firstAttribute="top" secondItem="Gic-cL-ljC" secondAttribute="top" id="ILV-pb-CWx"/>
+                                        <constraint firstItem="BpY-ha-W9J" firstAttribute="top" secondItem="Gic-cL-ljC" secondAttribute="top" constant="16" id="brV-Xz-f5b"/>
+                                        <constraint firstItem="qRZ-YN-XBu" firstAttribute="leading" secondItem="Gic-cL-ljC" secondAttribute="leading" id="hu8-NN-tX5"/>
+                                        <constraint firstItem="ps6-zA-ynw" firstAttribute="leading" secondItem="Gic-cL-ljC" secondAttribute="leading" constant="16" id="hvX-wa-6aW"/>
+                                        <constraint firstAttribute="bottom" secondItem="qRZ-YN-XBu" secondAttribute="bottom" id="icu-fg-Z6Q"/>
+                                        <constraint firstAttribute="trailing" secondItem="BpY-ha-W9J" secondAttribute="trailing" constant="12" id="oZD-bI-Byh"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTX-Hv-1kK">
-                                    <rect key="frame" x="0.0" y="61" width="261" height="56"/>
+                                    <rect key="frame" x="0.0" y="102.66666666666666" width="261" height="46.333333333333343"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu-JobsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MAr-Yn-kTA">
-                                            <rect key="frame" x="15.999999999999996" y="14.666666666666657" width="24.000000000000004" height="24"/>
+                                            <rect key="frame" x="15.999999999999996" y="14.333333333333343" width="24.000000000000004" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="24" id="7jj-rb-PPh"/>
                                                 <constraint firstAttribute="height" constant="24" id="irH-g9-g20"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-Rc-31C">
-                                            <rect key="frame" x="52" y="16" width="197" height="21"/>
+                                            <rect key="frame" x="52" y="16.000000000000028" width="197" height="21"/>
                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                             <color key="textColor" name="TextMuted"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndV-42-dnI">
-                                            <rect key="frame" x="0.0" y="0.0" width="261" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="261" height="46.333333333333336"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <connections>
                                                 <action selector="myJobsAction:" destination="dO0-zX-P3H" eventType="touchUpInside" id="Nye-vd-57W"/>
@@ -240,26 +277,26 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkK-be-OQQ">
-                                    <rect key="frame" x="0.0" y="122" width="261" height="56"/>
+                                    <rect key="frame" x="0.0" y="154" width="261" height="46"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu-WalletIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Z7s-bK-P0p">
-                                            <rect key="frame" x="15.999999999999996" y="14.666666666666686" width="24.000000000000004" height="24"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WiselistIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Z7s-bK-P0p">
+                                            <rect key="frame" x="15.999999999999996" y="14.333333333333314" width="24.000000000000004" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="24" id="JGc-sn-z6l"/>
                                                 <constraint firstAttribute="height" constant="24" id="MCz-7a-LO9"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyI-h6-eBa">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyI-h6-eBa">
                                             <rect key="frame" x="52" y="16" width="197" height="21"/>
                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                             <color key="textColor" name="TextMuted"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAX-PC-aun">
-                                            <rect key="frame" x="0.0" y="0.0" width="261" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="261" height="46"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <connections>
-                                                <action selector="walletAction:" destination="dO0-zX-P3H" eventType="touchUpInside" id="grE-AK-Rr4"/>
+                                                <action selector="wiselistAction:" destination="dO0-zX-P3H" eventType="touchUpInside" id="2Vg-La-6cI"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -276,8 +313,45 @@
                                         <constraint firstItem="LyI-h6-eBa" firstAttribute="leading" secondItem="Z7s-bK-P0p" secondAttribute="trailing" constant="12" id="yRX-fk-PjI"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JE-2n-17k">
+                                    <rect key="frame" x="0.0" y="205" width="261" height="46.333333333333343"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu-WalletIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xP5-Cl-Ke9">
+                                            <rect key="frame" x="15.999999999999996" y="14.666666666666686" width="24.000000000000004" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="h5b-OT-MLt"/>
+                                                <constraint firstAttribute="width" constant="24" id="rnu-ll-X08"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZw-bW-jB4">
+                                            <rect key="frame" x="52" y="16" width="197" height="21"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                            <color key="textColor" name="TextMuted"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKF-JQ-ZTH">
+                                            <rect key="frame" x="0.0" y="0.0" width="261" height="46.333333333333336"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="walletAction:" destination="dO0-zX-P3H" eventType="touchUpInside" id="nyN-Jl-zMn"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="cZw-bW-jB4" secondAttribute="trailing" constant="12" id="KRt-7u-p2o"/>
+                                        <constraint firstItem="xP5-Cl-Ke9" firstAttribute="centerY" secondItem="cZw-bW-jB4" secondAttribute="centerY" id="LJ8-dH-Cfr"/>
+                                        <constraint firstItem="XKF-JQ-ZTH" firstAttribute="top" secondItem="8JE-2n-17k" secondAttribute="top" id="O82-7K-gyA"/>
+                                        <constraint firstAttribute="trailing" secondItem="XKF-JQ-ZTH" secondAttribute="trailing" id="Ybb-NP-aCm"/>
+                                        <constraint firstItem="xP5-Cl-Ke9" firstAttribute="leading" secondItem="8JE-2n-17k" secondAttribute="leading" constant="16" id="cuG-pM-Wqk"/>
+                                        <constraint firstItem="cZw-bW-jB4" firstAttribute="leading" secondItem="xP5-Cl-Ke9" secondAttribute="trailing" constant="12" id="lNg-uM-Xmb"/>
+                                        <constraint firstAttribute="bottom" secondItem="XKF-JQ-ZTH" secondAttribute="bottom" id="mSN-cs-iYs"/>
+                                        <constraint firstItem="cZw-bW-jB4" firstAttribute="top" secondItem="8JE-2n-17k" secondAttribute="top" constant="16" id="o1B-bB-yMK"/>
+                                        <constraint firstItem="XKF-JQ-ZTH" firstAttribute="leading" secondItem="8JE-2n-17k" secondAttribute="leading" id="z0l-Np-TUx"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sz-LC-tvX">
-                                    <rect key="frame" x="0.0" y="183" width="261" height="56"/>
+                                    <rect key="frame" x="0.0" y="256.33333333333331" width="261" height="46.333333333333314"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu-DisputeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="og5-FX-7hJ">
                                             <rect key="frame" x="15.999999999999996" y="14.666666666666686" width="24.000000000000004" height="24"/>
@@ -293,7 +367,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpf-jZ-XxZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="261" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="261" height="46.333333333333336"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <connections>
                                                 <action selector="disputeAction:" destination="dO0-zX-P3H" eventType="touchUpInside" id="Ghn-1H-zvD"/>
@@ -314,10 +388,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3z-Bw-Imr">
-                                    <rect key="frame" x="0.0" y="244" width="261" height="56"/>
+                                    <rect key="frame" x="0.0" y="307.66666666666669" width="261" height="46.333333333333314"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu-SettingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="CSo-Vr-TdP">
-                                            <rect key="frame" x="15.999999999999996" y="14.666666666666686" width="24.000000000000004" height="24"/>
+                                            <rect key="frame" x="15.999999999999996" y="14.666666666666629" width="24.000000000000004" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="24" id="8JM-Gb-r8x"/>
                                                 <constraint firstAttribute="height" constant="24" id="Rgn-NW-XE8"/>
@@ -330,7 +404,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH1-yx-TaW">
-                                            <rect key="frame" x="0.0" y="0.0" width="261" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="261" height="46.333333333333336"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <connections>
                                                 <action selector="settingsAction:" destination="dO0-zX-P3H" eventType="touchUpInside" id="Jl3-Ff-E8M"/>
@@ -496,7 +570,7 @@
                         <constraint firstItem="Smz-Y3-evZ" firstAttribute="leading" secondItem="hgp-Jd-ZEV" secondAttribute="leading" id="nd6-gD-25R"/>
                         <constraint firstAttribute="trailing" secondItem="TTR-BN-Eha" secondAttribute="trailing" constant="19.5" id="pxo-lu-Og4"/>
                         <constraint firstItem="Pc6-rk-Jkl" firstAttribute="top" secondItem="Smz-Y3-evZ" secondAttribute="bottom" constant="16" id="uYu-1H-7H0"/>
-                        <constraint firstItem="hgp-Jd-ZEV" firstAttribute="top" secondItem="TTR-BN-Eha" secondAttribute="bottom" constant="90" id="yHW-cq-isC"/>
+                        <constraint firstItem="hgp-Jd-ZEV" firstAttribute="top" secondItem="TTR-BN-Eha" secondAttribute="bottom" constant="36" id="yHW-cq-isC"/>
                     </constraints>
                 </view>
             </subviews>
@@ -508,13 +582,16 @@
                 <constraint firstItem="Sek-8b-ebi" firstAttribute="top" secondItem="dO0-zX-P3H" secondAttribute="top" id="fKm-Eh-f8P"/>
             </constraints>
             <connections>
+                <outlet property="bottomAnchorLayout" destination="yHW-cq-isC" id="1jU-Kc-o0y"/>
                 <outlet property="chatBotView" destination="hgp-Jd-ZEV" id="Lee-eD-mby"/>
                 <outlet property="closeButton" destination="BOR-nC-DSn" id="rcL-QB-Cvj"/>
                 <outlet property="profileImageView" destination="BO6-ms-jBP" id="dtE-wD-JFZ"/>
+                <outlet property="recommendedJobsView" destination="Gic-cL-ljC" id="OTo-bI-htb"/>
                 <outlet property="userCompanyLabel" destination="miI-5V-t8x" id="Ekx-Pk-rck"/>
                 <outlet property="userJoinedDateLabel" destination="IFr-ko-jxq" id="93A-A3-Dpd"/>
                 <outlet property="userLoctionLabel" destination="1FS-5O-QoO" id="Hlp-UN-36j"/>
                 <outlet property="userNameLabel" destination="Jq2-QX-aEp" id="XQ5-vM-vAV"/>
+                <outlet property="wiseListView" destination="NkK-be-OQQ" id="nJ4-SD-BEA"/>
             </connections>
             <point key="canvasLocation" x="-331" y="-565"/>
         </view>
@@ -532,7 +609,9 @@
         <image name="Menu-JobsIcon" width="24" height="24"/>
         <image name="Menu-SettingsIcon" width="24" height="24"/>
         <image name="Menu-WalletIcon" width="24" height="24"/>
+        <image name="RecomIcon" width="24" height="24"/>
         <image name="WhiteDotIcon" width="8" height="8"/>
+        <image name="WiselistIcon" width="24" height="24"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

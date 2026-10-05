@@ -74,7 +74,7 @@ class GradientView: UIView {
             startColor.cgColor,
             endColor.cgColor
         ]
-
+        gradientLayer.cornerRadius = cornerRadius
         gradientLayer.setNeedsDisplay()
     }
 }

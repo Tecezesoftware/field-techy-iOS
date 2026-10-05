@@ -13,14 +13,18 @@ class WalletVC: BaseViewController {
     @IBOutlet weak var updatedStatusLabel: UILabel!
     
     @IBOutlet weak var quickActionView: UIView!
+    @IBOutlet weak var quickActionStackView: UIStackView!
+    @IBOutlet weak var addBalanceOuterView: UIView!
     @IBOutlet weak var addBalanceView: UIView!
     @IBOutlet weak var withdrawView: UIView!
+    @IBOutlet weak var withdrawIconView: UIView!
+    @IBOutlet weak var withdrawIconImageView: UIImageView!
     @IBOutlet weak var paymentView: UIView!
     @IBOutlet weak var historyView: UIView!
     
     @IBOutlet weak var historyTableView: UITableView!
     
-    private var quickActionViews: [UIView] {
+    var quickActionViews: [UIView] {
         [
             addBalanceView,
             withdrawView,
@@ -41,20 +45,33 @@ class WalletVC: BaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        quickActionView.layer.cornerRadius = 15
-        quickActionView.layer.shadowColor = AppTheme.primaryTextColor.cgColor
-        quickActionView.layer.shadowOpacity = 0.15
-        quickActionView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        quickActionView.layer.shadowRadius = 4
-        quickActionView.layer.masksToBounds = false
-        
-        for view in quickActionViews {
-            view.layer.cornerRadius = view.layer.frame.height/2
-            view.layer.borderWidth = 1
-            view.layer.borderColor = view == addBalanceView ? AppTheme.brandPrimaryTint.cgColor : AppTheme.borderColorOfViews.cgColor
+            quickActionView.layer.cornerRadius = 15
+            quickActionView.layer.shadowColor = AppTheme.primaryTextColor.cgColor
+            quickActionView.layer.shadowOpacity = 0.15
+            quickActionView.layer.shadowOffset = CGSize(width: 0, height: 2)
+            quickActionView.layer.shadowRadius = 4
+            quickActionView.layer.masksToBounds = false
+            
+        if UserDefaultsManager.shared.getIsClient{
+            for view in quickActionViews {
+                view.layer.cornerRadius = view.layer.frame.height/2
+                view.layer.borderWidth = 1
+                view.layer.borderColor = view == addBalanceView ? AppTheme.brandPrimaryTint.cgColor : AppTheme.borderColorOfViews.cgColor
+            }
+            quickActionStackView.spacing = 10
+            withdrawIconImageView.image = UIImage(named: "WithdrawIcon")
+            addBalanceOuterView.isHidden = false
+        }else{
+            for view in quickActionViews {
+                view.layer.cornerRadius = view.layer.frame.height/2
+                view.layer.borderWidth = 1
+                view.layer.borderColor = view == withdrawView ? AppTheme.brandPrimaryTint.cgColor : AppTheme.borderColorOfViews.cgColor
+            }
+            withdrawView.backgroundColor = AppTheme.primaryButtonBGColor
+            quickActionStackView.spacing = 69.5
+            withdrawIconImageView.image = UIImage(named: "WithdrawWhiteIcon")
+            addBalanceOuterView.isHidden = true
         }
-        
     }
     
     @IBAction func onTapFilter(_ sender: Any) {

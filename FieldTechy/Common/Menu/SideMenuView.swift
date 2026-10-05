@@ -10,8 +10,10 @@ import UIKit
 enum SideMenuItem {
     case profile
     case dashboard
+    case recommenedJobs
     case myJobs
     case wallet
+    case wiselist
     case dispute
     case settings
     case logout
@@ -25,6 +27,9 @@ class SideMenuView: UIView {
     @IBOutlet weak var userCompanyLabel: UILabel!
     @IBOutlet weak var userLoctionLabel: UILabel!
     @IBOutlet weak var userJoinedDateLabel: UILabel!
+    @IBOutlet weak var recommendedJobsView: UIView!
+    @IBOutlet weak var wiseListView: UIView!
+    @IBOutlet weak var bottomAnchorLayout: NSLayoutConstraint!
     @IBOutlet weak var chatBotView: GradientView!
     
     
@@ -42,6 +47,10 @@ class SideMenuView: UIView {
     @IBAction func dashboardAction(_ sender: UIButton) {
         onMenuSelection?(.dashboard)
     }
+    
+    @IBAction func recommendedJobsAction(_ sender: UIButton) {
+        onMenuSelection?(.recommenedJobs)
+    }
 
     @IBAction func myJobsAction(_ sender: UIButton) {
         onMenuSelection?(.myJobs)
@@ -49,6 +58,10 @@ class SideMenuView: UIView {
 
     @IBAction func walletAction(_ sender: UIButton) {
         onMenuSelection?(.wallet)
+    }
+    
+    @IBAction func wiselistAction(_ sender: UIButton) {
+        onMenuSelection?(.wiselist)
     }
 
     @IBAction func disputeAction(_ sender: UIButton) {
