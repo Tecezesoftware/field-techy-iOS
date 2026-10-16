@@ -38,17 +38,3 @@ class OtherRecieptView: UIView {
         }
     }
 }
-
-extension OtherRecieptView {
-    static func loadFromXIB() -> OtherRecieptView? {
-        let nib = UINib(
-            nibName: "OtherRecieptView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? OtherRecieptView
-    }
-}

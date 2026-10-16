@@ -63,6 +63,15 @@ extension MyJobsVC: UITableViewDataSource, UITableViewDelegate{
         }else{
             cell.saveButton.isHidden = true
         }
+        
+        if indexPath.row == 1{
+            cell.jobtypeLabel.text = "Full Time"
+        }else if indexPath.row == 2{
+            cell.jobtypeLabel.text = "Scheduled"
+        }else{
+            cell.jobtypeLabel.text = "Dispatch"
+        }
+        
         return cell
     }
     
@@ -82,7 +91,15 @@ extension MyJobsVC: UITableViewDataSource, UITableViewDelegate{
             }
             self.navigationController?.pushViewController(vc, animated: true)
         }else{
-            
+            let vc = Singleton.shared.storyBoard(storyboard: "EngineerViewMyJobs", identifier: "EngineerViewMyJobsVC") as! EngineerViewMyJobsVC
+            if indexPath.row == 1{
+                vc.jobType = .fulltime
+            }else if indexPath.row == 2{
+                vc.jobType = .scheduled
+            }else{
+                vc.jobType = .dispatch
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

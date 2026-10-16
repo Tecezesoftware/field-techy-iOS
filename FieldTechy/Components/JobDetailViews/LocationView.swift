@@ -118,17 +118,3 @@ class LocationView: UIView {
         }
     }
 }
-
-extension LocationView {
-    static func loadFromXIB() -> LocationView? {
-        let nib = UINib(
-            nibName: "LocationView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? LocationView
-    }
-}

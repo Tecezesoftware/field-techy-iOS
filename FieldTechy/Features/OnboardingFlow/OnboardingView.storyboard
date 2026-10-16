@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rL1-Ro-N02">
-                                <rect key="frame" x="139.66666666666666" y="730" width="114.66666666666666" height="47"/>
+                                <rect key="frame" x="139.33333333333334" y="730" width="114.66666666666666" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWz-kc-kJE">
                                         <rect key="frame" x="0.0" y="13" width="86.666666666666671" height="21"/>
@@ -49,7 +49,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenRightPointer" translatesAutoresizingMaskIntoConstraints="NO" id="B1p-gV-lSg">
-                                        <rect key="frame" x="94.666666666666686" y="13.666666666666629" width="20" height="20"/>
+                                        <rect key="frame" x="94.666666666666657" y="13.666666666666629" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="pdN-qO-v1x"/>
                                             <constraint firstAttribute="height" constant="20" id="wPY-uC-3fc"/>
@@ -73,9 +73,9 @@
                             <constraint firstItem="rL1-Ro-N02" firstAttribute="bottom" secondItem="UAB-cO-aeY" secondAttribute="bottom" id="UFn-tE-DDu"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UAB-cO-aeY" secondAttribute="trailing" constant="28.5" id="Ylc-Pl-bvE"/>
                             <constraint firstItem="tGk-E0-aFC" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="216" id="atq-0T-gsH"/>
-                            <constraint firstItem="rL1-Ro-N02" firstAttribute="leading" secondItem="UAB-cO-aeY" secondAttribute="leading" constant="111" id="fdJ-Q1-fLX"/>
                             <constraint firstItem="UAB-cO-aeY" firstAttribute="top" secondItem="tGk-E0-aFC" secondAttribute="bottom" constant="174" id="hiZ-EG-qfk"/>
                             <constraint firstItem="tGk-E0-aFC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ill-0U-0e4"/>
+                            <constraint firstItem="rL1-Ro-N02" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kg9-QA-aGu"/>
                             <constraint firstItem="UAB-cO-aeY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28.5" id="tQy-kp-3E4"/>
                             <constraint firstItem="Cn9-SK-9Ri" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="vOl-yB-pu3"/>
                             <constraint firstItem="rL1-Ro-N02" firstAttribute="top" secondItem="UAB-cO-aeY" secondAttribute="top" id="vfF-he-Mtm"/>
@@ -98,7 +98,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryButtonTextColor">
-            <color red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.60000002384185791" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

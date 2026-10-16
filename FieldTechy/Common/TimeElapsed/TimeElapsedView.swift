@@ -8,61 +8,63 @@
 import UIKit
 
 class TimeElapsedView: UIView {
-
+    
     // MARK: - IBOutlets
-
+    
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var checkOutButton: UIButton!
     @IBOutlet weak var additionalHoursButton: UIButton!
-
-
+    @IBOutlet weak var timerContainerView: UIView!
+    
+    
     // MARK: - Timer Properties
-
+    
     private var timer: Timer?
     private var startDate: Date?
-
+    
     /// Default working duration = 8 hours
     private let targetDuration: TimeInterval = 8 * 60 * 60
-
-
+    
+    
     // MARK: - Circular Progress Properties
-
-    private let tickCount = 60
+    
+    private let tickCount = 110
     private var tickLayers: [CAShapeLayer] = []
     private var ringCreated = false
-
+    private var lastRingSize: CGSize = .zero
+    
     // MARK: - Button Actions
-
+    
     /// Called when user taps Check Out.
     var onCheckOut: (() -> Void)?
-
+    
     /// Called when user taps Request Additional Hours.
     var onRequestAdditionalHours: (() -> Void)?
-
-
+    
+    
     // MARK: - Lifecycle
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
+    }
+    
+    func configure() {
         setupUI()
     }
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-
-        setupProgressRing()
     }
-
+    
     deinit {
         timer?.invalidate()
     }
-
-
+    
+    
     // MARK: - Setup
-
+    
     private func setupUI() {
-
+        
         setupButtons()
         elapsedTimeLabel.text = "00:00:00"
         elapsedTimeLabel.textAlignment = .center
@@ -71,100 +73,99 @@ class TimeElapsedView: UIView {
             weight: .bold
         )
     }
-
-
+    
+    
     private func setupButtons() {
-
+        
         // Check Out Button
-
+        
         checkOutButton.layer.cornerRadius = 15
         checkOutButton.clipsToBounds = true
-
-
+        
+        
         // Additional Hours Button
-
+        
         additionalHoursButton.layer.cornerRadius = 15
         additionalHoursButton.layer.borderWidth = 1
         additionalHoursButton.layer.borderColor =
-            UIColor.systemGreen.cgColor
-
+        UIColor.systemGreen.cgColor
+        
         additionalHoursButton.clipsToBounds = true
     }
-
-
+    
+    
     // MARK: - Progress Ring
-
-    private func setupProgressRing() {
-
-        guard !ringCreated else {
+    
+    func setupProgressRing() {
+        let size = timerContainerView.bounds.size
+        
+        // Wait until Auto Layout provides the actual size.
+        guard size.width > 0, size.height > 0 else {
             return
         }
-
-        ringCreated = true
-
-        /*
-         The circular ring is positioned based on the size of
-         the TimeElapsedView.
-
-         If your XIB has a separate UIView for the circular
-         timer area, it is better to use that UIView instead.
-         */
-
+        
+        // Rebuild only when the container size changes.
+        guard size != lastRingSize else {
+            return
+        }
+        
+        lastRingSize = size
+        
+        // Remove previously created ticks.
+        tickLayers.forEach { $0.removeFromSuperlayer() }
+        tickLayers.removeAll()
+        
         let center = CGPoint(
-            x: bounds.midX,
-            y: bounds.midY
+            x: size.width / 2,
+            y: size.height / 2
         )
-
-        let radius = min(
-            bounds.width,
-            bounds.height
-        ) / 2 - 15
-
-
+        
+        let radius = min(size.width, size.height) / 2 - 8
+        
         for index in 0..<tickCount {
-
+            
             let angle =
-                CGFloat(index)
-                / CGFloat(tickCount)
-                * 2
-                * .pi
-                - (.pi / 2)
-
+            CGFloat(index) / CGFloat(tickCount)
+            * 2 * .pi - (.pi / 2)
+            
             let outerPoint = CGPoint(
                 x: center.x + cos(angle) * radius,
                 y: center.y + sin(angle) * radius
             )
-
+            
             let innerPoint = CGPoint(
-                x: center.x + cos(angle) * (radius - 8),
-                y: center.y + sin(angle) * (radius - 8)
+                x: center.x + cos(angle) * (radius - 7),
+                y: center.y + sin(angle) * (radius - 7)
             )
-
+            
             let path = UIBezierPath()
-
             path.move(to: innerPoint)
             path.addLine(to: outerPoint)
-
+            
             let tickLayer = CAShapeLayer()
             tickLayer.path = path.cgPath
-            tickLayer.lineWidth = 3
-            tickLayer.lineCap = .butt
-            tickLayer.strokeColor =
-                UIColor.lightGray.cgColor
-            layer.addSublayer(tickLayer)
+            tickLayer.lineWidth = 2
+            tickLayer.strokeColor = AppTheme.neutralLight300.cgColor
+            
+            timerContainerView.layer.addSublayer(tickLayer)
             tickLayers.append(tickLayer)
         }
+        
+        // Refresh the ring using the current elapsed time.
+        if let startDate = startDate {
+            updateProgress(Date().timeIntervalSince(startDate))
+        }
     }
-
-
+    
+    
     // MARK: - Start Timer
-
+    
     /// Starts the elapsed timer.
     ///
     /// - Parameter startDate:
     ///   The actual check-in time received from the API.
     func startTimer(from startDate: Date = Date()) {
-
+        
         self.startDate = startDate
         timer?.invalidate()
         updateTimer()
@@ -180,33 +181,33 @@ class TimeElapsedView: UIView {
             forMode: .common
         )
     }
-
+    
     // MARK: - Update Timer
     @objc private func updateTimer() {
         guard let startDate = startDate else {
             return
         }
         let elapsedTime =
-            Date().timeIntervalSince(startDate)
+        Date().timeIntervalSince(startDate)
         updateTimeLabel(elapsedTime)
         updateProgress(elapsedTime)
     }
-
+    
     // MARK: - Update Time Label
     private func updateTimeLabel(_ elapsedTime: TimeInterval) {
-
+        
         let totalSeconds =
-            max(0, Int(elapsedTime))
-
+        max(0, Int(elapsedTime))
+        
         let hours =
-            totalSeconds / 3600
-
+        totalSeconds / 3600
+        
         let minutes =
-            (totalSeconds % 3600) / 60
-
+        (totalSeconds % 3600) / 60
+        
         let seconds =
-            totalSeconds % 60
-
+        totalSeconds % 60
+        
         elapsedTimeLabel.text = String(
             format: "%02d:%02d:%02d",
             hours,
@@ -214,8 +215,8 @@ class TimeElapsedView: UIView {
             seconds
         )
     }
-
-
+    
+    
     // MARK: - Update Circular Progress
     private func updateProgress(_ elapsedTime: TimeInterval) {
         guard !tickLayers.isEmpty else {
@@ -226,24 +227,20 @@ class TimeElapsedView: UIView {
         let activeTickCount = Int(progress * Double(tickCount))
         for (index, tickLayer) in tickLayers.enumerated() {
             if index < activeTickCount {
-                tickLayer.strokeColor =
-                    UIColor.systemGreen.cgColor
-
+                tickLayer.strokeColor = AppTheme.primaryButtonBGColor.cgColor //borderColorOfViews
             } else {
-
-                tickLayer.strokeColor =
-                    UIColor.lightGray.cgColor
+                tickLayer.strokeColor = AppTheme.neutralLight300.cgColor
             }
         }
     }
-
+    
     // MARK: - Stop Timer
     func stopTimer() {
         timer?.invalidate()
         timer = nil
     }
-
-
+    
+    
     // MARK: - Reset Timer
     func resetTimer() {
         stopTimer()
@@ -251,29 +248,16 @@ class TimeElapsedView: UIView {
         elapsedTimeLabel.text = "00:00:00"
         updateProgress(0)
     }
-
-
+    
+    
     // MARK: - Check Out
     @IBAction func checkOutTapped(_ sender: UIButton){
         stopTimer()
         onCheckOut?()
     }
-
+    
     // MARK: - Additional Hours
     @IBAction func additionalHoursTapped(_ sender: UIButton) {
         onRequestAdditionalHours?()
-    }
-}
-
-extension UIView {
-
-    static func loadFromXIB<T: UIView>() -> T {
-        let nibName = String(describing: T.self)
-
-        return Bundle.main.loadNibNamed(
-            nibName,
-            owner: nil,
-            options: nil
-        )!.first as! T
     }
 }

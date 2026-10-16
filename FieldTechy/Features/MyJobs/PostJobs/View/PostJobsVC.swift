@@ -205,7 +205,7 @@ extension PostJobsVC: UITableViewDelegate, UITableViewDataSource {
             case .engData:
                 switch selectedJobType{
                 case .dispatch: return 963
-                case .fulltime: return 1050
+                case .fulltime: return 1150
                 case .scheduled: return 1398
                 }
             case .checklist:

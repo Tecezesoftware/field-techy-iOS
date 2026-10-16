@@ -148,9 +148,6 @@
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#FT-2026-04-1247" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYV-WD-ya7">
                                                                             <rect key="frame" x="0.0" y="3" width="119" height="17"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="119" id="H3Q-Js-DvQ"/>
-                                                                            </constraints>
                                                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                                                                             <color key="textColor" name="PrimaryButtonTextColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -175,6 +172,7 @@
                                                                                 <constraint firstItem="ciT-oZ-rmr" firstAttribute="centerY" secondItem="Stm-U9-ffF" secondAttribute="centerY" id="R5c-p5-KaM"/>
                                                                                 <constraint firstAttribute="height" constant="23" id="UW9-76-K8m"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="ciT-oZ-rmr" secondAttribute="bottom" constant="4" id="n1h-56-UKR"/>
+                                                                                <constraint firstAttribute="width" constant="162" id="sV8-3d-0JS"/>
                                                                             </constraints>
                                                                         </view>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8D-xE-iG2">

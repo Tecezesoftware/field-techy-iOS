@@ -89,7 +89,7 @@ class ViewDisputeVC: UIViewController {
         selectedTab = .evidence
         evidenceBtn.isSelected = true
         configureTabStyle()
-        jobTypeLabel.text = jobType?.rawValue
+//        jobTypeLabel.text = jobType?.rawValue
         
     }
     

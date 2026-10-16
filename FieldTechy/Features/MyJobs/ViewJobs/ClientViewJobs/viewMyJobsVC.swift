@@ -57,14 +57,14 @@ class viewMyJobsVC: UIViewController {
          engineerTimelineTabButton]
     }
     
-    private let taskInfoView = TaskInfomationView.loadFromXIB()
-    private let locationView = LocationView.loadFromXIB()
-    private let signOffView = SignOffSheetView.loadFromXIB()
-    private let timesheetView = TimeSheetView.loadFromXIB()
-    private let ratingView = RatingView.loadFromXIB()
-    private let paymentReceiptView = PaymentReceiptView.loadFromXIB()
-    private let engineerTimelineView = EngineerTimelineView.loadFromXIB()
-    private let otherRecieptView = OtherRecieptView.loadFromXIB()
+    private let taskInfoView : TaskInfomationView = .loadFromXIB()
+    private let locationView : LocationView = .loadFromXIB()
+    private let signOffView : SignOffSheetView = .loadFromXIB()
+    private let timesheetView : TimeSheetView = .loadFromXIB()
+    private let ratingView : RatingView = .loadFromXIB()
+    private let paymentReceiptView : PaymentReceiptView = .loadFromXIB()
+    private let engineerTimelineView : EngineerTimelineView = .loadFromXIB()
+    private let otherRecieptView : OtherRecieptView = .loadFromXIB()
     
     private var currentContentView: UIView?
     var jobType: jobTypes?
@@ -102,10 +102,10 @@ class viewMyJobsVC: UIViewController {
             
             signOffSheetTabButton.setTitle("Sign Off Sheet", for: .normal)
             
-            taskInfoView?.jobPaymentStackView.isHidden = true
-            taskInfoView?.SMEHeaderLabel.text = "SME Details"
-            taskInfoView?.toolRequiredView.isHidden = false
-            taskInfoView?.toolsOuterView.isHidden = false
+            taskInfoView.jobPaymentStackView.isHidden = true
+            taskInfoView.SMEHeaderLabel.text = "SME Details"
+            taskInfoView.toolRequiredView.isHidden = false
+            taskInfoView.toolsOuterView.isHidden = false
             
         }else if jobType == .fulltime {
             
@@ -120,10 +120,10 @@ class viewMyJobsVC: UIViewController {
             
             signOffSheetTabButton.setTitle("Timesheet", for: .normal)
             
-            taskInfoView?.jobPaymentStackView.isHidden = false
-            taskInfoView?.SMEHeaderLabel.text = "Reporting Manager Details"
-            taskInfoView?.toolRequiredView.isHidden = true
-            taskInfoView?.toolsOuterView.isHidden = true
+            taskInfoView.jobPaymentStackView.isHidden = false
+            taskInfoView.SMEHeaderLabel.text = "Reporting Manager Details"
+            taskInfoView.toolRequiredView.isHidden = true
+            taskInfoView.toolsOuterView.isHidden = true
             
         }else if jobType == .scheduled{
             
@@ -138,10 +138,10 @@ class viewMyJobsVC: UIViewController {
             
             signOffSheetTabButton.setTitle("Timesheet", for: .normal)
             
-            taskInfoView?.jobPaymentStackView.isHidden = false
-            taskInfoView?.SMEHeaderLabel.text = "Reporting Manager Details"
-            taskInfoView?.toolRequiredView.isHidden = true
-            taskInfoView?.toolsOuterView.isHidden = true
+            taskInfoView.jobPaymentStackView.isHidden = false
+            taskInfoView.SMEHeaderLabel.text = "Reporting Manager Details"
+            taskInfoView.toolRequiredView.isHidden = true
+            taskInfoView.toolsOuterView.isHidden = true
         }
     }
     
@@ -227,7 +227,7 @@ class viewMyJobsVC: UIViewController {
     @IBAction func taskInfoTabAction(_ sender: UIButton){
         selectTab(sender)
         showTabContent(taskInfoView)
-        taskInfoView?.rejectButtonOnTap = {
+        taskInfoView.rejectButtonOnTap = {
             PopupManager.shared.showRejectRemarks(title: "Reject Engineer", buttonTitle: " Reject engineer", buttonImage: UIImage(named: "CrossIcon"), in: self) { test in
                 print("Dismissed")
             }

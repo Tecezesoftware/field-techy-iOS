@@ -105,5 +105,8 @@ class WithdrawVC: UIViewController{
         amountTextField.text = "$\(amount)"
         amountLabel.textColor = AppTheme.primaryTextColor
         amountLabel.text = "$\(amount)"
+        
+        continueButton.isEnabled = true
+        continueButton.alpha = 1
     }
 }

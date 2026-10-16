@@ -32,17 +32,3 @@ class PaymentReceiptView: UIView {
         self.viewreciept?()
     }
 }
-
-extension PaymentReceiptView {
-    static func loadFromXIB() -> PaymentReceiptView? {
-        let nib = UINib(
-            nibName: "PaymentReceiptView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? PaymentReceiptView
-    }
-}

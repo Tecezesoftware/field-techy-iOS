@@ -82,6 +82,18 @@ class EngineerDashboardVC: BaseViewController {
         vc.fromScreen = "Withdraw"
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func redirectToRecommendedJobs(_ sender: Any){
+        let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC") as! MyJobsVC
+        vc.previousScreen = "Recommended Jobs"
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    @IBAction func redirectToMyJobs(_ sender: Any){
+        let vc = Singleton.shared.storyBoard(storyboard: "MyJobs", identifier: "MyJobsVC") as! MyJobsVC
+        vc.previousScreen = "MyJobs"
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
 }
 
 extension EngineerDashboardVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -95,6 +107,18 @@ extension EngineerDashboardVC: UICollectionViewDelegate, UICollectionViewDataSou
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 280.0, height: 170.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = Singleton.shared.storyBoard(storyboard: "EngineerViewMyJobs", identifier: "EngineerViewMyJobsVC") as! EngineerViewMyJobsVC
+        if indexPath.row == 1{
+            vc.jobType = .fulltime
+        }else if indexPath.row == 2{
+            vc.jobType = .scheduled
+        }else{
+            vc.jobType = .dispatch
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -111,8 +135,14 @@ extension EngineerDashboardVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("at cell for row ")
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyJobCell", for: indexPath) as! MyJobCell
+        if indexPath.row == 1{
+            cell.jobtypeLabel.text = "Full Time"
+        }else if indexPath.row == 2{
+            cell.jobtypeLabel.text = "Scheduled"
+        }else{
+            cell.jobtypeLabel.text = "Dispatch"
+        }
         return cell
     }
     
@@ -121,7 +151,15 @@ extension EngineerDashboardVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let vc = Singleton.shared.storyBoard(storyboard: "EngineerViewMyJobs", identifier: "EngineerViewMyJobsVC") as! EngineerViewMyJobsVC
+        if indexPath.row == 1{
+            vc.jobType = .fulltime
+        }else if indexPath.row == 2{
+            vc.jobType = .scheduled
+        }else{
+            vc.jobType = .dispatch
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

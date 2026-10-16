@@ -81,18 +81,3 @@ class SideMenuView: UIView {
     }
 
 }
-
-extension SideMenuView {
-
-    static func loadFromXIB() -> SideMenuView? {
-        let nib = UINib(
-            nibName: "SideMenuView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? SideMenuView
-    }
-}

@@ -55,6 +55,7 @@ enum AppTheme{
     static let neutralLight50 = UIColor(hex:"F9FAFB")
     static let neutralLight100 = UIColor(hex: "DCDCDC")
     static let neutralLight200 = UIColor(hex: "#DDDDDD")
+    static let neutralLight300 = UIColor(hex: "#D9D9D9")
     static let neutralLight500 = UIColor(hex:"D0D0D0")
     static let neutralLight800 = UIColor(hex: "#8B8B8B")
     static let error100 = UIColor(hex: "#EC8686")

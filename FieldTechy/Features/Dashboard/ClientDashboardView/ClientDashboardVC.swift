@@ -41,7 +41,6 @@ class ClientDashboardVC: BaseViewController {
         makeShadowAndRadius(view: softwareDevView, shadowRadius: 10.0)
         makeShadowAndRadius(view: networkEngView, shadowRadius: 10.0)
         makeShadowAndRadius(view: cybersecurityView, shadowRadius: 10.0)
-        
     }
     
     func makeShadowAndRadius(view:UIView, shadowRadius: CGFloat){
@@ -103,6 +102,11 @@ class ClientDashboardVC: BaseViewController {
     }
     
     @IBAction func postJobAction(_ sender: Any) {
+        let vc = Singleton.shared.storyBoard(storyboard: "PostJobs", identifier: "PostJobsVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func rediectToPostJob(_ sender: Any) {
         let vc = Singleton.shared.storyBoard(storyboard: "PostJobs", identifier: "PostJobsVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }

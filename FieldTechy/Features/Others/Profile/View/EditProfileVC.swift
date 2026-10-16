@@ -95,8 +95,11 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func changeProfile(_ sender: UIButton) {
-        sender.isSelected.toggle()
-        changePhotoBottomView.isHidden = !sender.isSelected
+        if changePhotoBottomView.isHidden == false{
+            changePhotoBottomView.isHidden = true
+        }else{
+            changePhotoBottomView.isHidden = false
+        }
     }
     
     @IBAction func TakePhoto(_ sender: Any) {
@@ -119,5 +122,10 @@ class EditProfileVC: UIViewController {
     @IBAction func SaveAction(_ sender: Any){
         //TODO: - In future need to call api once profile data was altered.
         self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func dismissChangePhotoTab(_ sender: Any) {
+        if changePhotoBottomView.isHidden == false{
+            changePhotoBottomView.isHidden = true
+        }
     }
 }

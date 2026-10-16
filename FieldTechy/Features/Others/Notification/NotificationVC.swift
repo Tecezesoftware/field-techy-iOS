@@ -54,13 +54,13 @@ class NotificationCell: UITableViewCell{
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        containerView.layer.cornerRadius = 10
+        containerView.layer.cornerRadius = 15
         containerView.layer.borderWidth = 1
         containerView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
-        containerView.layer.shadowColor = AppTheme.primaryTextColor.cgColor
-        containerView.layer.shadowOpacity = 0.15
-        containerView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        containerView.layer.shadowRadius = 10
+//        containerView.layer.shadowColor = AppTheme.primaryTextColor.cgColor
+//        containerView.layer.shadowOpacity = 0.15
+//        containerView.layer.shadowOffset = CGSize(width: 0, height: 1)
+//        containerView.layer.shadowRadius = 10
         containerView.layer.masksToBounds = false
     }
 }

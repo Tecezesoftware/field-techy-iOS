@@ -119,17 +119,3 @@ class RatingView: UIView {
         }
     }
 }
-
-extension RatingView {
-    static func loadFromXIB() -> RatingView? {
-        let nib = UINib(
-            nibName: "RatingView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? RatingView
-    }
-}

@@ -69,18 +69,3 @@ class TimeSheetView: UIView {
     }
     
 }
-
-extension TimeSheetView {
-    
-    static func loadFromXIB() -> TimeSheetView? {
-        let nib = UINib(
-            nibName: "TimeSheetView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? TimeSheetView
-    }
-}

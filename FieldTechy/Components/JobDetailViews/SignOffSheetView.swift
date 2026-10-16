@@ -32,18 +32,3 @@ class SignOffSheetView: UIView {
     }
 
 }
-
-extension SignOffSheetView {
-    
-    static func loadFromXIB() -> SignOffSheetView? {
-        let nib = UINib(
-            nibName: "SignOffSheetView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? SignOffSheetView
-    }
-}

@@ -38,17 +38,3 @@ class EngineerTimelineView: UIView {
         
     }
 }
-
-extension EngineerTimelineView {
-    static func loadFromXIB() -> EngineerTimelineView? {
-        let nib = UINib(
-            nibName: "EngineerTimelineView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? EngineerTimelineView
-    }
-}

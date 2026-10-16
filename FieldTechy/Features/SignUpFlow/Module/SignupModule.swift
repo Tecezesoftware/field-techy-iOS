@@ -159,7 +159,7 @@ struct EngineerFormDataSource {
     // MARK: Step 2 — Skills & Rates
     static func step2Items() -> [EngineerFormItem] {[
         EngineerFormItem(id: "sectionTitle",  fieldType: .sectionHeader,    title: "Skills & Rates",    placeholder: ""),
-        EngineerFormItem(id: "skills", fieldType: .multiSelectChips(["React Js", "Angular Js", "HTML 5", "Vue Js", "Swift", "Kotlin", "Flutter"]), title: "Select your skills",  placeholder: "",   isRequired: true),
+        EngineerFormItem(id: "skills", fieldType: .multiSelectChips(["React Js", "Angular Js", "HTML 5", "Vue Js", "Swift", "Kotlin", "Flutter"]), title: "Select your skills",  placeholder: "Select your skills",   isRequired: true),
         EngineerFormItem(id: "skillLevel",   fieldType: .text, title: "Skill Level", placeholder: "L1 (0-3)",   isRequired: true, showDropDown: true, dropDownOptions: ["L1 (0-3)", "L2 (3-5)", "L3 (5+)"]),
         EngineerFormItem(id: "experience",   fieldType: .text,
                          title: "Total Experience",   placeholder: "3-5 years",  isRequired: true, showDropDown: true, dropDownOptions: ["0-1 years", "1-3 years", "3-5 years", "5-10 years", "10+ years"]),

@@ -75,18 +75,3 @@ class TaskInfomationView: UIView {
        rejectButtonOnTap?()
     }
 }
-
-extension TaskInfomationView {
-
-    static func loadFromXIB() -> TaskInfomationView? {
-        let nib = UINib(
-            nibName: "TaskInfomationView",
-            bundle: nil
-        )
-
-        return nib.instantiate(
-            withOwner: nil,
-            options: nil
-        ).first as? TaskInfomationView
-    }
-}

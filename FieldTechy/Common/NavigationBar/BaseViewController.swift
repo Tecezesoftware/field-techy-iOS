@@ -19,9 +19,7 @@ class BaseViewController: UIViewController {
     
     private func showSideMenu() {
         
-        guard let menu = SideMenuView.loadFromXIB() else {
-            return
-        }
+        let menu : SideMenuView = .loadFromXIB()
         menu.frame = view.bounds
         menu.onClose = { [weak menu] in
             menu?.removeFromSuperview()
@@ -29,6 +27,7 @@ class BaseViewController: UIViewController {
         }
         menu.onMenuSelection = { [weak self, weak menu] item in
             menu?.removeFromSuperview()
+            self?.bottomNavigationView.isHidden = false
             self?.handleMenuSelection(item)
         }
         menu.chatBotView.cornerRadius = 15
@@ -48,9 +47,7 @@ class BaseViewController: UIViewController {
     
     private func handleMenuSelection(_ item: SideMenuItem) {
         
-        guard let menu = SideMenuView.loadFromXIB() else {
-            return
-        }
+        let menu : SideMenuView = .loadFromXIB()
         switch item {
         case .profile:
             let vc = Singleton.shared.storyBoard(storyboard: "ViewProfile", identifier: "ViewProfileVC")
@@ -100,7 +97,8 @@ class BaseViewController: UIViewController {
             
         case .aiChat:
             print("AI Chat")
-            //                openAIChat()
+            let vc = Singleton.shared.storyBoard(storyboard: "UnderDevelopmentVC", identifier: "UnderDevelopmentVC") as! UnderDevelopmentVC
+            self.navigationController?.pushViewController(vc, animated: true)
             
         case .logout:
             showLogoutConfirmation()

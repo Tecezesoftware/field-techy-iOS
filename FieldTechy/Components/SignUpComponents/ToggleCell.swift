@@ -29,6 +29,8 @@ class ToggleCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         cardView.layer.cornerRadius = 10
+        cardView.layer.borderWidth = 1
+        cardView.layer.borderColor = AppTheme.borderColorOfViews.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
