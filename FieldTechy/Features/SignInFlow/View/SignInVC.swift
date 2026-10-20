@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 enum SignInFieldType {
     case applogo
@@ -17,7 +18,7 @@ enum SignInFieldType {
 }
 
 class SignInVC: UIViewController {
-
+    
     //MARK: - Outlet Properties
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var signinTableView: UITableView!
@@ -25,15 +26,55 @@ class SignInVC: UIViewController {
     //MARK: - Properties
     var signinFields: [SignInFieldType] = [.applogo, .text, .password, .forgotPassword, .submitButton, .socialLogin]
     var showOtpScreen: Bool = false
-
+    
+    private let viewModel = signInViewModel()
+    private var cancellables = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bgView.layer.cornerRadius = bgView.frame.height/2
         registerCell()
+        bindViewModel()
     }
     
     func registerCell(){
         Singleton.shared.register(in: signinTableView, nameOfAllCells: ["SignupApplogoCell", "TextFieldCell", "ForgotPasswordCell", "CompleteButtonCell", "SocialLoginCell"])
+    }
+    
+    func bindViewModel(){
+        viewModel.$loginResponse
+            .compactMap { $0 }
+            .sink { [weak self] response in
+                guard let self = self else { return }
+                
+                print("Login successful")
+                print("User ID:", response.user.id)
+                print("Role:", response.user.role)
+                print("Region ID:", response.user.regionId)
+                
+                // Save accessToken securely in Keychain.
+                // Navigate to the appropriate dashboard.
+            }
+            .store(in: &cancellables)
+        
+        viewModel.$errorMessage
+            .compactMap { $0 }
+            .sink { [weak self] message in
+                guard let self = self else { return }
+                
+                let alert = UIAlertController(
+                    title: "Login Failed",
+                    message: message,
+                    preferredStyle: .alert
+                )
+                
+                alert.addAction(
+                    UIAlertAction(title: "OK", style: .default)
+                )
+                
+                self.present(alert, animated: true)
+            }
+            .store(in: &cancellables)
     }
 }
 
@@ -85,13 +126,15 @@ extension SignInVC: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompleteButtonCell", for: indexPath) as! CompleteButtonCell
             cell.buttonLabel.text = "Sign in"
             cell.navigateToRespectiveScreen = {[weak self] in
-                if UserDefaultsManager.shared.getIsClient{
-                    let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
-                    self?.navigationController?.pushViewController(vc, animated: false)
-                }else{
-                    let vc = Singleton.shared.storyBoard(storyboard: "EngineerDashboard", identifier: "EngineerDashboardVC")
-                    self?.navigationController?.pushViewController(vc, animated: false)
-                }
+                
+            self?.viewModel.login( email: "kowsalya@fieldtechy.in", password: "FieldTechy@123")
+//                if UserDefaultsManager.shared.getIsClient{
+//                    let vc = Singleton.shared.storyBoard(storyboard: "ClientDashboard", identifier: "ClientDashboardVC")
+//                    self?.navigationController?.pushViewController(vc, animated: false)
+//                }else{
+//                    let vc = Singleton.shared.storyBoard(storyboard: "EngineerDashboard", identifier: "EngineerDashboardVC")
+//                    self?.navigationController?.pushViewController(vc, animated: false)
+//                }
             }
             return cell
         case .socialLogin:
